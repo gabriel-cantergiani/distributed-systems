@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  lua-server:
+    container_name: lua-server
+    image: ubuntu_lua_socket
+    command: lua /root/lua/scripts/server2.lua
+    volumes:
+      - .:/root
+    ports:
+      - 8889:8889
+  lua-client:
+    container_name: lua-client
+    image: ubuntu_lua_socket
+    command: lua /root/lua/scripts/client.lua
+    volumes:
+      - .:/root
+  lua-client2:
+    container_name: lua-client2
+    image: ubuntu_lua_socket
+    command: lua /root/lua/scripts/client.lua
+    volumes:
+      - .:/root
