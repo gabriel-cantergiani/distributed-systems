@@ -88,16 +88,17 @@ function luarpc:createServant(object, idl_string)
             client:setoption('tcp-nodelay', true)
 
             -- Receive message:
-            local line, err = clt:receive('*l')
+            local line, err = client:receive('*a')
             if line then
                 print("Message received: ", line)
+                -- TODO
+                -- Converte usando protocolo determinado para obter nome do método e parametros
+                -- Chama método do objeto
+                -- Obtém resposta
+                -- Converte novamente a resposta de acordo com protocolo determinado
             else
                 print("Error receiving message from client: " .. err)
             end
-            -- Converte usando protocolo determinado para obter nome do método e parametros
-            -- Chama método do objeto
-            -- Obtém resposta
-            -- Converte novamente a resposta de acordo com protocolo determinado
         -- Gera mensagem de resposta e envia para o client
         -- Fecha conexao com client (primeira versao)
         else
