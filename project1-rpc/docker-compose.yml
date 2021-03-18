@@ -3,7 +3,7 @@ services:
   lua-server:
     container_name: lua-server
     image: ubuntu_lua_socket
-    command: lua /root/lua/scripts/server2.lua
+    command: lua /root/server.lua
     volumes:
       - .:/root
     ports:
