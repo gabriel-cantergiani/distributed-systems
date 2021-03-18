@@ -1,16 +1,24 @@
 luarpc = require("luarpc")
 
--- Cria objeto(s)
-object1 = {}
+-- Creates server objects
+object1 = { 
+    foo =   
+        function (a, s, st)
+            return a*2, string.len(s) + st.idade
+        end,
+    boo = 
+        function (n)
+            return n, { nome = "Bia", idade = 30, peso = 61.0}
+        end
+}
 
--- Abre arquivo da interface
+-- Reads IDL file
 io.input("example1.idl")
 local idl_string = io.read("*all")
 
 
-
-
--- Cria Servants
+-- Creates servants
 luarpc:createServant(object1, idl_string)
 
--- Chama waitIncoming
+-- Calls waitIncoming
+luarpc:waitIncoming()

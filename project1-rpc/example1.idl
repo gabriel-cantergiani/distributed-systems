@@ -14,9 +14,16 @@ interface {
             resulttype = "double",
             args = {
                 {direction = "in",type = "double"},
-                {direction = "in",type = "minhaStruct2"},
+                {direction = "in",type = "string"},
                 {direction = "in",type = "minhaStruct"},
                 {direction = "out",type = "int"}
+            }
+        },
+        boo = {
+            resulttype = "int",
+            args = {
+                {direction = "in",type = "int"},
+                {direction = "out",type = "minhaStruct"}
             }
         }
     }
