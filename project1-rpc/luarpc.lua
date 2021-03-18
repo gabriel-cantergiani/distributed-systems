@@ -17,26 +17,26 @@ local function dump(o)
  end
  
 
-
+-- Parse an IDL string and create an IDL table
 local function idl_parser(idl_string)
 
-    -- Substitute first struct to return a array of tables
+    -- Substitutes first struct to return an array of tables
     s1, num_structs = string.gsub(idl_string, "struct", "return", 1)
 
-    -- If there was no struct in the file, return only the interface
+    -- If there was no struct in the file, returns only the interface
     if num_structs ~= 1 then
         s1, num_structs = string.gsub(idl_string, "interface", "return", 1)
     else
-        -- Replace other structs/interfaces with tables, separated by commas
+        -- Replaces other structs/interfaces with tables, separated by commas
         s1, num_structs = string.gsub(s1, "struct", ",")
         s1 = string.gsub(s1, "interface", ",")
     end
 
-    -- Load replaced string as a function and call it to receive the idl table as a return
+    -- Loads replaced string as a function and call it to receive the idl table as a return
     local f, err = load(s1)
     local r = {f()}
 
-    -- Building idl final table
+    -- Builds idl final table
     idl = {interface = {}, structs = {}}
     for k,v in pairs(r) do
         if v['fields'] ~= nil then
