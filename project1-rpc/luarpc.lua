@@ -64,7 +64,7 @@ function luarpc:createServant(object, idl_string)
     -- Define a higher port than the ones already being used
     local port = 8888
     if next(servants) ~= nil then
-        for _,v in ipairs(servants) do
+        for k,v in pairs(servants) do
             if port <= v.port then
                 port = v.port + 1
             end
@@ -75,8 +75,8 @@ function luarpc:createServant(object, idl_string)
     local server = assert(socket.bind("*", port))
     local ip, _ = server:getsockname()
     
-    -- Cria função para escutar requisição
-    local start_server = function()
+    -- Define function to receive and respond client messages
+    local receive_message = function()
         
         -- Waits for client to connect
         server:settimeout(10)
@@ -88,9 +88,10 @@ function luarpc:createServant(object, idl_string)
             client:setoption('tcp-nodelay', true)
 
             -- Receive message:
-            local line, err = client:receive('*a')
+            local line, err = client:receive('*l')
             if line then
                 print("Message received: ", line)
+                client:send("Hello from server(" .. port .. ")!\n")
                 -- TODO
                 -- Converte usando protocolo determinado para obter nome do método e parametros
                 -- Chama método do objeto
@@ -102,14 +103,13 @@ function luarpc:createServant(object, idl_string)
         -- Gera mensagem de resposta e envia para o client
         -- Fecha conexao com client (primeira versao)
         else
-            print("Server timeout...")
+            print("Server timed out while accepting client connection.")
         end
 
     end
 
     -- Insert newly created server in servants list
-    table.insert(servants, {ip = ip, port = port, start_server = start_server})
-
+    servants[server] = {ip = ip, port = port, receive_message = receive_message}
 
     -- Return Server's info (ip and port)
     return ip, port
@@ -147,20 +147,22 @@ end
 
 function luarpc:waitIncoming()
 
-    -- Obtem tabela global com os servants registrados
+    -- Insert server sockets in table
+    local obs = {}
+    for k,_ in pairs(servants) do
+        table.insert(obs, k)
+    end
 
     while 1 do
-        -- Loop sobre os servants:
-        for _,v in ipairs(servants) do
-            print("Starting server on port: " .. v.port)
-            -- chama select para receber pedidos a cada servant
-            v.start_server()
-            print("Server stopped")
+        -- Waiting for a server to connect
+        local ready_to_read, _, err = socket.select(obs, {}, 5)
+
+        for _,server in ipairs(ready_to_read) do
+            servants[server].receive_message()
         end
-        socket.sleep(5)
+
     end
 
 end
-
 
 return luarpc

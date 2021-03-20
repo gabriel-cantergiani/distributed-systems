@@ -11,12 +11,12 @@ services:
   lua-client:
     container_name: lua-client
     image: ubuntu_lua_socket
-    command: lua /root/client.lua
+    command: lua /root/client.lua lua-server 8888
     volumes:
       - .:/root
   lua-client2:
     container_name: lua-client2
     image: ubuntu_lua_socket
-    command: lua /root/lua/scripts/client.lua
+    command: lua /root/client.lua lua-server 8889
     volumes:
       - .:/root

@@ -18,7 +18,11 @@ local idl_string = io.read("*all")
 
 
 -- Creates servants
-luarpc:createServant(object1, idl_string)
+ip, port = luarpc:createServant(object1, idl_string)
+print("Servant registered on IP=" .. ip .. " and PORT=" .. port)
+
+ip, port = luarpc:createServant(object1, idl_string)
+print("Servant registered on IP=" .. ip .. " and PORT=" .. port)
 
 -- Calls waitIncoming
 luarpc:waitIncoming()
