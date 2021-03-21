@@ -5,7 +5,12 @@ local luarpc = {}
 local servants = {}
 
 
--- ######################## Local functions ######################
+--[[#######################################################################
+
+                    LOCAL FUNCTIONS
+
+############################################################################]]
+
 local function dump(o)
     if type(o) == 'table' then
        local s = '{ '
@@ -104,8 +109,22 @@ local function validate_object(object, idl)
     return nil
 end
 
---######################## createServant #########################
+local function get_methods_from_idl(idl)
 
+    names = {}
+    signatures = {}
+
+    return names, signatures
+end
+
+--[[#######################################################################
+
+                    EXPORTED FUNCTIONS
+
+############################################################################]]
+
+
+-- Creates an RPC servant to serve a given object's methods
 function luarpc:createServant(object, idl_string)
 
     local idl = idl_parser(idl_string)
@@ -190,17 +209,68 @@ end
 
 
 
+local function validate_remote_call(params, signature)
+
+    -- Check number of parameters
+    sig_in_params = {}
+    sig_out_params = {}
+    for _,v in ipairs(signature.args) do
+        if v.direction == 'in' then table.insert(sig_in_params, v) else table.insert(sig_out_params, v) end
+    end
+
+    if #params ~= #sig_in_params then
+        return "Invalid number of arguments. Expected: " .. #params .. ". Received: " .. #sig_in_params
+    end
+    
+    -- Check params types
+    for i = 1, #params do
+        if type(params[i]) == 'number' then
+            if sig_in_params[i].type ~= 'int' and sig_in_params[i].type ~= 'double' then
+                return "Invalid parameter type. Expected: number. Received: " .. type(params[i])
+            end
+        elseif type(params[i] == 'table') then
+            -- TODO
+            -- trata struct
+        elseif type(params[i]) ~= sig_in_params[i].type then
+            return "Invalid parameter type. Expected: " .. sig_in_params[i].type .. ". Received: " .. type(params[i])
+        end
+    end
+
+    return nil
+end
+
 --######################## createProxy #########################
 
-function luarpc:createProxy(interface, ip, porta)
+function luarpc:createProxy(idl_string, ip, port)
 
-    -- Cria tabela de funções
+    local methods = {}
+
+    -- Parse idl
+    local idl = idl_parser(idl_string)
 
     -- Parsear a interface para obter uma tabela com o nome e assinatura das funções
+    -- local names, signatures = get_methods_from_idl(idl)
 
     -- Loop sobre a tabela:
+    for name, signature in pairs(idl.interface.methods) do
 
         -- Insere na tabela de funções uma nova função que:
+        methods[name] = function(...)
+        
+            local params = {...}
+
+            -- Check if method was called with 'table:function' syntax
+            if params[1] == methods then
+                -- Remove table self-reference from params
+                table.remove(params, 1)
+            end
+
+            local err = validate_remote_call(params, signature)
+            if err then
+                print("Error: " .. err)
+            end
+
+        end
             -- Recebe parâmetros e valida se são compatíveis com os definidos na interface
             -- Completa parametros se necessário, ou gera resposta de erro caso necessário
             -- Converte parâmetros para mensagem de acordo com protocolo definido
@@ -211,7 +281,9 @@ function luarpc:createProxy(interface, ip, porta)
             -- Converte resposta novamente de volta, de acordo com protocolo
             -- Envia resposta para quem chamou a função
 
+    end
     -- Retorna tabela de funções
+    return methods
 
 end
 
