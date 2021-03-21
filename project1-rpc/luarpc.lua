@@ -55,23 +55,23 @@ end
 -- Process remote call request
 local function process_request(line, idl)
 
-    -- Decode message
+    -- Decodes message
     local message = json.decode(line)
     print("Message received: " .. dump(message))
 
     response = {}
 
-    -- Check message type
+    -- Checks message type
     if message.type ~= 'REQUEST' then
         return nil, "Wrong message type. Expecting: REQUEST. Received: " .. message.type
     end
 
-    -- Check if method is in IDL
+    -- Checks if method is in IDL
     if idl.interface.methods[message.method] == nil then
         return nil, "Invalid request. Requested method does not exist in interface"
     end
 
-    -- Check parameters
+    -- Checks parameters
     if idl.interface.methods[message.method].args then
         if message.params == nil then
             return nil, "Missing method parameters"
@@ -92,9 +92,9 @@ local function process_request(line, idl)
     
 end
 
+-- Validates an object implementation with an IDL
 local function validate_object(object, idl)
 
-    -- print(dump(object))
     for k,v in pairs(idl.interface.methods) do
         if object[k] == nil then 
             return "Method '" .. k .. "' not found" 
@@ -110,13 +110,13 @@ function luarpc:createServant(object, idl_string)
 
     local idl = idl_parser(idl_string)
     
-    -- Valida se objeto recebido é compatível com a interface ??? (- TODO)
+    -- Validates received object with IDL
     local err = validate_object(object, idl) 
     if err then
         return nil, nil, "Invalid object received while creating servant: " .. err
     end
 
-    -- Define a higher port than the ones already being used
+    -- Defines a higher port than the ones already being used
     local port = 8888
     if next(servants) ~= nil then
         for k,v in pairs(servants) do
@@ -126,11 +126,11 @@ function luarpc:createServant(object, idl_string)
         end
     end
 
-    -- Create server
+    -- Creates server
     local server = assert(socket.bind("*", port))
     local ip, _ = server:getsockname()
     
-    -- Define function to receive and respond client messages
+    -- Defines function to receive and respond client messages
     local receive_message = function()
         
         -- Waits for client to connect
@@ -142,7 +142,7 @@ function luarpc:createServant(object, idl_string)
             client:settimeout(10)
             client:setoption('tcp-nodelay', true)
 
-            -- Receive message:
+            -- Receives message:
             local line, err = client:receive('*l')
             if line then
 
@@ -156,31 +156,34 @@ function luarpc:createServant(object, idl_string)
                 else
                     response['type'] = 'RESPONSE'
                     response['method'] = request.method
-                    -- Chama método do objeto
-                    
-                    -- Obtém resposta
-                    response['result'] = "Hello from server(" .. port .. ")!"
+
+                    -- Calls object method and store response
+                    local result = table.pack(object[request.method](table.unpack(request.params)))
+                    result["n"] = nil
+                    response['result'] = result
+
                 end
 
-                -- Converte novamente a resposta de acordo com protocolo determinado
+                -- Encodes response message
                 local encoded_response = json.encode(response)
 
-                -- Gera mensagem de resposta e envia para o client
+                -- Sends response back to client
                 client:send(encoded_response .. "\n")
             else
                 print("Error receiving message from client: " .. err)
             end
-            -- Fecha conexao com client (primeira versao)
+            -- Closes connection with client
+            client:close()
         else
             print("Server timed out while accepting client connection.")
         end
 
     end
 
-    -- Insert newly created server in servants list
+    -- Inserts newly created server in servants list
     servants[server] = {ip = ip, port = port, receive_message = receive_message}
 
-    -- Return Server's info (ip and port)
+    -- Returns Server's info (ip and port)
     return ip, port, nil
 
 end
@@ -216,7 +219,7 @@ end
 
 function luarpc:waitIncoming()
 
-    -- Insert server sockets in table
+    -- Inserts server sockets in table
     local obs = {}
     for k,_ in pairs(servants) do
         table.insert(obs, k)
