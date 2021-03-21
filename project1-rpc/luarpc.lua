@@ -1,4 +1,5 @@
 local socket = require("socket")
+local json = require("json")
 
 local luarpc = {}
 local servants = {}
@@ -19,7 +20,7 @@ local function dump(o)
  end
  
 
--- Parse an IDL string and create an IDL table
+-- Parses an IDL string and create an IDL table
 local function idl_parser(idl_string)
 
     -- Substitutes first struct to return an array of tables
@@ -51,6 +52,57 @@ local function idl_parser(idl_string)
     return idl
 end
 
+-- Process remote call request
+local function process_request(line, idl)
+
+    -- Decode message
+    local message = json.decode(line)
+    print("Message received: " .. dump(message))
+
+    response = {}
+
+    -- Check message type
+    if message.type ~= 'REQUEST' then
+        return nil, "Wrong message type. Expecting: REQUEST. Received: " .. message.type
+    end
+
+    -- Check if method is in IDL
+    if idl.interface.methods[message.method] == nil then
+        return nil, "Invalid request. Requested method does not exist in interface"
+    end
+
+    -- Check parameters
+    if idl.interface.methods[message.method].args then
+        if message.params == nil then
+            return nil, "Missing method parameters"
+        end
+
+        expected_num_params = 0
+        for _,v in ipairs(idl.interface.methods[message.method].args) do
+            if v.direction == "in" then expected_num_params = expected_num_params + 1 end
+        end
+        received_num_params = #message.params
+
+        if expected_num_params ~= received_num_params then
+            return nil, "Invalid numbers of parameters. Expecting: " .. expected_num_params .. ". Received: " .. received_num_params
+        end
+    end
+
+    return message, nil
+    
+end
+
+local function validate_object(object, idl)
+
+    -- print(dump(object))
+    for k,v in pairs(idl.interface.methods) do
+        if object[k] == nil then 
+            return "Method '" .. k .. "' not found" 
+        end
+    end
+
+    return nil
+end
 
 --######################## createServant #########################
 
@@ -59,7 +111,10 @@ function luarpc:createServant(object, idl_string)
     local idl = idl_parser(idl_string)
     
     -- Valida se objeto recebido é compatível com a interface ??? (- TODO)
-    
+    local err = validate_object(object, idl) 
+    if err then
+        return nil, nil, "Invalid object received while creating servant: " .. err
+    end
 
     -- Define a higher port than the ones already being used
     local port = 8888
@@ -90,18 +145,32 @@ function luarpc:createServant(object, idl_string)
             -- Receive message:
             local line, err = client:receive('*l')
             if line then
-                print("Message received: ", line)
-                client:send("Hello from server(" .. port .. ")!\n")
-                -- TODO
-                -- Converte usando protocolo determinado para obter nome do método e parametros
-                -- Chama método do objeto
-                -- Obtém resposta
+
+                -- Process request by converting to table and checking if it is valid
+                request, err = process_request(line, idl)
+                response = {}
+                if err then
+                    response['type'] = 'ERROR'
+                    if request then response['method'] = request.method end
+                    response['error'] = err
+                else
+                    response['type'] = 'RESPONSE'
+                    response['method'] = request.method
+                    -- Chama método do objeto
+                    
+                    -- Obtém resposta
+                    response['result'] = "Hello from server(" .. port .. ")!"
+                end
+
                 -- Converte novamente a resposta de acordo com protocolo determinado
+                local encoded_response = json.encode(response)
+
+                -- Gera mensagem de resposta e envia para o client
+                client:send(encoded_response .. "\n")
             else
                 print("Error receiving message from client: " .. err)
             end
-        -- Gera mensagem de resposta e envia para o client
-        -- Fecha conexao com client (primeira versao)
+            -- Fecha conexao com client (primeira versao)
         else
             print("Server timed out while accepting client connection.")
         end
@@ -112,7 +181,7 @@ function luarpc:createServant(object, idl_string)
     servants[server] = {ip = ip, port = port, receive_message = receive_message}
 
     -- Return Server's info (ip and port)
-    return ip, port
+    return ip, port, nil
 
 end
 
