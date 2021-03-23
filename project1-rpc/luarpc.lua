@@ -4,6 +4,9 @@ local json = require("json")
 local luarpc = {}
 local servants = {}
 
+-- Variables
+local standard_types = {'int', 'double', 'string', 'nil', 'boolean', 'number', 'userdata', 'function', 'thread', 'table'}
+
 
 --[[#######################################################################
 
@@ -40,7 +43,7 @@ local function idl_parser(idl_string)
         s1 = string.gsub(s1, "interface", ",")
     end
 
-    -- Loads replaced string as a function and call it to receive the idl table as a return
+    -- Loads replaced string as a function and calls it to receive the idl tables as a return
     local f, err = load(s1)
     local r = {f()}
 
@@ -54,7 +57,35 @@ local function idl_parser(idl_string)
         end
     end
 
-    return idl
+    -- Check if structs are defined and also change int and double types for number
+    for method, _ in pairs(idl.interface.methods) do
+        for _, arg in ipairs(idl.interface.methods[method].args) do
+            standard_types = {'int', 'double', 'string', 'nil', 'boolean', 'number', 'userdata', 'function', 'thread', 'table'}
+            found = 0
+            for _,v in ipairs(standard_types) do
+                if arg.type == v then found = 1 end
+            end
+            
+            if found == 0 and idl.structs[arg.type] == nil then
+                return nil, "Struct " .. arg.type .. " not found"
+            end
+
+            if arg.type == "int" or arg.type == "double" then
+                arg.type = 'number'
+            end
+        end
+    end
+
+    -- Change int and double types to number on struct fields
+    for _, struct in pairs(idl.structs) do
+        for _, field in ipairs(struct.fields) do
+            if field.type == "int" or field.type == "double" then
+                field.type = "number"
+            end
+        end
+    end
+
+    return idl, nil
 end
 
 -- Process remote call request
@@ -109,12 +140,51 @@ local function validate_object(object, idl)
     return nil
 end
 
-local function get_methods_from_idl(idl)
+-- Validate parameters of a remote method call
+local function validate_remote_call(params, idl, method_name)
 
-    names = {}
-    signatures = {}
+    -- Check number of parameters
+    sig_in_params = {}
+    sig_out_params = {}
+    for _,v in ipairs(idl.interface.methods[method_name].args) do
+        if v.direction == 'in' then table.insert(sig_in_params, v) else table.insert(sig_out_params, v) end
+    end
 
-    return names, signatures
+    if #params ~= #sig_in_params then
+        return "Invalid number of arguments. Expected: " .. #sig_in_params .. ". Received: " .. #params
+    end
+    
+    -- Check params types
+    for i = 1, #params do
+
+        -- Checking struct types
+        if type(params[i]) == 'table' then
+            type_name = sig_in_params[i].type
+
+            -- Checks if expected type was not struct
+            for _,v in ipairs(standard_types) do
+                if type_name == v then 
+                    return "Invalid parameter type. Expected: " .. type_name .. ". Received: table"
+                end
+            end
+
+            -- Checks struct's fields
+            for _, struct_field in ipairs(idl.structs[type_name].fields) do
+                if params[i][struct_field.name] == nil then
+                    return "Invalid struct parameter. Missing field: " .. struct_field.name
+                end
+
+                if type(params[i][struct_field.name]) ~= struct_field.type then
+                    return "Invalid struct parameter. Expected type for field " .. struct_field.name .. ": " .. struct_field.type .. ". Received: " .. type(params[i][struct_field.name])
+                end
+            end
+
+        elseif type(params[i]) ~= sig_in_params[i].type then
+            return "Invalid parameter type. Expected: " .. sig_in_params[i].type .. ". Received: " .. type(params[i])
+        end
+    end
+
+    return nil
 end
 
 --[[#######################################################################
@@ -127,8 +197,9 @@ end
 -- Creates an RPC servant to serve a given object's methods
 function luarpc:createServant(object, idl_string)
 
-    local idl = idl_parser(idl_string)
-    
+    local idl, err = idl_parser(idl_string)
+    if err then return nil, nil, "Error parsing IDL: " .. err end
+
     -- Validates received object with IDL
     local err = validate_object(object, idl) 
     if err then
@@ -208,37 +279,6 @@ function luarpc:createServant(object, idl_string)
 end
 
 
-
-local function validate_remote_call(params, signature)
-
-    -- Check number of parameters
-    sig_in_params = {}
-    sig_out_params = {}
-    for _,v in ipairs(signature.args) do
-        if v.direction == 'in' then table.insert(sig_in_params, v) else table.insert(sig_out_params, v) end
-    end
-
-    if #params ~= #sig_in_params then
-        return "Invalid number of arguments. Expected: " .. #params .. ". Received: " .. #sig_in_params
-    end
-    
-    -- Check params types
-    for i = 1, #params do
-        if type(params[i]) == 'number' then
-            if sig_in_params[i].type ~= 'int' and sig_in_params[i].type ~= 'double' then
-                return "Invalid parameter type. Expected: number. Received: " .. type(params[i])
-            end
-        elseif type(params[i] == 'table') then
-            -- TODO
-            -- trata struct
-        elseif type(params[i]) ~= sig_in_params[i].type then
-            return "Invalid parameter type. Expected: " .. sig_in_params[i].type .. ". Received: " .. type(params[i])
-        end
-    end
-
-    return nil
-end
-
 --######################## createProxy #########################
 
 function luarpc:createProxy(idl_string, ip, port)
@@ -246,7 +286,8 @@ function luarpc:createProxy(idl_string, ip, port)
     local methods = {}
 
     -- Parse idl
-    local idl = idl_parser(idl_string)
+    local idl, err = idl_parser(idl_string)
+    if err then return nil, "Error parsing IDL: " .. err end
 
     -- Parsear a interface para obter uma tabela com o nome e assinatura das funções
     -- local names, signatures = get_methods_from_idl(idl)
@@ -265,7 +306,7 @@ function luarpc:createProxy(idl_string, ip, port)
                 table.remove(params, 1)
             end
 
-            local err = validate_remote_call(params, signature)
+            local err = validate_remote_call(params, idl, name)
             if err then
                 print("Error: " .. err)
             end
@@ -283,7 +324,7 @@ function luarpc:createProxy(idl_string, ip, port)
 
     end
     -- Retorna tabela de funções
-    return methods
+    return methods, nil
 
 end
 

@@ -14,8 +14,11 @@ local idl_string = io.read("*all")
 
 
 -- Create proxy
-proxy1 = luarpc:createProxy(idl_string, server_ip, server_port)
-
--- Call method
-local result = proxy1:boo(5)
-print(result)
+proxy1, err = luarpc:createProxy(idl_string, server_ip, server_port)
+if err then
+    print(err)
+else
+    -- Call method
+    local result = proxy1:boo(5, {nome = "joao", peso = 170.5, idade = 25})
+    print(result)
+end
