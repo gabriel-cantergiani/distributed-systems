@@ -93,7 +93,6 @@ local function process_request(line, idl)
 
     -- Decodes message
     local message = json.decode(line)
-    print("Message received: " .. dump(message))
 
     response = {}
 
@@ -170,11 +169,7 @@ local function validate_remote_call(params, idl, method_name)
 
             -- Checks struct's fields
             for _, struct_field in ipairs(idl.structs[type_name].fields) do
-                if params[i][struct_field.name] == nil then
-                    return "Invalid struct parameter. Missing field: " .. struct_field.name
-                end
-
-                if type(params[i][struct_field.name]) ~= struct_field.type then
+                if params[i][struct_field.name] ~= nil and type(params[i][struct_field.name]) ~= struct_field.type then
                     return "Invalid struct parameter. Expected type for field " .. struct_field.name .. ": " .. struct_field.type .. ". Received: " .. type(params[i][struct_field.name])
                 end
             end
@@ -260,12 +255,12 @@ function luarpc:createServant(object, idl_string)
                 -- Sends response back to client
                 client:send(encoded_response .. "\n")
             else
-                print("Error receiving message from client: " .. err)
+                return nil, nil, "Error receiving message from client: " .. err
             end
             -- Closes connection with client
             client:close()
         else
-            print("Server timed out while accepting client connection.")
+            return nil, nil, "Server timed out while accepting client connection"
         end
 
     end
@@ -289,13 +284,9 @@ function luarpc:createProxy(idl_string, ip, port)
     local idl, err = idl_parser(idl_string)
     if err then return nil, "Error parsing IDL: " .. err end
 
-    -- Parsear a interface para obter uma tabela com o nome e assinatura das funções
-    -- local names, signatures = get_methods_from_idl(idl)
-
-    -- Loop sobre a tabela:
     for name, signature in pairs(idl.interface.methods) do
 
-        -- Insere na tabela de funções uma nova função que:
+        -- Creating stub's methods
         methods[name] = function(...)
         
             local params = {...}
@@ -306,24 +297,59 @@ function luarpc:createProxy(idl_string, ip, port)
                 table.remove(params, 1)
             end
 
+            -- Validate received parameters
             local err = validate_remote_call(params, idl, name)
             if err then
-                print("Error: " .. err)
+                return nil, "Error validating parameters: " .. err
+            end
+    
+            -- Convert and encode request to protocol
+            request = {
+                type = "REQUEST", 
+                method = name,
+                params = params
+            }
+            local encoded_request = json.encode(request)
+
+            -- Create client socket and connect to server
+            local client = assert(socket.tcp())
+            local _, err = client:connect(ip, port)
+            if err then
+                return nil, "Error connecting to remote server: " .. err
+            end
+            
+            client:settimeout(5)
+
+            -- Send remote procedure call
+            local _, err = client:send(encoded_request .. "\n")
+            if err then
+                return nil, "Error sending request to remote server: " .. err
             end
 
+            local encoded_response, err = client:receive('*l')
+            if err then
+                return nil, "Error receiving response from remote server: " .. err
+            end
+
+            -- Process response
+            local response = json.decode(encoded_response)
+                
+            if response.type == "ERROR" then
+                return nil, "Error response from server: " .. response.error
+            elseif response.type ~= "RESPONSE" then
+                return nil, "Invalid response type from server: " .. response.type
+            end
+
+            client:close()
+
+            -- Return RPC response
+            return response.result
+
         end
-            -- Recebe parâmetros e valida se são compatíveis com os definidos na interface
-            -- Completa parametros se necessário, ou gera resposta de erro caso necessário
-            -- Converte parâmetros para mensagem de acordo com protocolo definido
-            -- Cria objeto cliente tcp
-            -- Conecta com IP e Porta do Servidor
-            -- Envia mensagem
-            -- Recebe resposta
-            -- Converte resposta novamente de volta, de acordo com protocolo
-            -- Envia resposta para quem chamou a função
 
     end
-    -- Retorna tabela de funções
+
+    -- Return stub
     return methods, nil
 
 end
@@ -332,7 +358,7 @@ end
 
 function luarpc:waitIncoming()
 
-    -- Inserts server sockets in table
+    -- Insert server sockets in table
     local obs = {}
     for k,_ in pairs(servants) do
         table.insert(obs, k)
@@ -344,6 +370,8 @@ function luarpc:waitIncoming()
 
         for _,server in ipairs(ready_to_read) do
             servants[server].receive_message()
+            -- TODO
+            -- Preciso inserir o socket client na lista de observáveis logo após o accept do servidor!
         end
 
     end

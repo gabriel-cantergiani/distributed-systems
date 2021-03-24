@@ -8,7 +8,7 @@ object1 = {
         end,
     boo = 
         function (n)
-            return n, { nome = "Bia", idade = 30, peso = 61.0}
+            return n*2, { nome = "Bia", idade = n*30, peso = n*61.0}
         end
 }
 
