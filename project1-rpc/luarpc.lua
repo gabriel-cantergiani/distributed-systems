@@ -31,23 +31,23 @@ local function dump(o)
 -- Parses an IDL string and create an IDL table
 local function idl_parser(idl_string)
 
-    -- Substitutes first struct to return an array of tables
+    -- Substitute first struct to return an array of tables
     s1, num_structs = string.gsub(idl_string, "struct", "return", 1)
 
-    -- If there was no struct in the file, returns only the interface
+    -- If there was no struct in the file, return only the interface
     if num_structs ~= 1 then
         s1, num_structs = string.gsub(idl_string, "interface", "return", 1)
     else
-        -- Replaces other structs/interfaces with tables, separated by commas
+        -- Replace other structs/interfaces with tables, separated by commas
         s1, num_structs = string.gsub(s1, "struct", ",")
         s1 = string.gsub(s1, "interface", ",")
     end
 
-    -- Loads replaced string as a function and calls it to receive the idl tables as a return
+    -- Load replaced string as a function and calls it to receive the idl tables as a return
     local f, err = load(s1)
     local r = {f()}
 
-    -- Builds idl final table
+    -- Build idl final table
     idl = {interface = {}, structs = {}}
     for k,v in pairs(r) do
         if v['fields'] ~= nil then
@@ -91,22 +91,22 @@ end
 -- Process remote call request
 local function process_request(line, idl)
 
-    -- Decodes message
+    -- Decode message
     local message = json.decode(line)
 
     response = {}
 
-    -- Checks message type
+    -- Check message type
     if message.type ~= 'REQUEST' then
         return nil, "Wrong message type. Expecting: REQUEST. Received: " .. message.type
     end
 
-    -- Checks if method is in IDL
+    -- Check if method is in IDL
     if idl.interface.methods[message.method] == nil then
         return nil, "Invalid request. Requested method does not exist in interface"
     end
 
-    -- Checks parameters
+    -- Check parameters
     if idl.interface.methods[message.method].args then
         if message.params == nil then
             return nil, "Missing method parameters"
@@ -127,7 +127,7 @@ local function process_request(line, idl)
     
 end
 
--- Validates an object implementation with an IDL
+-- Validate an object implementation with an IDL
 local function validate_object(object, idl)
 
     for k,v in pairs(idl.interface.methods) do
@@ -160,14 +160,14 @@ local function validate_remote_call(params, idl, method_name)
         if type(params[i]) == 'table' then
             type_name = sig_in_params[i].type
 
-            -- Checks if expected type was not struct
+            -- Check if expected type was not struct
             for _,v in ipairs(standard_types) do
                 if type_name == v then 
                     return "Invalid parameter type. Expected: " .. type_name .. ". Received: table"
                 end
             end
 
-            -- Checks struct's fields
+            -- Check struct's fields
             for _, struct_field in ipairs(idl.structs[type_name].fields) do
                 if params[i][struct_field.name] ~= nil and type(params[i][struct_field.name]) ~= struct_field.type then
                     return "Invalid struct parameter. Expected type for field " .. struct_field.name .. ": " .. struct_field.type .. ". Received: " .. type(params[i][struct_field.name])
@@ -195,13 +195,13 @@ function luarpc:createServant(object, idl_string)
     local idl, err = idl_parser(idl_string)
     if err then return nil, nil, "Error parsing IDL: " .. err end
 
-    -- Validates received object with IDL
+    -- Validate received object with IDL
     local err = validate_object(object, idl) 
     if err then
         return nil, nil, "Invalid object received while creating servant: " .. err
     end
 
-    -- Defines a higher port than the ones already being used
+    -- Define a higher port than the ones already being used
     local port = 8888
     if next(servants) ~= nil then
         for k,v in pairs(servants) do
@@ -211,14 +211,14 @@ function luarpc:createServant(object, idl_string)
         end
     end
 
-    -- Creates server
+    -- Create server
     local server = assert(socket.bind("*", port))
     local ip, _ = server:getsockname()
     
-    -- Defines function to receive and respond client messages
+    -- Define function to receive and respond client messages
     local receive_message = function()
         
-        -- Waits for client to connect
+        -- Wait for client to connect
         server:settimeout(10)
         local client, timeout = server:accept()
 
@@ -227,7 +227,7 @@ function luarpc:createServant(object, idl_string)
             client:settimeout(10)
             client:setoption('tcp-nodelay', true)
 
-            -- Receives message:
+            -- Receive message:
             local line, err = client:receive('*l')
             if line then
 
@@ -242,22 +242,22 @@ function luarpc:createServant(object, idl_string)
                     response['type'] = 'RESPONSE'
                     response['method'] = request.method
 
-                    -- Calls object method and store response
+                    -- Call object method and store response
                     local result = table.pack(object[request.method](table.unpack(request.params)))
                     result["n"] = nil
                     response['result'] = result
 
                 end
 
-                -- Encodes response message
+                -- Encode response message
                 local encoded_response = json.encode(response)
 
-                -- Sends response back to client
+                -- Send response back to client
                 client:send(encoded_response .. "\n")
             else
                 return nil, nil, "Error receiving message from client: " .. err
             end
-            -- Closes connection with client
+            -- Close connection with client
             client:close()
         else
             return nil, nil, "Server timed out while accepting client connection"
@@ -265,10 +265,10 @@ function luarpc:createServant(object, idl_string)
 
     end
 
-    -- Inserts newly created server in servants list
+    -- Insert newly created server in servants list
     servants[server] = {ip = ip, port = port, receive_message = receive_message}
 
-    -- Returns Server's info (ip and port)
+    -- Return Server's info (ip and port)
     return ip, port, nil
 
 end
@@ -282,7 +282,10 @@ function luarpc:createProxy(idl_string, ip, port)
 
     -- Parse idl
     local idl, err = idl_parser(idl_string)
-    if err then return nil, "Error parsing IDL: " .. err end
+    if err then 
+        print ("Error parsing IDL: " .. err)
+        return nil 
+    end
 
     for name, signature in pairs(idl.interface.methods) do
 
@@ -300,7 +303,8 @@ function luarpc:createProxy(idl_string, ip, port)
             -- Validate received parameters
             local err = validate_remote_call(params, idl, name)
             if err then
-                return nil, "Error validating parameters: " .. err
+                print("Error validating parameters: " .. err)
+                return nil
             end
     
             -- Convert and encode request to protocol
@@ -315,7 +319,8 @@ function luarpc:createProxy(idl_string, ip, port)
             local client = assert(socket.tcp())
             local _, err = client:connect(ip, port)
             if err then
-                return nil, "Error connecting to remote server: " .. err
+                print("Error connecting to remote server: " .. err)
+                return nil
             end
             
             client:settimeout(5)
@@ -323,21 +328,25 @@ function luarpc:createProxy(idl_string, ip, port)
             -- Send remote procedure call
             local _, err = client:send(encoded_request .. "\n")
             if err then
-                return nil, "Error sending request to remote server: " .. err
+                print("Error sending request to remote server: " .. err)
+                return nil
             end
 
             local encoded_response, err = client:receive('*l')
             if err then
-                return nil, "Error receiving response from remote server: " .. err
+                print("Error receiving response from remote server: " .. err)
+                return nil
             end
 
             -- Process response
             local response = json.decode(encoded_response)
                 
             if response.type == "ERROR" then
-                return nil, "Error response from server: " .. response.error
+                print("Error response from server: " .. response.error)
+                return nil
             elseif response.type ~= "RESPONSE" then
-                return nil, "Invalid response type from server: " .. response.type
+                print("Invalid response type from server: " .. response.type)
+                return nil
             end
 
             client:close()
