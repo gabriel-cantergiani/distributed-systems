@@ -1,10 +1,9 @@
 local socket = require("socket")
 local json = require("json")
 
+-- Variables
 local luarpc = {}
 local servants = {}
-
--- Variables
 local standard_types = {'int', 'double', 'string', 'nil', 'boolean', 'number', 'userdata', 'function', 'thread', 'table'}
 
 
@@ -175,6 +174,11 @@ local function validate_remote_call(params, idl, method_name)
             end
 
         elseif type(params[i]) ~= sig_in_params[i].type then
+            -- Convert string para number
+
+            -- Converte string para boolean
+
+            -- Converte string para nil
             return "Invalid parameter type. Expected: " .. sig_in_params[i].type .. ". Received: " .. type(params[i])
         end
     end
@@ -192,13 +196,20 @@ end
 -- Creates an RPC servant to serve a given object's methods
 function luarpc:createServant(object, idl_string)
 
-    local idl, err = idl_parser(idl_string)
-    if err then return nil, nil, "Error parsing IDL: " .. err end
+    local ok, return_value, err = pcall(idl_parser, idl_string)
+    if not ok or err ~= nil then
+        local msg = err or return_value
+        print("Error parsing IDL: " .. msg) 
+        return nil
+    end
+    local idl = return_value
 
     -- Validate received object with IDL
-    local err = validate_object(object, idl) 
-    if err then
-        return nil, nil, "Invalid object received while creating servant: " .. err
+    local ok, err = pcall(validate_object, object, idl) 
+    if not ok or err then
+        msg = err or ""
+        print("Invalid object received while creating servant: " .. err)
+        return nil
     end
 
     -- Define a higher port than the ones already being used
@@ -232,13 +243,15 @@ function luarpc:createServant(object, idl_string)
             if line then
 
                 -- Process request by converting to table and checking if it is valid
-                request, err = process_request(line, idl)
+                ok, return_value, err = pcall(process_request, line, idl)
                 response = {}
-                if err then
+                if not ok or err then
                     response['type'] = 'ERROR'
                     if request then response['method'] = request.method end
-                    response['error'] = err
+                    msg = err or return_value
+                    response['error'] = msg
                 else
+                    local request = return_value
                     response['type'] = 'RESPONSE'
                     response['method'] = request.method
 
@@ -255,12 +268,14 @@ function luarpc:createServant(object, idl_string)
                 -- Send response back to client
                 client:send(encoded_response .. "\n")
             else
-                return nil, nil, "Error receiving message from client: " .. err
+                print("Error receiving message from client: " .. err)
+                return nil
             end
             -- Close connection with client
             client:close()
         else
-            return nil, nil, "Server timed out while accepting client connection"
+            print("Server timed out while accepting client connection")
+            return nil
         end
 
     end
@@ -269,7 +284,7 @@ function luarpc:createServant(object, idl_string)
     servants[server] = {ip = ip, port = port, receive_message = receive_message}
 
     -- Return Server's info (ip and port)
-    return ip, port, nil
+    return {ip=ip, port=port}
 
 end
 
@@ -281,11 +296,13 @@ function luarpc:createProxy(idl_string, ip, port)
     local methods = {}
 
     -- Parse idl
-    local idl, err = idl_parser(idl_string)
-    if err then 
-        print ("Error parsing IDL: " .. err)
+    local ok, return_value, err = pcall(idl_parser, idl_string)
+    if not ok or err then
+        local msg = err or return_value
+        print ("Error parsing IDL: " .. msg)
         return nil 
     end
+    local idl = return_value
 
     for name, signature in pairs(idl.interface.methods) do
 
@@ -301,9 +318,10 @@ function luarpc:createProxy(idl_string, ip, port)
             end
 
             -- Validate received parameters
-            local err = validate_remote_call(params, idl, name)
-            if err then
-                print("Error validating parameters: " .. err)
+            local ok, err = pcall(validate_remote_call, params, idl, name)
+            if not ok or err then
+                local msg = err or ""
+                print("Error validating parameters: " .. msg)
                 return nil
             end
     
@@ -377,8 +395,8 @@ function luarpc:waitIncoming()
         -- Waiting for a server to connect
         local ready_to_read, _, err = socket.select(obs, {}, 5)
 
-        for _,server in ipairs(ready_to_read) do
-            servants[server].receive_message()
+        for _,socket_ready in ipairs(ready_to_read) do
+            servants[socket_ready].receive_message()
             -- TODO
             -- Preciso inserir o socket client na lista de observáveis logo após o accept do servidor!
         end
