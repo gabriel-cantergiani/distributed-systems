@@ -13,20 +13,6 @@ local standard_types = {'int', 'double', 'string', 'nil', 'boolean', 'number', '
 
 ############################################################################]]
 
-local function dump(o)
-    if type(o) == 'table' then
-       local s = '{ '
-       for k,v in pairs(o) do
-          if type(k) ~= 'number' then k = '"'..k..'"' end
-          s = s .. '['..k..'] = ' .. dump(v) .. ','
-       end
-       return s .. '} '
-    else
-       return tostring(o)
-    end
- end
- 
-
 -- Parses an IDL string and create an IDL table
 local function idl_parser(idl_string)
 
@@ -244,7 +230,7 @@ function luarpc:createServant(object, idl_string)
     end
 
     -- Define a higher port than the ones already being used
-    local port = 8888
+    local port = os.getenv("PORT") or 8888
     if next(servants) ~= nil then
         for k,v in pairs(servants) do
             if port <= v.port then

@@ -6,7 +6,10 @@ services:
     command: lua /root/server.lua
     volumes:
       - .:/root
+    environment: 
+      PORT: 8888
     ports:
+      - 8888:8888
       - 8889:8889
   lua-client:
     container_name: lua-client
