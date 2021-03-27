@@ -261,12 +261,12 @@ function luarpc:createServant(object, idl_string)
     local receive_message = function()
         
         -- Wait for client to connect
-        server:settimeout(10)
+        server:settimeout(0.5)
         local client, timeout = server:accept()
 
         if client then
             print("Client connected to server on port " .. port)
-            client:settimeout(10)
+            client:settimeout(0.5)
             client:setoption('tcp-nodelay', true)
 
             -- Receive message:
@@ -372,7 +372,7 @@ function luarpc:createProxy(idl_string, ip, port)
                 return nil
             end
             
-            client:settimeout(5)
+            client:settimeout(0.5)
 
             -- Send remote procedure call
             local _, err = client:send(encoded_request .. "\n")
@@ -428,8 +428,6 @@ function luarpc:waitIncoming()
 
         for _,socket_ready in ipairs(ready_to_read) do
             servants[socket_ready].receive_message()
-            -- TODO
-            -- Preciso inserir o socket client na lista de observáveis logo após o accept do servidor!
         end
 
     end
