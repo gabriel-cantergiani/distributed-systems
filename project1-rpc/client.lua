@@ -18,11 +18,11 @@ proxy1 = luarpc:createProxy(idl_string, server_ip, server_port)
 if proxy1 then
     -- Call method
     local result = proxy1:boo(5, {nome = "joao", peso = 170.5, idade = nil})
-    print(result)
+    if result then print(result[1]) end
 end
 
 proxy2 = luarpc:createProxy(idl_string, server_ip, server_port+1)
 if proxy2 then
     local result = proxy2:foo(3.0, "hello", {nome = "paula", peso = 65, idade = 33})
-    print(result)
+    if result then print(result) end
 end

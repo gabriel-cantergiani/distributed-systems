@@ -87,6 +87,40 @@ local function idl_parser(idl_string)
     return idl, nil
 end
 
+-- Try to convert received parameters to the type defined in IDL
+local function convert_value(received_param, idl_param)
+    if type(received_param) == 'string' then
+        -- Convert string to number
+        if idl_param.type == 'number' then
+            converted_number = tonumber(received_param)
+            if converted_number then 
+                received_param = converted_number
+                return nil
+            else
+                return "Error converting parameter type. Expected: " .. idl_param.type .. ". Received: " .. received_param .. " (" .. type(received_param) .. ")"
+            end
+        -- Convert string to boolean
+        elseif idl_param.type == 'boolean' then
+            if received_param == 'false' or received_param == 'False' or received_param == '0' then
+                received_param = false
+            else
+                received_param = true
+            end
+            return nil
+        end
+    -- Convert number to boolean
+    elseif type(received_param) == 'number' and idl_param.type == 'boolean' then
+        if received_param == 0 then
+            received_param = false
+        else
+            received_param = true
+        end
+        return nil
+    end
+
+    return "Invalid parameter type. Expected: " .. idl_param.type .. ". Received: " .. type(received_param)
+end
+
 -- Process remote call request
 local function process_request(line, idl)
 
@@ -118,7 +152,7 @@ local function process_request(line, idl)
         received_num_params = #message.params
 
         if expected_num_params ~= received_num_params then
-            return nil, "Invalid numbers of parameters. Expecting: " .. expected_num_params .. ". Received: " .. received_num_params
+            return nil, "Invalid number of parameters. Expecting: " .. expected_num_params .. ". Received: " .. received_num_params
         end
     end
 
@@ -169,17 +203,14 @@ local function validate_remote_call(params, idl, method_name)
             -- Check struct's fields
             for _, struct_field in ipairs(idl.structs[type_name].fields) do
                 if params[i][struct_field.name] ~= nil and type(params[i][struct_field.name]) ~= struct_field.type then
-                    return "Invalid struct parameter. Expected type for field " .. struct_field.name .. ": " .. struct_field.type .. ". Received: " .. type(params[i][struct_field.name])
+                    err = convert_value(params[i][struct_field.name], struct_field)
+                    if err then return "Invalid struct: " .. err end
                 end
             end
 
         elseif type(params[i]) ~= sig_in_params[i].type then
-            -- Convert string para number
-
-            -- Converte string para boolean
-
-            -- Converte string para nil
-            return "Invalid parameter type. Expected: " .. sig_in_params[i].type .. ". Received: " .. type(params[i])
+            err = convert_value(params[i], sig_in_params[i])
+            if err then return err end
         end
     end
 
