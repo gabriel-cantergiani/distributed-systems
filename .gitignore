@@ -1,0 +1,6 @@
+
+local/
+.cache
+.bash*
+*.zip
+Relatório.txt
