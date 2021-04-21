@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  lua-raft:
+    container_name: lua-raft
+    image: ubuntu_lua_socket
+    command: lua /root/init.lua
+    volumes:
+      - .:/root
+    # environment: 
+    #   PORT: 8888
+    # ports:
+    #   - 8888:8888
+    #   - 8889:8889
