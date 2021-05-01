@@ -1,13 +1,32 @@
 version: "3.9"
 services:
-  lua-raft:
-    container_name: lua-raft
+  raft-server1:
+    container_name: raft-server1
     image: ubuntu_lua_socket
-    command: lua /root/init.lua
+    command: lua /root/init_server.lua 8888
     volumes:
       - .:/root
-    # environment: 
-    #   PORT: 8888
-    # ports:
-    #   - 8888:8888
-    #   - 8889:8889
+    ports:
+      - 8888:8888
+  raft-server2:
+    container_name: raft-server2
+    image: ubuntu_lua_socket
+    command: lua /root/init_server.lua 8889
+    volumes:
+      - .:/root
+    ports:
+      - 8889:8889
+  raft-server3:
+    container_name: raft-server3
+    image: ubuntu_lua_socket
+    command: lua /root/init_server.lua 9000
+    volumes:
+      - .:/root
+    ports:
+      - 9000:9000
+  raft-client:
+    container_name: raft-client
+    image: ubuntu_lua_socket
+    command: lua /root/client.lua
+    volumes:
+      - .:/root
