@@ -31,22 +31,15 @@ function raft.SetUp(peers, me)
     raftNode.currentTerm = 0
     raftNode.votedFor = -1
     raftNode.currentState = "follower"
-    raftNode.start = false
-
+    raftNode.running = false
 end
 
 function raft.InitializeNode()
     -- Inicializa e fica rodando..
     print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] InitializingNode received")
-    raftNode.start = true
-    raft.StartLoop()
-    print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] Node initialized")
-end
-
-function raft.StartLoop()
-    print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] Starting Loop")
-    while raftNode.start do
-        socket.sleep(5)
+    raftNode.running = true
+    while raftNode.running do
+        print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] Node Running...")
         -- Verifica estado atual. 
         -- Se for leader
             -- fica mandando heartbeats / sendHeartbeats()
@@ -56,14 +49,15 @@ function raft.StartLoop()
             -- Se recebeu um RequestVote reply...???
         -- Se for candidate
             -- startElection()
+        socket.sleep(5)
     end
-    print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] Stopped Loop")
+    print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] Node Stopped")
 end
 
 
 function raft.StopNode()
     print("[" .. raftNode.me.host .. "/" .. raftNode.currentState .. "] StopNode received")
-    raftNode.start = false
+    raftNode.running = false
     -- Continua com os mesmos estados
     -- Só para de receber os Heartbeats
 end

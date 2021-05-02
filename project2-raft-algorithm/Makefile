@@ -10,9 +10,9 @@ run-raft-server2:
 
 run-raft-server3:
 	docker-compose up raft-server3
-
-run-raft-client:
-	docker-compose up raft-client
+	
+run-tests:
+	docker-compose up raft-tests
 
 # # RUN LOCAL
 # run-raft:

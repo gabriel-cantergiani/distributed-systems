@@ -24,6 +24,5 @@ end
 print("Setting Up Raft Node...")
 raft.SetUp(peers, me)
 
-
 luarpc.createServant(raft, config.interface_file, PORT)
 luarpc.waitIncoming(true)

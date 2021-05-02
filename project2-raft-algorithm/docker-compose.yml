@@ -24,9 +24,9 @@ services:
       - .:/root
     ports:
       - 9000:9000
-  raft-client:
-    container_name: raft-client
+  raft-tests:
+    container_name: raft-tests
     image: ubuntu_lua_socket
-    command: lua /root/client.lua
+    command: sh /root/tests.sh
     volumes:
       - .:/root
