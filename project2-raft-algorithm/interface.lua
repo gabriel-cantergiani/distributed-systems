@@ -26,6 +26,26 @@ interface = {
     StopNode ={
       resulttype = "void",
       args = {
+        {direction = "in", type = "int"}
+      }
+    },
+    AppendEntries ={
+      resulttype = "void",
+      args = {
+        {direction = "in", type = "int"}
+      }
+    },
+    RequestVote ={
+      resulttype = "string",
+      args = {
+        {direction = "in", type = "int"},
+        {direction = "in", type = "int"}
+      }
+    },
+    RequestVoteReply ={
+      resulttype = "void",
+      args = {
+        {direction = "in", type = "string"}
       }
     },
     ApplyEntry ={

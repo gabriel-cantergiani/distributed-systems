@@ -2,6 +2,9 @@
 run-raft-all:
 	docker-compose up
 
+run-raft-2-servers:
+	docker-compose up raft-server1 raft-server2
+
 run-raft-server1:
 	docker-compose up raft-server1
 

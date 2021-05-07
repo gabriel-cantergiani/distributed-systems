@@ -16,13 +16,17 @@ for _, server in ipairs(config.servers) do
     if server.port == tonumber(PORT) then
         me = server
     else
-        raft_node = luarpc.createProxy(server.host, server.port, config.interface_file, config.verbose)
+        raft_node = {}
+        raft_node.host = server.host
+        raft_node.port = server.port
+        raft_node.id = server.id
+        raft_node.proxy = luarpc.createProxy(server.host, server.port, config.interface_file, config.verbose)
         table.insert(peers, raft_node)
     end
 end
 
 print("Setting Up Raft Node...")
-raft.SetUp(peers, me)
+raft.SetUp(peers, me, config.verbose)
 
 luarpc.createServant(raft, config.interface_file, PORT)
-luarpc.waitIncoming(true)
+luarpc.waitIncoming(false)

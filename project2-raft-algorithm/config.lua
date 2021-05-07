@@ -3,8 +3,8 @@ local config = {}
 
 config.servers_num = 3
 config.servers = {
-    {host = "raft-server1", port = 8888},
-    -- {host = "raft-server2", port = 8889},
+    {host = "raft-server1", port = 8888, id = 1},
+    {host = "raft-server2", port = 8889, id = 2},
     -- {host = "raft-server3", port = 9000},
 }
 
