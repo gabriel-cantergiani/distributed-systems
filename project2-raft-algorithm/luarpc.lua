@@ -234,7 +234,9 @@ function luarpc.process_request(client, request_msg, servant)
   end
 
   -- invoke the method passed in the request with all its parameters and get the result
-  local result = table.pack(servants_lst[servant]["obj"][func_name](table.unpack(params)))
+  local implFunc = servants_lst[servant]["obj"][func_name] -- changed
+  local result = table.pack(pcall(implFunc, table.unpack(params))) -- changed
+  -- print(result) -- changed
   local msg_to_send = marshall.marshalling(result)
   -- print("\n\n\t\t >>>>>> [SVR -> CLT] MSG TO BE SENT FROM SERVER:",msg_to_send) -- [DEBUG]
   return msg_to_send
