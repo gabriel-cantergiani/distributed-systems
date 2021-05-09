@@ -26,7 +26,11 @@ interface = {
     StopNode ={
       resulttype = "void",
       args = {
-        {direction = "in", type = "int"}
+      }
+    },
+    ResumeNode ={
+      resulttype = "void",
+      args = {
       }
     },
     AppendEntries ={

@@ -29,4 +29,4 @@ print("Setting Up Raft Node...")
 raft.SetUp(peers, me, config.verbose)
 
 luarpc.createServant(raft, config.interface_file, PORT)
-luarpc.waitIncoming(false)
+luarpc.waitIncoming(config.rpc_verbose)

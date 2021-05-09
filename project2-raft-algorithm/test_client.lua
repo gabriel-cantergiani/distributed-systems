@@ -29,8 +29,9 @@ raft_node = luarpc.createProxy(hostname, port, config.interface_file, config.ver
 if rpc_method == "InitializeNode" then
     raft_node.InitializeNode()
 elseif rpc_method == "StopNode" then
-    seconds = tonumber(arg[4])
-    raft_node.StopNode(seconds)
+    raft_node.StopNode()
+elseif rpc_method == "ResumeNode" then
+    raft_node.ResumeNode()
 end
 
 

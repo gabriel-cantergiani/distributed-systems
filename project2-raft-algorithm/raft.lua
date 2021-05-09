@@ -32,22 +32,26 @@ function raft.SetUp(peers, me, verbose)
     raft.receivedRequestVote = false
     raft.votingMajority = (#peers / 2) + 1
     raft.votes = 0
-    raft.votedFor = -1
+    raft.votedFor = nil
     raft.currentState = "follower"
     raft.running = false
     raft.heartbeatReceived = false
+    raft.lastHeartbeatTimestamp = 0
     raft.waitingForVotes = false
+    raft.peersToRetryRequestVote = {}
     raft.verbose = verbose
-    -- math.randomseed(me.port * os.time())
-    -- raft.randomHeartbeatTimeout = math.random(1,5) TEMP
-    raft.randomHeartbeatTimeout = 5*raft.me.id
-    -- raft.randomElectionTimeout = math.random(10,20) TEMP
-    raft.randomElectionTimeout = 10*raft.me.id
-    print("Heartbeat timeout: " .. tostring(raft.randomHeartbeatTimeout))
-    print("Election timeout: " .. tostring(raft.randomElectionTimeout))
+    math.randomseed(me.port * os.time())
+    raft.randomElectionTimeout = math.random(10,20)
+    -- if me.id == 1 then raft.randomElectionTimeout = 7 else raft.randomElectionTimeout = 10 end
+    raft.heartbeatFrequency = 2
+    -- raft.randomElectionTimeout = 3*raft.me.id
+    raft.electionStartTimestamp = nil
+    raft.raftStartTimestamp = os.time()
+    print("Heartbeat timeout: " .. tostring(raft.randomElectionTimeout))
 
 end
 
+-- RPC METHOD
 function raft.InitializeNode()
     -- Inicializa e fica rodando..
     raft.printState("InitializingNode received")
@@ -64,117 +68,150 @@ function raft.InitializeNode()
             if raft.currentState == 'leader' then
             -- Se for leader
                 raft.sendHeartbeats()
-                luarpc.wait(raft.randomHeartbeatTimeout, false) -- TEMPORARIO
+                luarpc.wait(raft.heartbeatFrequency, false)
             elseif raft.currentState == 'candidate' then
             -- Se for candidate
-                raft.startElection()
+                if raft.waitingForVotes then
+                    raft.processReceivedVotes()
+                else
+                    raft.startElection()
+                end
+                -- Espera os votos chegarem, com um wait uma ordem de grandeza menor que o timeout
+                luarpc.wait(math.max(raft.randomElectionTimeout/5, 1), false)
             elseif raft.currentState == 'follower' then
             -- Se for follower
                 raft.heartbeatReceived = false
                 -- Chama corotina para esperar por timeout aleatório
                 raft.printState("Waiting for heartbeat...")
-                luarpc.wait(raft.randomHeartbeatTimeout, false)
+                luarpc.wait(raft.randomElectionTimeout, false)
                 -- Se recebeu um Heartbeat, ignora (lider esta vivo)
-                if not raft.heartbeatReceived then
+                -- if not raft.heartbeatReceived then
+                --     raft.currentState = 'candidate'
+                -- end
+                if not raft.heartbeatReceived or (os.time() - raft.lastHeartbeatTimestamp) > raft.randomElectionTimeout then
                     raft.currentState = 'candidate'
                 end
                 -- Se recebeu um RequestVote reply...???
             end
+        else
+            luarpc.wait(raft.heartbeatFrequency, false)
         end
     end
     raft.printState("Node Stopped")
 end
 
-
-function raft.StopNode(seconds)
+-- RPC METHOD
+function raft.StopNode()
     raft.printState("StopNode received.")
+    raft.heartbeatDue = os.time() - raft.lastHeartbeatTimestamp
     raft.running = false
-    raft.printState("Stopping Node for " .. tostring(seconds) .. " seconds")
-    luarpc.wait(seconds, false)
+end
+
+-- RPC METHOD
+function raft.ResumeNode()
+    raft.printState("ResumeNode received.")
+    raft.lastHeartbeatTimestamp = os.time() - raft.heartbeatDue
     raft.running = true
 end
 
 
--- EM ESTADO FOLLOWER OU CANDIDATE
+-- PRIVATE
 function raft.startElection()
     raft.printState("Starting election")
     -- Incrementa o termo
     raft.currentTerm = raft.currentTerm + 1 
     -- Vota em si mesmo
     raft.votes = 1
-    -- Envia RequestVote para outros nós em paralelo (corotinas) - sendRequestVote()
+    raft.votedFor = raft.me.id
+    raft.peersToRetryRequestVote = {}
+    -- Envia RequestVote para outros nós
     for _,peer in ipairs(raft.remote_peers) do
         raft.printState("Sending RequestVote to Node " .. peer.id)
         result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
+        if result == "NOT ACK" then
+            table.insert(raft.peersToRetryRequestVote, peer)
+        end
     end
     raft.printState("RequestVotes Sent. Waiting for Replies...")
-    luarpc.wait(raft.randomElectionTimeout, false)
+    raft.waitingForVotes = true
+    raft.electionTimeoutLimit = math.random(50,100)
+    raft.electionStartTimestamp = os.time()
+end
+
+-- PRIVATE
+function raft.processReceivedVotes()
+    raft.printState("Processing Received Votes")
     -- Fica esperando um dos 3 casos:
     if raft.currentState ~= "candidate" then
         -- Recebeu heartbeat com termo maior ou igual de outro leader -> muda para follower
         raft.printState("State changed during election")
-        return
+        raft.waitingForVotes = false
     elseif raft.votes >= raft.votingMajority then
         raft.printState("Election Won. Changing state to leader")
         -- Ganhou eleicao -> atualiza estado para leader
         raft.currentState = 'leader'
         raft.votes = 0
+        raft.waitingForVotes = false
+    elseif (os.time() - raft.electionStartTimestamp) > raft.electionTimeoutLimit then
+        raft.printState("Election timed out")
+        raft.votes = 0
+        raft.waitingForVotes = false
     else
-        raft.printState("Election timedout")
-        -- Estorou timeout de eleição -> mantem estado de candidate (nova eleicao sera iniciada)
-        return
+        -- Tenta novamente envio do RequestVote para nos que nao receberam
+        for position,peer in ipairs(raft.peersToRetryRequestVote) do
+            raft.printState("Retrying RequestVote to Node " .. peer.id)
+            result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
+            if result == "ACK" then
+                raft.printState("RequestVote ACK received from Node " .. peer.id)
+                table.remove(raft.peersToRetryRequestVote, position)
+            end
+        end 
     end
 end
 
--- EM ESTADO CANDIDATE / EM COROTINA
--- function sendRequestVote()
---     -- envia as chamadas RPC RequestVote()
---     -- enquanto a eleição ainda estiver em andamento:
---         -- Vai colhendo os resultados. 
---         -- Se o estado atual tiver mudado para follower (por conta de heartbeat recebido)
---             -- retorna para loop
---         -- Se o termo recebido for maior que o seu atual
---             -- Volta estado para follower e retorna para loop
---         -- Se for do mesmo termo, incrementa o numero de votos e continua esperando mais votos..
---         -- Se o numero de votos chegar na maioria:
---             -- Ganhou eleicao -> muda variavel de estado de winner
---             -- retorna
--- end
-
+-- RPC METHOD
 function raft.RequestVote(node_id, term)
+    -- Nao faz nada se estiver "parado"
+    if not raft.running then return "NOT ACK" end
+
     raft.printState("Received RequestVote")
     -- Responde o requestVote votando ou não no candidato...
-    raft.requestVoteTerm = term
-    raft.receivedRequestVote = true
-    raft.requestVoteNodeID = node_id
+    if not raft.receivedRequestVote then
+        raft.requestVoteTerm = term
+        raft.receivedRequestVote = true
+        raft.requestVoteNodeID = node_id
+    end
     return "ACK"
-    -- Se já votou em um candidato para aquele mesmo termo, responde Nao
-    -- Se ainda não votou em candidato para aquele termo, responde Sim
 end
 
+-- RPC METHOD
 function raft.RequestVoteReply(vote)
+    -- Nao faz nada se estiver "parado"
+    if not raft.running then return end
+
     if raft.currentState == 'candidate' then
         if vote == "YES" then
             raft.printState("Received RequestVoteReply YES")
-            raft.votes = raft.votes + 1 
+            raft.votes = raft.votes + 1
         else
             raft.printState("Received RequestVoteReply NO")
         end
     end
-    raft.receivedRequestVote = false
 end
 
+-- PRIVATE
 function raft.ProcessRequestVote()
     raft.printState("Processing RequestVote")
-    vote = ""
+    vote = "NO"
      -- Se o termo recebido for maior que o atual
-    if raft.requestVoteTerm > raft.currentTerm then
-        raft.printState("Received Higher Term. Changing to Follower")
-        -- Muda para follower e responde OK
-        raft.currentState = 'follower'
-        raft.currentTerm = raft.requestVoteTerm
-        vote = "YES"
-    else vote = "NO" end
+    if (raft.requestVoteTerm > raft.currentTerm) or (raft.requestVoteTerm == raft.currentTermand and raft.votedFor == nil) then
+            raft.printState("Received Higher Term. Changing to Follower")
+            -- Muda para follower e responde OK
+            raft.currentState = 'follower'
+            raft.currentTerm = raft.requestVoteTerm
+            raft.votedFor = raft.requestVoteNodeID
+            vote = "YES"
+    end
 
     -- Envia Reply
     for _,node in ipairs(raft.remote_peers) do
@@ -187,7 +224,7 @@ function raft.ProcessRequestVote()
     
 end
 
--- EM ESTADO LEADER
+-- PRIVATE
 function raft.sendHeartbeats()
     raft.printState("Sending Heartbeats...")
     -- Se for o líder
@@ -201,17 +238,22 @@ function raft.sendHeartbeats()
     raft.printState("All heartbeats sent")
 end
 
-
+-- RPC METHOD
 function raft.AppendEntries(term)
+    -- Nao faz nada se estiver "parado"
+    if not raft.running then return end
+
     raft.printState("Received AppendEntries")
     -- Recebe heartbeat
     -- Se estiver no estado candidate (ou leader?):
     if raft.currentState == 'leader' or raft.currentState == 'candidate' then
         -- Se o termo do Heartbeat for maior ou igual que o termo atual, sai do estado candidate e vai pro follower.
-        if tonumber(term) > raft.currentTerm then
-            raft.printState("AppendEntries with higher term. Changing to follower")
+        if (tonumber(term) > raft.currentTerm and raft.currentState == 'leader') or (tonumber(term) >= raft.currentTerm and raft.currentState == 'candidate') then
+            raft.printState("AppendEntries with higher or equal term. Changing to follower")
             raft.currentState = 'follower'
             raft.currentTerm = tonumber(term)
+            raft.waitingForVotes = false
+            raft.votedFor = nil
         end
         -- Se estiver no estado follower:
     elseif raft.currentState == 'follower' then
@@ -219,17 +261,20 @@ function raft.AppendEntries(term)
         if raft.currentTerm < tonumber(term) then
             -- Se for maior, atualiza o seu termo atual
             raft.currentTerm = term
+            raft.votedFor = nil
         end
     end
 
     raft.heartbeatReceived = true
+    raft.lastHeartbeatTimestamp = os.time()
 
     return
 end
 
+-- PRIVATE
 function raft.printState(message)
     if raft.verbose then
-        print("[Node " .. raft.me.id .. "/" .. raft.currentState .. "/term " .. raft.currentTerm ..  "] " .. message)
+        print("[" .. (os.time() - raft.raftStartTimestamp) .. "s][Node " .. raft.me.id .. "/" .. raft.currentState .. "/term " .. raft.currentTerm ..  "] " .. message)
     end
 end
 
