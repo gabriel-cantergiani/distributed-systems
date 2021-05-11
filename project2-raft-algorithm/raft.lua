@@ -2,24 +2,12 @@ luarpc = require("luarpc")
 interface = require("interface")
 socket = require("socket")
 math = require("math")
+config = require("config")
 
 -- Raft Implementation
 local raft = {}
 
--- definir struct de cada mensagem RPC recebida e enviada
-
--- Definir struct para guardar estado do nó, incluindo todas as variáveis necessárias
-
--- Implementar a recepção da chamada RequestVote
-
--- Implementar a recepção da chamada AppendEntries
-
--- PARA PENSAR -> como vai ser o estado inicial quando o algoritmo começar a execução.
-    -- Implementar método InitializeNode da interface. Neste método, começa todo o algoritmo...
-        -- Se estiver no estado Follower, fica sempre esperando o heartbeat. Dispara uma corotina paralela para contar o tempo até o timeout (randomico). Se houver um timeout antes de receber o heartbeat, muda de estado para Candidato e inicia a eleição enviando um RequestVote para outros nós.
-        -- Se estiver no estado Líder, fica enviando ApplyEntries() vazios para os outros nós periódicamente como forma de heartbeat.
-    -- Implementar método StopNode da interface. Neste método, algum estado interno deve ser alterado, a fim de parar a execução iniciada no metodo acima.
-
+-- SetUp
 function raft.SetUp(peers, me, verbose)
 
     -- Insert RPC connection to all peers in remote_peers table
@@ -35,26 +23,23 @@ function raft.SetUp(peers, me, verbose)
     raft.votedFor = nil
     raft.currentState = "follower"
     raft.running = false
-    raft.heartbeatReceived = false
     raft.lastHeartbeatTimestamp = 0
     raft.waitingForVotes = false
     raft.peersToRetryRequestVote = {}
     raft.verbose = verbose
     math.randomseed(me.port * os.time())
-    raft.randomElectionTimeout = math.random(10,20)
-    -- if me.id == 1 then raft.randomElectionTimeout = 7 else raft.randomElectionTimeout = 10 end
-    raft.heartbeatFrequency = 2
-    -- raft.randomElectionTimeout = 3*raft.me.id
+    raft.randomElectionTimeout = math.random(config.electionTimeoutMin, config.electionTimeoutMax)
+    raft.heartbeatFrequency = config.heartbeatFrequency
     raft.electionStartTimestamp = nil
     raft.raftStartTimestamp = os.time()
     print("Heartbeat timeout: " .. tostring(raft.randomElectionTimeout))
-
 end
 
 -- RPC METHOD
 function raft.InitializeNode()
     -- Inicializa e fica rodando..
     raft.printState("InitializingNode received")
+    raft.lastHeartbeatTimestamp = os.time()
     raft.running = true
     while true do
         if raft.running then
@@ -68,7 +53,6 @@ function raft.InitializeNode()
             if raft.currentState == 'leader' then
             -- Se for leader
                 raft.sendHeartbeats()
-                luarpc.wait(raft.heartbeatFrequency, false)
             elseif raft.currentState == 'candidate' then
             -- Se for candidate
                 if raft.waitingForVotes then
@@ -76,26 +60,20 @@ function raft.InitializeNode()
                 else
                     raft.startElection()
                 end
-                -- Espera os votos chegarem, com um wait uma ordem de grandeza menor que o timeout
-                luarpc.wait(math.max(raft.randomElectionTimeout/5, 1), false)
+                -- Espera os votos chegarem
             elseif raft.currentState == 'follower' then
             -- Se for follower
-                raft.heartbeatReceived = false
-                -- Chama corotina para esperar por timeout aleatório
                 raft.printState("Waiting for heartbeat...")
-                luarpc.wait(raft.randomElectionTimeout, false)
-                -- Se recebeu um Heartbeat, ignora (lider esta vivo)
-                -- if not raft.heartbeatReceived then
-                --     raft.currentState = 'candidate'
-                -- end
-                if not raft.heartbeatReceived or (os.time() - raft.lastHeartbeatTimestamp) > raft.randomElectionTimeout then
-                    raft.currentState = 'candidate'
+                if raft.running then
+                    -- Se recebeu um Heartbeat, ignora (lider esta vivo)
+                    if (os.time() - raft.lastHeartbeatTimestamp) > raft.randomElectionTimeout then
+                        raft.printState("No HeartBeat received within ElectionTimeout. Changing state do candidate")
+                        raft.currentState = 'candidate'
+                    end
                 end
-                -- Se recebeu um RequestVote reply...???
             end
-        else
-            luarpc.wait(raft.heartbeatFrequency, false)
         end
+        luarpc.wait(raft.heartbeatFrequency, false)
     end
     raft.printState("Node Stopped")
 end
@@ -132,10 +110,10 @@ function raft.startElection()
             table.insert(raft.peersToRetryRequestVote, peer)
         end
     end
-    raft.printState("RequestVotes Sent. Waiting for Replies...")
     raft.waitingForVotes = true
-    raft.electionTimeoutLimit = math.random(50,100)
+    raft.electionTimeoutLimit = math.random(config.electionTimeLimitMin, config.electionTimeLimitMax)
     raft.electionStartTimestamp = os.time()
+    raft.printState("RequestVotes Sent. Waiting for Replies... (ElectionTimeoutLimit = " .. raft.electionTimeoutLimit .. ")")
 end
 
 -- PRIVATE
@@ -205,11 +183,12 @@ function raft.ProcessRequestVote()
     vote = "NO"
      -- Se o termo recebido for maior que o atual
     if (raft.requestVoteTerm > raft.currentTerm) or (raft.requestVoteTerm == raft.currentTermand and raft.votedFor == nil) then
-            raft.printState("Received Higher Term. Changing to Follower")
+            raft.printState("Received Higher Term from Node " .. raft.requestVoteNodeID ..  ". Changing to Follower")
             -- Muda para follower e responde OK
             raft.currentState = 'follower'
             raft.currentTerm = raft.requestVoteTerm
             raft.votedFor = raft.requestVoteNodeID
+            raft.lastHeartbeatTimestamp = os.time()
             vote = "YES"
     end
 
@@ -254,6 +233,7 @@ function raft.AppendEntries(term)
             raft.currentTerm = tonumber(term)
             raft.waitingForVotes = false
             raft.votedFor = nil
+            raft.lastHeartbeatTimestamp = os.time()
         end
         -- Se estiver no estado follower:
     elseif raft.currentState == 'follower' then
@@ -265,7 +245,6 @@ function raft.AppendEntries(term)
         end
     end
 
-    raft.heartbeatReceived = true
     raft.lastHeartbeatTimestamp = os.time()
 
     return

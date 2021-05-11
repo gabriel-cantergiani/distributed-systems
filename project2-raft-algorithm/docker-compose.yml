@@ -24,6 +24,14 @@ services:
       - .:/root
     ports:
       - 9000:9000
+  raft-server4:
+    container_name: raft-server4
+    image: ubuntu_lua_socket
+    command: lua /root/init_server.lua 9001
+    volumes:
+      - .:/root
+    ports:
+      - 9001:9001
   raft-tests:
     container_name: raft-tests
     image: ubuntu_lua_socket
