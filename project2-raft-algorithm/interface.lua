@@ -23,6 +23,11 @@ interface = {
       args = {
       }
     },
+    PartitionNode ={
+      resulttype = "void",
+      args = {
+      }
+    },
     StopNode ={
       resulttype = "void",
       args = {

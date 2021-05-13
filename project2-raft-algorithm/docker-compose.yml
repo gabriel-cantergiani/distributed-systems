@@ -3,7 +3,7 @@ services:
   raft-server1:
     container_name: raft-server1
     image: ubuntu_lua_socket
-    command: lua /root/init_server.lua 8888
+    command: lua /root/init_server.lua 1
     volumes:
       - .:/root
     ports:
@@ -11,7 +11,7 @@ services:
   raft-server2:
     container_name: raft-server2
     image: ubuntu_lua_socket
-    command: lua /root/init_server.lua 8889
+    command: lua /root/init_server.lua 2
     volumes:
       - .:/root
     ports:
@@ -19,7 +19,7 @@ services:
   raft-server3:
     container_name: raft-server3
     image: ubuntu_lua_socket
-    command: lua /root/init_server.lua 9000
+    command: lua /root/init_server.lua 3
     volumes:
       - .:/root
     ports:
@@ -27,11 +27,19 @@ services:
   raft-server4:
     container_name: raft-server4
     image: ubuntu_lua_socket
-    command: lua /root/init_server.lua 9001
+    command: lua /root/init_server.lua 4
     volumes:
       - .:/root
     ports:
       - 9001:9001
+  raft-server5:
+    container_name: raft-server5
+    image: ubuntu_lua_socket
+    command: lua /root/init_server.lua 5
+    volumes:
+      - .:/root
+    ports:
+      - 9002:9002
   raft-tests:
     container_name: raft-tests
     image: ubuntu_lua_socket

@@ -10,23 +10,32 @@ local raft = {}
 -- SetUp
 function raft.SetUp(peers, me, verbose)
 
-    -- Insert RPC connection to all peers in remote_peers table
+    -- Nodes information variables
     raft.remote_peers = peers
     raft.me = me
+    if config.fileOutputEnabled then
+        raft.outputFile = io.open(config.fileOutputPath, "a")
+        io.output(raft.outputFile)
+    end
 
-    -- Initialize state values
+    -- Basic State Variables
+    raft.running = false
+    raft.isPartitioned = false
+    raft.currentState = "follower"
+    raft.verbose = verbose
+
+    -- Election State Variables
     raft.currentTerm = 0
     raft.requestVoteTerm = 0
     raft.receivedRequestVote = false
     raft.votingMajority = (#peers / 2) + 1
     raft.votes = 0
     raft.votedFor = nil
-    raft.currentState = "follower"
-    raft.running = false
-    raft.lastHeartbeatTimestamp = 0
     raft.waitingForVotes = false
     raft.peersToRetryRequestVote = {}
-    raft.verbose = verbose
+    
+    -- Timeout related variables
+    raft.lastHeartbeatTimestamp = 0
     math.randomseed(me.port * os.time())
     raft.randomElectionTimeout = math.random(config.electionTimeoutMin, config.electionTimeoutMax)
     raft.heartbeatFrequency = config.heartbeatFrequency
@@ -79,9 +88,17 @@ function raft.InitializeNode()
 end
 
 -- RPC METHOD
+function raft.PartitionNode()
+    raft.printState("PartitionNode received")
+    raft.isPartitioned = true
+    raft.running = true
+end
+
+-- RPC METHOD
 function raft.StopNode()
     raft.printState("StopNode received.")
     raft.heartbeatDue = os.time() - raft.lastHeartbeatTimestamp
+    raft.isPartitioned = true
     raft.running = false
 end
 
@@ -89,6 +106,7 @@ end
 function raft.ResumeNode()
     raft.printState("ResumeNode received.")
     raft.lastHeartbeatTimestamp = os.time() - raft.heartbeatDue
+    raft.isPartitioned = false
     raft.running = true
 end
 
@@ -104,10 +122,14 @@ function raft.startElection()
     raft.peersToRetryRequestVote = {}
     -- Envia RequestVote para outros nós
     for _,peer in ipairs(raft.remote_peers) do
-        raft.printState("Sending RequestVote to Node " .. peer.id)
-        result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
-        if result == "NOT ACK" then
+        if raft.isPartitioned then
             table.insert(raft.peersToRetryRequestVote, peer)
+        else
+            raft.printState("Sending RequestVote to Node " .. peer.id)
+            result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
+            if result == "NOT ACK" then
+                table.insert(raft.peersToRetryRequestVote, peer)
+            end
         end
     end
     raft.waitingForVotes = true
@@ -137,11 +159,13 @@ function raft.processReceivedVotes()
     else
         -- Tenta novamente envio do RequestVote para nos que nao receberam
         for position,peer in ipairs(raft.peersToRetryRequestVote) do
-            raft.printState("Retrying RequestVote to Node " .. peer.id)
-            result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
-            if result == "ACK" then
-                raft.printState("RequestVote ACK received from Node " .. peer.id)
-                table.remove(raft.peersToRetryRequestVote, position)
+            if not raft.isPartitioned then
+                raft.printState("Retrying RequestVote to Node " .. peer.id)
+                result = peer.proxy.RequestVote(raft.me.id, raft.currentTerm)
+                if result == "ACK" then
+                    raft.printState("RequestVote ACK received from Node " .. peer.id)
+                    table.remove(raft.peersToRetryRequestVote, position)
+                end
             end
         end 
     end
@@ -150,7 +174,7 @@ end
 -- RPC METHOD
 function raft.RequestVote(node_id, term)
     -- Nao faz nada se estiver "parado"
-    if not raft.running then return "NOT ACK" end
+    if not raft.running or raft.isPartitioned then return "NOT ACK" end
 
     raft.printState("Received RequestVote")
     -- Responde o requestVote votando ou não no candidato...
@@ -165,7 +189,7 @@ end
 -- RPC METHOD
 function raft.RequestVoteReply(vote)
     -- Nao faz nada se estiver "parado"
-    if not raft.running then return end
+    if not raft.running or raft.isPartitioned then return end
 
     if raft.currentState == 'candidate' then
         if vote == "YES" then
@@ -194,7 +218,7 @@ function raft.ProcessRequestVote()
 
     -- Envia Reply
     for _,node in ipairs(raft.remote_peers) do
-        if node.id == raft.requestVoteNodeID then
+        if node.id == raft.requestVoteNodeID and not raft.isPartitioned then
             node.proxy.RequestVoteReply(vote)
         end
     end
@@ -207,7 +231,7 @@ end
 function raft.sendHeartbeats()
     raft.printState("Sending Heartbeats...")
     -- Se for o líder
-    if raft.currentState == 'leader' then
+    if raft.currentState == 'leader' and not raft.isPartitioned then
         -- Envia AppendEntries() para todos os peers
         for _,peer in ipairs(raft.remote_peers) do
             raft.printState("Sending AppendEntries to Node " .. peer.id)
@@ -220,7 +244,7 @@ end
 -- RPC METHOD
 function raft.AppendEntries(term)
     -- Nao faz nada se estiver "parado"
-    if not raft.running then return end
+    if not raft.running or raft.isPartitioned then return end
 
     raft.printState("Received AppendEntries")
     -- Recebe heartbeat
@@ -252,9 +276,18 @@ end
 
 -- PRIVATE
 function raft.printState(message)
+    log = "[" .. (os.time() - raft.raftStartTimestamp) .. "s][Node " .. raft.me.id .. "/" .. raft.currentState .. "/term " .. raft.currentTerm ..  "] " .. message
     if raft.verbose then
-        print("[" .. (os.time() - raft.raftStartTimestamp) .. "s][Node " .. raft.me.id .. "/" .. raft.currentState .. "/term " .. raft.currentTerm ..  "] " .. message)
+        print(log)
     end
+    if config.fileOutputEnabled then
+        io.write(log)
+    end
+end
+
+-- PRIVATE
+function raft.Healthcheck()
+    return
 end
 
 return raft

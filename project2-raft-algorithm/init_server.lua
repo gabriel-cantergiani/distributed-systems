@@ -2,9 +2,9 @@ raft = require("raft")
 luarpc = require("luarpc")
 config = require("config")
 
-PORT = arg[1]
-if PORT == nil then
-    print("Error: missing argument(s).\nUsage: lua init_server.lua <SERVER_PORT>")
+NODE_ID = arg[1]
+if NODE_ID == nil then
+    print("Error: missing node id argument.\nUsage: lua init_server.lua <NODE_ID>")
     os.exit()
 end
 
@@ -13,7 +13,7 @@ print("Creating proxies with other nodes...")
 me = {}
 peers = {}
 for _, server in ipairs(config.servers) do
-    if server.port == tonumber(PORT) then
+    if server.id == tonumber(NODE_ID) then
         me = server
     else
         raft_node = {}
@@ -28,5 +28,5 @@ end
 print("Setting Up Raft Node...")
 raft.SetUp(peers, me, config.verbose)
 
-luarpc.createServant(raft, config.interface_file, PORT)
+luarpc.createServant(raft, config.interface_file, me.port)
 luarpc.waitIncoming(config.rpc_verbose)
