@@ -14,8 +14,8 @@ function raft.SetUp(peers, me, verbose)
     raft.remote_peers = peers
     raft.me = me
     if config.fileOutputEnabled then
-        raft.outputFile = io.open(config.fileOutputPath, "a")
-        io.output(raft.outputFile)
+        raft.filePath = config.fileOutputFolder .. "node" .. tostring(me.id) .. ".log"
+        raft.outputFile = io.open(raft.filePath, "a")
     end
 
     -- Basic State Variables
@@ -100,6 +100,10 @@ function raft.StopNode()
     raft.heartbeatDue = os.time() - raft.lastHeartbeatTimestamp
     raft.isPartitioned = true
     raft.running = false
+    -- if config.fileOutputEnabled then
+    --     raft.outputFile:close()
+    --     raft.outputFile = nil
+    -- end
 end
 
 -- RPC METHOD
@@ -108,6 +112,10 @@ function raft.ResumeNode()
     raft.lastHeartbeatTimestamp = os.time() - raft.heartbeatDue
     raft.isPartitioned = false
     raft.running = true
+    -- if config.fileOutputEnabled then
+    --     if raft.outputFile then raft.outputFile:close() end 
+    --     raft.outputFile = io.open(raft.filePath, "a")
+    -- end
 end
 
 
@@ -281,7 +289,7 @@ function raft.printState(message)
         print(log)
     end
     if config.fileOutputEnabled then
-        io.write(log)
+        raft.outputFile:write(log .. "\n")
     end
 end
 

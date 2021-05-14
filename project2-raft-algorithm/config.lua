@@ -20,8 +20,8 @@ config.electionTimeoutMax = 30
 config.electionTimeLimitMin = 50
 config.electionTimeLimitMax = 100
 
-config.fileOutputEnabled = false
-config.fileOutputPath = "./logs/raft.log"
+config.fileOutputEnabled = true
+config.fileOutputFolder = "./logs/"
 
 function config.dump(o)
     if type(o) == 'table' then
