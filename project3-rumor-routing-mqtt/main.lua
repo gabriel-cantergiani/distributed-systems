@@ -1,4 +1,3 @@
-local mqtt = require("mqtt_library")
 local rumour = require("rumour")
 local config = require("config")
 
@@ -31,16 +30,7 @@ local graphics = {
         }
     }
 }
-  
-function mqttcb(topic, message)
-   print("Received: " .. topic .. ": " .. message)
-   if message == "a" then controle = not controle end
-end
 
-function love.keypressed(key)
-    print("pressionou tecla!")
-    mqtt_client:publish("controle", key)
-end
 
 function love.mousereleased(x, y, button)
 
@@ -61,7 +51,7 @@ function love.mousereleased(x, y, button)
     -- Clique Consulta
     if (x >= graphics.elements.consulta.position_x and x <= (graphics.elements.consulta.position_x + graphics.elements.consulta.width)) then
         if (y >= graphics.elements.consulta.position_y and y <= (graphics.elements.consulta.position_y + graphics.elements.consulta.height)) then
-            rumour.Consulta()
+            rumour.triggerConsulta()
         end
     end
 
@@ -74,7 +64,9 @@ function love.mousereleased(x, y, button)
 
  end
 
-function love.load(arg)
+
+
+ function love.load(arg)
 
     -- Love
     love.window.setMode(400, 200)
@@ -83,10 +75,6 @@ function love.load(arg)
     node_id = tonumber(arg[1])
     rumour.SetUp(node_id)
 
-    controle = false
-    mqtt_client = mqtt.client.create("localhost", 1883, mqttcb)
-    mqtt_client:connect("cliente love")
-    mqtt_client:subscribe({"controle"})
 end
 
 function love.draw()
@@ -128,5 +116,5 @@ end
 -- end
 
 function love.update(dt)
-  mqtt_client:handler()
+  rumour.HandleMqtt()
 end
