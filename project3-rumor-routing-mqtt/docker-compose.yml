@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  mosquitto-server:
+    container_name: mosquitto-server
+    image: eclipse-mosquitto
+    volumes:
+      - ./mosquitto:/mosquitto/
+      - ./mosquitto/log:/mosquitto/log
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/config:/mosquitto/config
+    ports:
+      - 1883:1883
+      - 9001:9001
+  lua-love:
+    container_name: lua-love
+    image: ubuntu_lua_love
+    # command: lua /root/client.lua lua-server 8888
+    command: love /root/
+    volumes:
+      - .:/root
+  # lua-client2:
+  #   container_name: lua-client2
+  #   image: ubuntu_lua_socket
+  #   command: lua /root/client.lua lua-server 8889
+  #   volumes:
+  #     - .:/root

@@ -1,0 +1,184 @@
+1622362596: mosquitto version 2.0.11 starting
+1622362596: Config loaded from /mosquitto/config/mosquitto.conf.
+1622362596: Opening ipv4 listen socket on port 1883.
+1622362596: Opening ipv6 listen socket on port 1883.
+1622362596: mosquitto version 2.0.11 running
+1622362721: New connection from 172.21.0.1:32908 on port 1883.
+1622362739: Client <unknown> disconnected: No error information.
+1622362758: mosquitto version 2.0.11 terminating
+1622362758: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622364807: mosquitto version 2.0.11 starting
+1622364807: Config loaded from /mosquitto/config/mosquitto.conf.
+1622364807: Opening ipv4 listen socket on port 1883.
+1622364807: Opening ipv6 listen socket on port 1883.
+1622364807: mosquitto version 2.0.11 running
+1622364813: mosquitto version 2.0.11 terminating
+1622364813: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622365174: mosquitto version 2.0.11 starting
+1622365174: Config loaded from /mosquitto/config/mosquitto.conf.
+1622365174: Opening ipv4 listen socket on port 1883.
+1622365174: Opening ipv6 listen socket on port 1883.
+1622365174: mosquitto version 2.0.11 running
+1622365175: mosquitto version 2.0.11 terminating
+1622365175: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622365202: mosquitto version 2.0.11 starting
+1622365202: Config loaded from /mosquitto/config/mosquitto.conf.
+1622365202: Opening ipv4 listen socket on port 1883.
+1622365202: Opening ipv6 listen socket on port 1883.
+1622365202: mosquitto version 2.0.11 running
+1622365730: New connection from 172.21.0.1:33032 on port 1883.
+1622365730: New client connected from 172.21.0.1:33032 as cliente love (p1, c1, k60).
+1622365760: Client cliente love closed its connection.
+1622368635: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622368771: New connection from 172.21.0.1:33038 on port 1883.
+1622368771: New client connected from 172.21.0.1:33038 as cliente love (p1, c1, k60).
+1622368783: Client cliente love closed its connection.
+1622368890: New connection from 172.21.0.1:33044 on port 1883.
+1622368890: New client connected from 172.21.0.1:33044 as cliente love (p1, c1, k60).
+1622368897: Client cliente love closed its connection.
+1622372392: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622374193: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622375993: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622377795: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622379595: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622383595: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622441195: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622442995: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622443240: New connection from 172.21.0.1:33050 on port 1883.
+1622443240: New client connected from 172.21.0.1:33050 as cliente love (p1, c1, k60).
+1622443258: Client cliente love closed its connection.
+1622443373: New connection from 172.21.0.1:33056 on port 1883.
+1622443373: New client connected from 172.21.0.1:33056 as cliente love (p1, c1, k60).
+1622443378: Client cliente love closed its connection.
+1622443415: New connection from 172.21.0.1:33062 on port 1883.
+1622443415: New client connected from 172.21.0.1:33062 as cliente love (p1, c1, k60).
+1622443418: Client cliente love closed its connection.
+1622444777: New connection from 172.21.0.1:33068 on port 1883.
+1622444777: New client connected from 172.21.0.1:33068 as cliente love (p1, c1, k60).
+1622444784: Client cliente love closed its connection.
+1622444796: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622444813: New connection from 172.21.0.1:33074 on port 1883.
+1622444813: New client connected from 172.21.0.1:33074 as cliente love (p1, c1, k60).
+1622444816: Client cliente love closed its connection.
+1622444845: New connection from 172.21.0.1:33080 on port 1883.
+1622444845: New client connected from 172.21.0.1:33080 as cliente love (p1, c1, k60).
+1622444846: Client cliente love closed its connection.
+1622444856: New connection from 172.21.0.1:33086 on port 1883.
+1622444856: New client connected from 172.21.0.1:33086 as cliente love (p1, c1, k60).
+1622444863: Client cliente love closed its connection.
+1622444941: New connection from 172.21.0.1:33092 on port 1883.
+1622444941: New client connected from 172.21.0.1:33092 as cliente love (p1, c1, k60).
+1622444943: Client cliente love closed its connection.
+1622445027: New connection from 172.21.0.1:33098 on port 1883.
+1622445027: New client connected from 172.21.0.1:33098 as cliente love (p1, c1, k60).
+1622445043: Client cliente love closed its connection.
+1622445164: New connection from 172.21.0.1:33104 on port 1883.
+1622445164: New client connected from 172.21.0.1:33104 as cliente love (p1, c1, k60).
+1622445169: Client cliente love closed its connection.
+1622445176: New connection from 172.21.0.1:33110 on port 1883.
+1622445176: New client connected from 172.21.0.1:33110 as cliente love (p1, c1, k60).
+1622445197: Client cliente love closed its connection.
+1622445210: New connection from 172.21.0.1:33116 on port 1883.
+1622445210: New client connected from 172.21.0.1:33116 as cliente love (p1, c1, k60).
+1622445213: Client cliente love closed its connection.
+1622445220: New connection from 172.21.0.1:33122 on port 1883.
+1622445220: New client connected from 172.21.0.1:33122 as cliente love (p1, c1, k60).
+1622445227: Client cliente love closed its connection.
+1622445265: New connection from 172.21.0.1:33128 on port 1883.
+1622445265: New client connected from 172.21.0.1:33128 as cliente love (p1, c1, k60).
+1622445289: Client cliente love closed its connection.
+1622445292: New connection from 172.21.0.1:33134 on port 1883.
+1622445292: New client connected from 172.21.0.1:33134 as cliente love (p1, c1, k60).
+1622445302: Client cliente love closed its connection.
+1622445315: New connection from 172.21.0.1:33140 on port 1883.
+1622445315: New client connected from 172.21.0.1:33140 as cliente love (p1, c1, k60).
+1622445367: Client cliente love closed its connection.
+1622445370: New connection from 172.21.0.1:33146 on port 1883.
+1622445370: New client connected from 172.21.0.1:33146 as cliente love (p1, c1, k60).
+1622445446: Client cliente love closed its connection.
+1622445449: New connection from 172.21.0.1:33152 on port 1883.
+1622445449: New client connected from 172.21.0.1:33152 as cliente love (p1, c1, k60).
+1622445454: Client cliente love closed its connection.
+1622445623: New connection from 172.21.0.1:33158 on port 1883.
+1622445623: New client connected from 172.21.0.1:33158 as cliente love (p1, c1, k60).
+1622445626: Client cliente love closed its connection.
+1622445645: New connection from 172.21.0.1:33164 on port 1883.
+1622445645: New client connected from 172.21.0.1:33164 as cliente love (p1, c1, k60).
+1622445647: Client cliente love closed its connection.
+1622445770: New connection from 172.21.0.1:33170 on port 1883.
+1622445770: New client connected from 172.21.0.1:33170 as cliente love (p1, c1, k60).
+1622445772: Client cliente love closed its connection.
+1622445782: New connection from 172.21.0.1:33176 on port 1883.
+1622445782: New client connected from 172.21.0.1:33176 as cliente love (p1, c1, k60).
+1622445784: Client cliente love closed its connection.
+1622445793: New connection from 172.21.0.1:33182 on port 1883.
+1622445793: New client connected from 172.21.0.1:33182 as cliente love (p1, c1, k60).
+1622445795: Client cliente love closed its connection.
+1622445801: New connection from 172.21.0.1:33188 on port 1883.
+1622445801: New client connected from 172.21.0.1:33188 as cliente love (p1, c1, k60).
+1622445804: Client cliente love closed its connection.
+1622445810: New connection from 172.21.0.1:33194 on port 1883.
+1622445810: New client connected from 172.21.0.1:33194 as cliente love (p1, c1, k60).
+1622445811: Client cliente love closed its connection.
+1622445819: New connection from 172.21.0.1:33200 on port 1883.
+1622445819: New client connected from 172.21.0.1:33200 as cliente love (p1, c1, k60).
+1622445820: Client cliente love closed its connection.
+1622445883: New connection from 172.21.0.1:33206 on port 1883.
+1622445883: New client connected from 172.21.0.1:33206 as cliente love (p1, c1, k60).
+1622445885: Client cliente love closed its connection.
+1622446654: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622447117: New connection from 172.21.0.1:33212 on port 1883.
+1622447117: New client connected from 172.21.0.1:33212 as cliente love (p1, c1, k60).
+1622447120: Client cliente love closed its connection.
+1622447149: New connection from 172.21.0.1:33218 on port 1883.
+1622447149: New client connected from 172.21.0.1:33218 as cliente love (p1, c1, k60).
+1622447153: Client cliente love closed its connection.
+1622447159: New connection from 172.21.0.1:33224 on port 1883.
+1622447159: New client connected from 172.21.0.1:33224 as cliente love (p1, c1, k60).
+1622447161: Client cliente love closed its connection.
+1622447172: New connection from 172.21.0.1:33230 on port 1883.
+1622447172: New client connected from 172.21.0.1:33230 as cliente love (p1, c1, k60).
+1622447175: Client cliente love closed its connection.
+1622447181: New connection from 172.21.0.1:33236 on port 1883.
+1622447181: New client connected from 172.21.0.1:33236 as cliente love (p1, c1, k60).
+1622447188: Client cliente love closed its connection.
+1622447283: New connection from 172.21.0.1:33242 on port 1883.
+1622447283: New client connected from 172.21.0.1:33242 as cliente love (p1, c1, k60).
+1622447285: Client cliente love closed its connection.
+1622447329: New connection from 172.21.0.1:33248 on port 1883.
+1622447329: New client connected from 172.21.0.1:33248 as cliente love (p1, c1, k60).
+1622447331: Client cliente love closed its connection.
+1622447373: New connection from 172.21.0.1:33254 on port 1883.
+1622447373: New client connected from 172.21.0.1:33254 as cliente love (p1, c1, k60).
+1622447378: Client cliente love closed its connection.
+1622447471: New connection from 172.21.0.1:33260 on port 1883.
+1622447471: New client connected from 172.21.0.1:33260 as cliente love (p1, c1, k60).
+1622447474: Client cliente love closed its connection.
+1622447497: New connection from 172.21.0.1:33266 on port 1883.
+1622447497: New client connected from 172.21.0.1:33266 as cliente love (p1, c1, k60).
+1622447499: Client cliente love closed its connection.
+1622447520: New connection from 172.21.0.1:33272 on port 1883.
+1622447520: New client connected from 172.21.0.1:33272 as cliente love (p1, c1, k60).
+1622447522: Client cliente love closed its connection.
+1622447570: New connection from 172.21.0.1:33278 on port 1883.
+1622447570: New client connected from 172.21.0.1:33278 as cliente love (p1, c1, k60).
+1622447572: Client cliente love closed its connection.
+1622447600: New connection from 172.21.0.1:33284 on port 1883.
+1622447600: New client connected from 172.21.0.1:33284 as cliente love (p1, c1, k60).
+1622447602: Client cliente love closed its connection.
+1622447607: New connection from 172.21.0.1:33290 on port 1883.
+1622447607: New client connected from 172.21.0.1:33290 as cliente love (p1, c1, k60).
+1622447609: Client cliente love closed its connection.
+1622448454: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622448826: New connection from 172.21.0.1:33296 on port 1883.
+1622448826: New client connected from 172.21.0.1:33296 as cliente love (p1, c1, k60).
+1622448829: Client cliente love closed its connection.
+1622449339: New connection from 172.21.0.1:33302 on port 1883.
+1622449339: New client connected from 172.21.0.1:33302 as cliente love (p1, c1, k60).
+1622449376: Client cliente love closed its connection.
+1622449380: New connection from 172.21.0.1:33308 on port 1883.
+1622449380: New client connected from 172.21.0.1:33308 as cliente love (p1, c1, k60).
+1622449385: Client cliente love closed its connection.
+1622449397: New connection from 172.21.0.1:33314 on port 1883.
+1622449397: New client connected from 172.21.0.1:33314 as cliente love (p1, c1, k60).
+1622449415: Client cliente love closed its connection.
