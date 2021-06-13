@@ -27,6 +27,9 @@ local graphics = {
             position_x = 20, position_y = 100, width = 350, height = 80,
             color_r = 96/255, color_g = 96/255, color_b = 96/255,
             text_x = 30, text_y = 80
+        },
+        title = {
+            position_x = 20, position_y = 5
         }
     }
 }
@@ -75,6 +78,9 @@ function love.mousereleased(x, y, button)
     node_id = tonumber(arg[1])
     rumour.SetUp(node_id)
 
+    -- Graphics
+    graphics.elements.title.text = "Node " .. tostring(node_id)
+
 end
 
 function love.draw()
@@ -103,6 +109,7 @@ function love.draw()
     love.graphics.print("consulta", graphics.elements.consulta.text_x, graphics.elements.consulta.text_y)
     love.graphics.print("estado", graphics.elements.estado.text_x, graphics.elements.estado.text_y)
     love.graphics.print("logs", graphics.elements.logs.text_x, graphics.elements.logs.text_y)
+    love.graphics.print(graphics.elements.title.text, graphics.elements.title.position_x, graphics.elements.title.position_y)
 
     -- love.graphics.setBackgroundColor(0, 255, 0)
     --  love.graphics.rectangle(mode(fill ou line), x, y, width, height)
