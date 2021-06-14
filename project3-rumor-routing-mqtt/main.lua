@@ -30,9 +30,20 @@ local graphics = {
         },
         title = {
             position_x = 20, position_y = 5
+        },
+        mouse_feedback = {
+            is_pressed = false,
+            x = 0,
+            y = 0
         }
     }
 }
+
+function love.mousepressed(x, y, button)
+    graphics.elements.mouse_feedback.x = x
+    graphics.elements.mouse_feedback.y = y
+    graphics.elements.mouse_feedback.is_pressed = true
+end
 
 
 function love.mousereleased(x, y, button)
@@ -64,6 +75,8 @@ function love.mousereleased(x, y, button)
             rumour.Estado()
         end
     end
+
+    graphics.elements.mouse_feedback.is_pressed = false
 
  end
 
@@ -116,6 +129,10 @@ function love.draw()
     love.graphics.print("logs", graphics.elements.logs.text_x, graphics.elements.logs.text_y)
     love.graphics.print(graphics.elements.title.text, graphics.elements.title.position_x, graphics.elements.title.position_y)
 
+    if graphics.elements.mouse_feedback.is_pressed then
+        love.graphics.setColor(255/255, 0/255, 0/255) -- Red
+        love.graphics.circle("fill", graphics.elements.mouse_feedback.x, graphics.elements.mouse_feedback.y, 15)
+    end
     -- love.graphics.setBackgroundColor(0, 255, 0)
     --  love.graphics.rectangle(mode(fill ou line), x, y, width, height)
     --  love.graphics.draw(image, x, y)

@@ -54,17 +54,17 @@ end
 
 function rumour.triggerEvento1()
     rumour.log("Event1 triggered")
-    rumour.sendMessageToNeighbours("event1")
+    rumour.sendMessageToNeighbours("event1 from Node " .. rumour.me.topic)
 end
 
 function rumour.triggerEvento2()
     rumour.log("Event2 triggered")
-    rumour.sendMessageToNeighbours("event2")
+    rumour.sendMessageToNeighbours("event2 from Node " .. rumour.me.topic)
 end
 
 function rumour.triggerConsulta()
     rumour.log("Consulta triggered")
-    rumour.sendMessageToNeighbours("consulta")
+    rumour.sendMessageToNeighbours("consulta from Node " .. rumour.me.topic)
 end
 
 function rumour.Estado()
