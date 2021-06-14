@@ -21,6 +21,8 @@ config.nodes = {
     {host = "localhost", id = 16, position_x = 4, position_y = 4},
 }
 
+config.max_hops = 10
+
 config.fileOutputEnabled = true
 config.fileOutputFolder = "./logs/"
 

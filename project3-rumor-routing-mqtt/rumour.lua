@@ -28,6 +28,13 @@ function rumour.SetUp(node_id, printLog)
             end
         end
     end
+
+    -- Events
+    math.randomseed(node_id * os.time())
+    rumour.events = {
+        -- event1 = {node_id(path)=x, hops=y}
+        -- event2 = {node_id(path)=x, hops=y}
+    }
     
     -- MQTT set up
     rumour.me.topic = "no-" .. tostring(rumour.me.position_x) .. "-" .. tostring(rumour.me.position_y)
@@ -56,33 +63,33 @@ end
 
 function rumour.triggerEvento1()
     rumour.log("Event1 triggered")
-    rumour.sendMessageToNeighbours("event1 from Node " .. rumour.me.topic)
+    rumour.sendMessageToNeighbour("event1 from Node " .. rumour.me.topic)
 end
 
 function rumour.triggerEvento2()
     rumour.log("Event2 triggered")
-    rumour.sendMessageToNeighbours("event2 from Node " .. rumour.me.topic)
+    rumour.sendMessageToNeighbour("event2 from Node " .. rumour.me.topic)
 end
 
 function rumour.triggerConsulta1()
     rumour.log("Consulta1 triggered")
-    rumour.sendMessageToNeighbours("consulta1 from Node " .. rumour.me.topic)
+    rumour.sendMessageToNeighbour("consulta1 from Node " .. rumour.me.topic)
 end
 
 function rumour.triggerConsulta2()
     rumour.log("Consulta2 triggered")
-    rumour.sendMessageToNeighbours("consulta2 from Node " .. rumour.me.topic)
+    rumour.sendMessageToNeighbour("consulta2 from Node " .. rumour.me.topic)
 end
 
 function rumour.Estado()
     rumour.log("Estado triggered")
 end
 
-function rumour.sendMessageToNeighbours(message)
-    for _,neighbour in ipairs(rumour.neighbours) do
-        mqtt_client:publish(neighbour, message)
-        rumour.log("Sending " .. message .. " to node " .. neighbour)
-    end
+function rumour.sendMessageToNeighbour(message)
+    random_index = math.random(1, #rumour.neighbours)
+    random_neighbour = rumour.neighbours[random_index]
+    mqtt_client:publish(random_neighbour, message)
+    rumour.log("Sending " .. message .. " to node " .. random_neighbour)
 end
 
 
