@@ -34,6 +34,7 @@ function rumour.SetUp(node_id)
     mqtt_client:connect("Node " .. tostring(rumour.me.id))
     mqtt_client:subscribe({rumour.me.topic})
     
+    rumour.initial_timestamp = os.time()
     rumour.log("Initialized")
 end
 
@@ -80,7 +81,7 @@ end
 
 
 function rumour.log(message)
-    msg = "[Node ".. tostring(rumour.me.id) .. "] " .. tostring(message)
+    msg = "[" .. (os.time() - rumour.initial_timestamp) .. "s][Node ".. tostring(rumour.me.id) .. "] " .. tostring(message)
     rumour.outputFile:write(msg .. "\n")
 end
 
