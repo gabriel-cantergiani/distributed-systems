@@ -37,6 +37,10 @@ function rumour.SetUp(node_id)
     rumour.log("Initialized")
 end
 
+function rumour.getNodePosition()
+    return rumour.me.position_x, rumour.me.position_y
+end
+
 
 function rumour.HandleMqtt()
     mqtt_client:handler()

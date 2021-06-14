@@ -71,12 +71,17 @@ function love.mousereleased(x, y, button)
 
  function love.load(arg)
 
-    -- Love
-    love.window.setMode(400, 200)
-
     -- Rumour
     node_id = tonumber(arg[1])
     rumour.SetUp(node_id)
+    row, column = rumour.getNodePosition()
+    rows_columns_num = math.sqrt(config.nodes_num)
+
+    -- Love
+    local _, _, flags = love.window.getMode()
+    local width, height = love.window.getDesktopDimensions(flags.display)
+    love.window.setMode(width/rows_columns_num, height/rows_columns_num)
+    love.window.setPosition((width*(column - 1))/rows_columns_num, (height*(row - 1))/rows_columns_num + 20, flags.display)
 
     -- Graphics
     graphics.elements.title.text = "Node " .. tostring(node_id)
