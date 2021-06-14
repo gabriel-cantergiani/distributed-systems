@@ -3,11 +3,12 @@ local mqtt = require("mqtt_library")
 
 local rumour = {}
 
-function rumour.SetUp(node_id)
+function rumour.SetUp(node_id, printLog)
 
     -- Set Up logging
     rumour.filePath = config.fileOutputFolder .. "node" .. tostring(node_id) .. ".log"
     rumour.outputFile = io.open(rumour.filePath, "w")
+    rumour.print = printLog
     
     -- Get node position
     for _,node in ipairs(config.nodes) do
@@ -63,9 +64,14 @@ function rumour.triggerEvento2()
     rumour.sendMessageToNeighbours("event2 from Node " .. rumour.me.topic)
 end
 
-function rumour.triggerConsulta()
-    rumour.log("Consulta triggered")
-    rumour.sendMessageToNeighbours("consulta from Node " .. rumour.me.topic)
+function rumour.triggerConsulta1()
+    rumour.log("Consulta1 triggered")
+    rumour.sendMessageToNeighbours("consulta1 from Node " .. rumour.me.topic)
+end
+
+function rumour.triggerConsulta2()
+    rumour.log("Consulta2 triggered")
+    rumour.sendMessageToNeighbours("consulta2 from Node " .. rumour.me.topic)
 end
 
 function rumour.Estado()
@@ -83,6 +89,7 @@ end
 function rumour.log(message)
     msg = "[" .. (os.time() - rumour.initial_timestamp) .. "s][Node ".. tostring(rumour.me.id) .. "] " .. tostring(message)
     rumour.outputFile:write(msg .. "\n")
+    rumour.print(message)
 end
 
 return rumour
