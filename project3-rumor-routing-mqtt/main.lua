@@ -98,7 +98,8 @@ end
     love.window.setPosition((desktop_width*(column - 1))/rows_columns_num, (desktop_height*(row - 1))/rows_columns_num + 20, flags.display)
 
     -- Graphics
-    setElementsPositions(window_width, window_height, node_id)
+    setElementsPositions(window_width, window_height)
+    graphics.elements.title.text = "Node " .. tostring(node_id) .. " (no-" .. tostring(row) .. "-" .. tostring(column) .. ")"
 
 end
 
@@ -132,7 +133,7 @@ function love.draw()
     love.graphics.print("logs", graphics.elements.logs.text_x, graphics.elements.logs.text_y)
     love.graphics.print(graphics.elements.title.text, graphics.elements.title.position_x, graphics.elements.title.position_y)
     love.graphics.setColor(255/255, 255/255, 255/255) -- White
-    love.graphics.print(graphics.elements.logs.log_text, graphics.elements.logs.text_x + 10, graphics.elements.logs.text_y + 20)
+    love.graphics.print(graphics.elements.logs.log_text, graphics.elements.logs.text_x, graphics.elements.logs.text_y + 20)
 
     if graphics.elements.mouse_feedback.is_pressed then
         love.graphics.setColor(255/255, 0/255, 0/255) -- Red
@@ -154,7 +155,7 @@ function love.update(dt)
 end
 
 
-function setElementsPositions(window_width, window_height, node_id)
+function setElementsPositions(window_width, window_height)
 
     local button_width = window_width * 0.18
     local button_height = window_height * 0.2
@@ -215,7 +216,6 @@ function setElementsPositions(window_width, window_height, node_id)
     -- Title
     graphics.elements.title.position_x = space_between_width
     graphics.elements.title.position_y = 1
-    graphics.elements.title.text = "Node " .. tostring(node_id)
 
 end
 
