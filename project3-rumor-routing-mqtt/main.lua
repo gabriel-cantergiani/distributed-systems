@@ -33,28 +33,28 @@ function love.mousereleased(x, y, button)
     -- Clique Evento 1
     if (x >= graphics.elements.evento1.position_x and x <= (graphics.elements.evento1.position_x + graphics.elements.evento1.width)) then
         if (y >= graphics.elements.evento1.position_y and y <= (graphics.elements.evento1.position_y + graphics.elements.evento1.height)) then
-            rumour.triggerEvento1()
+            rumour.triggerMessage("agent", "event1")
         end
     end
 
     -- Clique Evento 2
     if (x >= graphics.elements.evento2.position_x and x <= (graphics.elements.evento2.position_x + graphics.elements.evento2.width)) then
         if (y >= graphics.elements.evento2.position_y and y <= (graphics.elements.evento2.position_y + graphics.elements.evento2.height)) then
-            rumour.triggerEvento2()
+            rumour.triggerMessage("agent", "event2")
         end
     end
 
     -- Clique Consulta1
     if (x >= graphics.elements.consulta1.position_x and x <= (graphics.elements.consulta1.position_x + graphics.elements.consulta1.width)) then
         if (y >= graphics.elements.consulta1.position_y and y <= (graphics.elements.consulta1.position_y + graphics.elements.consulta1.height)) then
-            rumour.triggerConsulta1()
+            rumour.triggerMessage("query", "event1")
         end
     end
 
     -- Clique Consulta2
     if (x >= graphics.elements.consulta2.position_x and x <= (graphics.elements.consulta2.position_x + graphics.elements.consulta2.width)) then
         if (y >= graphics.elements.consulta2.position_y and y <= (graphics.elements.consulta2.position_y + graphics.elements.consulta2.height)) then
-            rumour.triggerConsulta2()
+            rumour.triggerMessage("query", "event2")
         end
     end
 

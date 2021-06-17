@@ -33,8 +33,8 @@ function rumour.SetUp(node_id, printLog)
     -- Events
     math.randomseed(node_id * os.time())
     rumour.events = {
-        event1 = {agent_path=nil, agent_hops=0, query_path=nil, query_hops=0},
-        event2 = {agent_path=nil, agent_hops=0, query_path=nil, query_hops=0}
+        event1 = {agent_path=nil, agent_hops=0, query_path=nil, query_hops=0, is_observer = false},
+        event2 = {agent_path=nil, agent_hops=0, query_path=nil, query_hops=0, is_observer = false}
     }
     
     -- MQTT set up
@@ -54,6 +54,18 @@ end
 
 function rumour.HandleMqtt()
     mqtt_client:handler()
+
+    -- Check if event1 has expired
+    if rumour.events.event1.event_observed_timestamp ~= nil and (os.time() - rumour.events.event1.event_observed_timestamp) > config.event_timeout then
+        rumour.events.event1.event_observed_timestamp = nil
+        rumour.events.event1.is_observer = false
+    end
+
+    -- Check if event2 has expired
+    if rumour.events.event2.event_observed_timestamp ~= nil and (os.time() - rumour.events.event2.event_observed_timestamp) > config.event_timeout then
+        rumour.events.event2.event_observed_timestamp = nil
+        rumour.events.event2.is_observer = false
+    end
 end
 
 function mqttcb(topic, message)
@@ -85,29 +97,60 @@ function rumour.processReceivedMessage(message)
             rumour.log("Event agent reached hops limit")
         end
     elseif message.type == "query" then
-        -- Update message
-        incoming_message_sender = message.sender
-        message.sender = rumour.me.topic
-        message.hops = message.hops + 1
 
-        sleep(config.sleep_between_hops)
-        -- Check events table
-        if rumour.events[message.event].agent_path ~= nil then
-            -- Forward query to node_path
-            rumour.log("Forwarding event query")
-            rumour.sendMessageToNeighbour(message, rumour.events[message.event].agent_path)
-        elseif message.hops < config.query_max_hops then
-            -- Forward query to random node
-            rumour.log("Randomly Forwarding event query")
-            rumour.sendMessageToRandomNeighbour(message)
+        if rumour.events[message.event].is_observer then
+            rumour.AnswerEventQuery()
+            return
         else
-            rumour.log("Event query reached hops limit")
+            -- Forwarding query...
+
+            -- Update message
+            incoming_message_sender = message.sender
+            message.sender = rumour.me.topic
+            message.hops = message.hops + 1
+
+            sleep(config.sleep_between_hops)
+            -- Check events table
+            if rumour.events[message.event].agent_path ~= nil then
+                -- Forward query to node_path
+                rumour.log("Forwarding event query")
+                rumour.sendMessageToNeighbour(message, rumour.events[message.event].agent_path)
+            elseif message.hops < config.query_max_hops then
+                -- Forward query to random node
+                rumour.log("Randomly Forwarding event query")
+                rumour.sendMessageToRandomNeighbour(message)
+            else
+                rumour.log("Event query reached hops limit")
+            end
+
+            -- Update events table
+            rumour.events[message.event].query_path = incoming_message_sender
+            rumour.events[message.event].query_hops = message.hops
         end
 
-        -- Update events table
-        rumour.events[message.event].query_path = incoming_message_sender
-        rumour.events[message.event].query_hops = message.hops
+    end
 
+end
+
+function rumour.triggerMessage(message_type, message_event)
+    rumour.log(message_event .. " " .. message_type .. " triggered")
+    message = {
+        type = message_type,
+        event = message_event,
+        sender = rumour.me.topic,
+        hops = 0
+    }
+
+    if message_type == "query" and rumour.events[message_event].node_path ~= nil then
+        -- encaminha no path do evento
+        rumour.sendMessageToNeighbour(message, rumour.events[message_event].node_path)
+    else
+        if message_type == "event" then
+            rumour.events[message_event].is_observer = true
+            rumour.events[message_event].event_observed_timestamp = os.time()
+        end
+        -- encaminha para vizinho aleatorio
+        rumour.sendMessageToRandomNeighbour(message)
     end
 
 end

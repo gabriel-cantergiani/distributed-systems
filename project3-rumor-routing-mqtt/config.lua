@@ -24,6 +24,7 @@ config.nodes = {
 config.query_max_hops = 5
 config.agent_max_hops = 5
 config.sleep_between_hops = 3
+config.event_timeout = 30 -- in seconds
 
 config.fileOutputEnabled = true
 config.fileOutputFolder = "./logs/"
