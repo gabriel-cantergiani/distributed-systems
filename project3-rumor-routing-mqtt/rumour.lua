@@ -44,7 +44,7 @@ function rumour.SetUp(node_id, printLog)
     mqtt_client:subscribe({rumour.me.topic})
     
     rumour.initial_timestamp = os.time()
-    rumour.log("Initialized")
+    rumour.log("Initialized", true)
 end
 
 function rumour.getNodePosition()
@@ -75,11 +75,6 @@ function mqttcb(topic, message)
         else
             rumour.queryReceived(decoded_message)
         end
-
-        -- for _,event in ipairs(decoded_message.events) do
-        --     rumour.log("Sending " .. event.event .. "-" .. decoded_message.type .. " from node " .. event.sender)
-        -- end
-        -- rumour.processReceivedMessage(decoded_message)
     end
 end
 
@@ -105,11 +100,11 @@ function rumour.agentReceived(agent)
     end -- end for
 
     if agent.hops < config.agent_max_hops then
-        rumour.log("Forwarding Agent")
+        rumour.log("Forwarding Agent", true)
         sleep(config.sleep_between_hops)
         rumour.sendMessageToRandomNeighbour(agent)
     else
-        rumour.log("Agent reached hops limit")
+        rumour.log("Agent reached hops limit", true)
     end
 
 end
@@ -119,36 +114,39 @@ function rumour.queryReceived(query)
 
     if query.hops < config.query_max_hops then
         if rumour.events[query.event].event_distance == nil then
-            rumour.log("Forwarding query to random direction")
+            rumour.log("Forwarding query to random direction", true)
             sleep(config.sleep_between_hops)
             rumour.sendMessageToRandomNeighbour(query)
         elseif rumour.events[query.event].event_distance == 0 then
             rumour.AnswerEventQuery()
         elseif rumour.events[query.event].event_distance > 0 then
-            rumour.log("Forwarding query to event direction")
+            rumour.log("Forwarding query to event direction", true)
             sleep(config.sleep_between_hops)
             rumour.sendMessageToNeighbour(query, rumour.events[query.event].event_direction)
         end
     else
-        rumour.log("Query reached max hops limit")
+        rumour.log("Query reached max hops limit", true)
     end
 
 end
 
 function rumour.AnswerEventQuery()
-    rumour.log("answering event query...") -- TODO
+    rumour.log("answering event query...", true) -- TODO
 end
 
 function rumour.triggerMessage(message_type, message_event)
-    rumour.log(message_event .. " " .. message_type .. " triggered")
+    rumour.log(message_event .. " " .. message_type .. " triggered", true)
 
     if message_type == "query" then
         message = {
             type = "query",
             event = message_event,
             source_direction = rumour.me.topic,
-            hops = 0
+            hops = 0,
+            visited_nodes = {}
         }
+
+        table.insert(message.visited_nodes, rumour.me.topic)
 
         rumour.events[message_event].query_distance = 0
         rumour.events[message_event].query_direction = rumour.me.topic
@@ -167,9 +165,11 @@ function rumour.triggerMessage(message_type, message_event)
             type = "agent",
             events = {},
             source_direction = rumour.me.topic,
-            hops = 0
+            hops = 0,
+            visited_nodes = {}
         }
         message.events[message_event] = {distance = 0}
+        table.insert(message.visited_nodes, rumour.me.topic)
 
         rumour.events[message_event].event_distance = 0
         rumour.events[message_event].event_direction = rumour.me.topic
@@ -184,30 +184,71 @@ function rumour.triggerMessage(message_type, message_event)
 end
 
 function rumour.Estado()
-    rumour.log("Estado triggered")
+    rumour.log("Estado triggered", true)
 end
 
 function rumour.sendMessageToRandomNeighbour(message)
-    -- Get random neighbour
-    random_index = math.random(1, #rumour.neighbours)
-    random_neighbour = rumour.neighbours[random_index]
+
+    table.insert(message.visited_nodes, rumour.me.topic)
+
+    found, random_neighbour = rumour.getUnvisitedRandomNeighbour(message.visited_nodes)
+
+    if not found then
+        rumour.log("All neighbours were already visited by agent/query", true)
+        return
+    end
 
     -- Decode message table into string and publish it to mqtt
     mqtt_client:publish(random_neighbour, json.encode(message))
-    rumour.log("Sending " .. message.type .. " to node " .. random_neighbour)
+    rumour.log("Sending " .. message.type .. " to node " .. random_neighbour, true)
 end
 
 function rumour.sendMessageToNeighbour(message, neighbour)
     -- Decode message table into string and publish it to mqtt
     mqtt_client:publish(neighbour, json.encode(message))
-    rumour.log("Sending " .. message.type .. " to node " .. neighbour)
+    rumour.log("Sending " .. message.type .. " to node " .. neighbour, true)
+end
+
+function rumour.getUnvisitedRandomNeighbour(visited_nodes)
+
+    rumour.log(config.dump(visited_nodes), false)
+    
+    -- Shuffle neighbours list
+    local shuffled_neighbours = {}
+    for i, v in ipairs(rumour.neighbours) do
+        local pos = math.random(1, #shuffled_neighbours+1)
+        table.insert(shuffled_neighbours, pos, v)
+    end
+
+    
+    local neighbour_visited_by_agent = false
+    
+    rumour.log(config.dump(shuffled_neighbours), false)
+    -- Get neighbour one by one, checking if it was already visited
+    for _,random_neighbour in ipairs(shuffled_neighbours) do
+        for _,node in ipairs(visited_nodes) do
+            rumour.log(random_neighbour, false)
+            rumour.log(node, false)
+            if node == random_neighbour then 
+                neighbour_visited_by_agent = true
+                break
+            end
+        end
+        if not neighbour_visited_by_agent then
+            rumour.log("Found: " .. random_neighbour, false)
+            return true, random_neighbour
+        end
+    end
+
+    return false, nil
+
 end
 
 
-function rumour.log(message)
+function rumour.log(message, print)
     msg = "[" .. (os.time() - rumour.initial_timestamp) .. "s][Node ".. tostring(rumour.me.id) .. "] " .. tostring(message)
     rumour.outputFile:write(msg .. "\n")
-    rumour.print(message)
+    if print then rumour.print(message) end
 end
 
 
