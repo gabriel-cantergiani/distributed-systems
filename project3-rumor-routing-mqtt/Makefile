@@ -3,7 +3,7 @@ run-mosquitto-server:
 	docker-compose up -d mosquitto-server
 
 run-client-container:
-	docker-compose up lua-client
+	docker-compose up lua-love
 
 # env:Path += ";C:\Program Files\LOVE\"
 run-love:

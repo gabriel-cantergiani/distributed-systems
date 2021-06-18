@@ -33,8 +33,8 @@ function rumour.SetUp(node_id, printLog)
     -- Events
     math.randomseed(node_id * os.time())
     rumour.events = {
-        event1 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false},
-        event2 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false}
+        event1 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false, is_query_source = false},
+        event2 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false, is_query_source = false}
     }
     
     -- MQTT set up
@@ -72,8 +72,10 @@ function mqttcb(topic, message)
         decoded_message = json.decode(message)
         if decoded_message.type == "agent" then
             rumour.agentReceived(decoded_message)
-        else
+        elseif decoded_message.type == "query" then
             rumour.queryReceived(decoded_message)
+        else
+            rumour.queryResponseReceived(decoded_message)
         end
     end
 end
@@ -95,9 +97,10 @@ function rumour.agentReceived(agent)
         if rumour.events[event].event_distance ~= nil then
             if agent.events[event] == nil then agent.events[event] = {} end
             agent.events[event].distance = rumour.events[event].event_distance
-            agent.events[event].source_direction = rumour.me.topic
         end
     end -- end for
+    
+    agent.source_direction = rumour.me.topic
 
     if agent.hops < config.agent_max_hops then
         rumour.log("Forwarding Agent", true)
@@ -110,28 +113,60 @@ function rumour.agentReceived(agent)
 end
 
 function rumour.queryReceived(query)
-    query.hops = query.hops + 1
 
-    if query.hops < config.query_max_hops then
-        if rumour.events[query.event].event_distance == nil then
+    -- Update Node
+    rumour.events[query.event].query_direction = query.source_direction
+    rumour.events[query.event].distance = query.hops
+
+    -- Update query
+    query.hops = query.hops + 1
+    
+    if rumour.events[query.event].event_distance == nil then
+        query.source_direction = rumour.me.topic
+        if query.hops < config.query_max_hops then
             rumour.log("Forwarding query to random direction", true)
             sleep(config.sleep_between_hops)
             rumour.sendMessageToRandomNeighbour(query)
-        elseif rumour.events[query.event].event_distance == 0 then
-            rumour.AnswerEventQuery()
-        elseif rumour.events[query.event].event_distance > 0 then
-            rumour.log("Forwarding query to event direction", true)
-            sleep(config.sleep_between_hops)
-            rumour.sendMessageToNeighbour(query, rumour.events[query.event].event_direction)
+        else
+            rumour.log("Query for " .. query.event .. " reached max hops limit", true)
         end
-    else
-        rumour.log("Query reached max hops limit", true)
+    elseif rumour.events[query.event].event_distance == 0 then
+        rumour.AnswerEventQuery(query)
+    elseif rumour.events[query.event].event_distance >= 1 then
+        query.source_direction = rumour.me.topic
+        rumour.log("Forwarding query to event direction", true)
+        sleep(config.sleep_between_hops)
+        rumour.sendMessageToNeighbour(query, rumour.events[query.event].event_direction)
     end
 
 end
 
-function rumour.AnswerEventQuery()
-    rumour.log("answering event query...", true) -- TODO
+function rumour.queryResponseReceived(queryResponse)
+
+    if rumour.events[queryResponse.event].is_query_source then
+        rumour.log("Received Event Information: " .. tostring(queryResponse.event_information), true)
+    elseif rumour.events[queryResponse.event].query_direction == nil then
+        rumour.log("Received query response but there is no path to query", true)
+    else
+        rumour.log("Forwarding query response to query direction", true)
+        sleep(config.sleep_between_hops)
+        rumour.sendMessageToNeighbour(queryResponse, rumour.events[queryResponse.event].query_direction)
+    end
+end
+
+function rumour.AnswerEventQuery(query)
+    rumour.log("Answering event query...", true) -- TODO
+
+    message = {
+        type = "query-response",
+        event = query.event,
+        event_information = "foo" -- Aqui entraria o dado relativo ao evento
+    }
+
+    -- Send response back to query source direction
+    sleep(config.sleep_between_hops)
+    rumour.sendMessageToNeighbour(message, query.source_direction)
+
 end
 
 function rumour.triggerMessage(message_type, message_event)
@@ -150,6 +185,7 @@ function rumour.triggerMessage(message_type, message_event)
 
         rumour.events[message_event].query_distance = 0
         rumour.events[message_event].query_direction = rumour.me.topic
+        rumour.events[message_event].is_query_source = true
 
         if  rumour.events[message_event].event_direction ~= nil then
             -- encaminha no path do evento
@@ -169,15 +205,11 @@ function rumour.triggerMessage(message_type, message_event)
             visited_nodes = {}
         }
         message.events[message_event] = {distance = 0}
-        table.insert(message.visited_nodes, rumour.me.topic)
 
         rumour.events[message_event].event_distance = 0
         rumour.events[message_event].event_direction = rumour.me.topic
 
-        -- rumour.events[message_event].is_observer = true
-        -- rumour.events[message_event].event_observed_timestamp = os.time()
-        -- rumour.sendMessageToRandomNeighbour(message)
-        -- encaminha para si mesmo
+        -- Forward message to itself
         rumour.sendMessageToNeighbour(message, rumour.me.topic)
     end
 
@@ -194,7 +226,7 @@ function rumour.sendMessageToRandomNeighbour(message)
     found, random_neighbour = rumour.getUnvisitedRandomNeighbour(message.visited_nodes)
 
     if not found then
-        rumour.log("All neighbours were already visited by agent/query", true)
+        rumour.log("All neighbours were already visited by " .. message.type, true)
         return
     end
 
@@ -210,8 +242,6 @@ function rumour.sendMessageToNeighbour(message, neighbour)
 end
 
 function rumour.getUnvisitedRandomNeighbour(visited_nodes)
-
-    rumour.log(config.dump(visited_nodes), false)
     
     -- Shuffle neighbours list
     local shuffled_neighbours = {}
@@ -223,21 +253,18 @@ function rumour.getUnvisitedRandomNeighbour(visited_nodes)
     
     local neighbour_visited_by_agent = false
     
-    rumour.log(config.dump(shuffled_neighbours), false)
     -- Get neighbour one by one, checking if it was already visited
     for _,random_neighbour in ipairs(shuffled_neighbours) do
         for _,node in ipairs(visited_nodes) do
-            rumour.log(random_neighbour, false)
-            rumour.log(node, false)
             if node == random_neighbour then 
                 neighbour_visited_by_agent = true
                 break
             end
         end
         if not neighbour_visited_by_agent then
-            rumour.log("Found: " .. random_neighbour, false)
             return true, random_neighbour
         end
+        neighbour_visited_by_agent = false
     end
 
     return false, nil

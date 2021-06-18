@@ -15,7 +15,7 @@ services:
     container_name: lua-love
     image: ubuntu_lua_love
     # command: lua /root/client.lua lua-server 8888
-    command: love /root/
+    command: lua test_mqtt.lua
     volumes:
       - .:/root
   # lua-client2:
