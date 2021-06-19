@@ -36,15 +36,23 @@ function rumour.SetUp(node_id, printLog)
         event1 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false, is_query_source = false},
         event2 = {event_direction=nil, event_distance=nil, query_direction=nil, query_distance=nil, is_observer = false, is_query_source = false}
     }
+
+    rumour.initial_timestamp = os.time()
     
     -- MQTT set up
     rumour.me.topic = "no-" .. tostring(rumour.me.position_x) .. "-" .. tostring(rumour.me.position_y)
     mqtt_client = mqtt.client.create(config.mqtt_server_address, config.mqtt_server_port, mqttcb)
-    mqtt_client:connect("Node " .. tostring(rumour.me.id))
+    error = mqtt_client:connect("Node " .. tostring(rumour.me.id))
+    if error ~= nil then
+        rumour.log(tostring(error), true)
+        rumour.mqtt_error = tostring(error)
+        return tostring(error)
+    end
     mqtt_client:subscribe({rumour.me.topic})
+    rumour.log("Connection to mqtt server successful", true)
+    rumour.log("Waiting for messages...", true)
     
-    rumour.initial_timestamp = os.time()
-    rumour.log("Initialized", true)
+    return nil
 end
 
 function rumour.getNodePosition()
@@ -52,6 +60,9 @@ function rumour.getNodePosition()
 end
 
 function rumour.HandleMqtt()
+
+    if rumour.mqtt_error ~= nil then return end
+
     mqtt_client:handler()
 
     -- Check if event1 has expired
@@ -216,7 +227,13 @@ function rumour.triggerMessage(message_type, message_event)
 end
 
 function rumour.Estado()
-    rumour.log("Estado triggered", true)
+    rumour.log("Node state:", true)
+    if rumour.events.event1.event_direction ~= nil then
+        rumour.log("Event 1: direction=" .. rumour.events.event1.event_direction .. ", distance=" .. rumour.events.event1.event_distance, true)
+    end
+    if rumour.events.event2.event_direction ~= nil then
+        rumour.log("Event 2: direction=" .. rumour.events.event2.event_direction .. ", distance=" .. rumour.events.event2.event_distance, true)
+    end
 end
 
 function rumour.sendMessageToRandomNeighbour(message)

@@ -1,0 +1,7 @@
+[0s][Node 7] Connection to mqtt server successful
+[0s][Node 7] Waiting for messages...
+[29s][Node 7] Forwarding query to random direction
+[32s][Node 7] Sending query to node no-2-4
+[59s][Node 7] Forwarding query response to query direction
+[62s][Node 7] Sending query-response to node no-3-4
+[127s][Node 7] Node state:

@@ -182,3 +182,2551 @@
 1622449397: New connection from 172.21.0.1:33314 on port 1883.
 1622449397: New client connected from 172.21.0.1:33314 as cliente love (p1, c1, k60).
 1622449415: Client cliente love closed its connection.
+1622450256: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622450407: New connection from 172.21.0.1:33320 on port 1883.
+1622450407: New client connected from 172.21.0.1:33320 as node 1 (p1, c1, k60).
+1622450414: Client node 1 closed its connection.
+1622450461: New connection from 172.21.0.1:33326 on port 1883.
+1622450461: New client connected from 172.21.0.1:33326 as node 1 (p1, c1, k60).
+1622450472: Client node 1 closed its connection.
+1622450608: New connection from 172.21.0.1:33332 on port 1883.
+1622450608: New client connected from 172.21.0.1:33332 as node 1 (p1, c1, k60).
+1622450614: Client node 1 closed its connection.
+1622450741: New connection from 172.21.0.1:33338 on port 1883.
+1622450741: New client connected from 172.21.0.1:33338 as node 1 (p1, c1, k60).
+1622450743: Client node 1 closed its connection.
+1622450766: New connection from 172.21.0.1:33344 on port 1883.
+1622450766: New client connected from 172.21.0.1:33344 as node 1 (p1, c1, k60).
+1622450774: Client node 1 closed its connection.
+1622450826: New connection from 172.21.0.1:33350 on port 1883.
+1622450826: New client connected from 172.21.0.1:33350 as node 1 (p1, c1, k60).
+1622450830: Client node 1 closed its connection.
+1622451172: New connection from 172.21.0.1:33356 on port 1883.
+1622451172: New client connected from 172.21.0.1:33356 as node 1 (p1, c1, k60).
+1622451173: Client node 1 closed its connection.
+1622451736: New connection from 172.21.0.1:33362 on port 1883.
+1622451736: New client connected from 172.21.0.1:33362 as node 1 (p1, c1, k60).
+1622451742: Client node 1 closed its connection.
+1622451869: New connection from 172.21.0.1:33368 on port 1883.
+1622451869: New client connected from 172.21.0.1:33368 as node 1 (p1, c1, k60).
+1622451878: Client node 1 closed its connection.
+1622452038: New connection from 172.21.0.1:33374 on port 1883.
+1622452038: New client connected from 172.21.0.1:33374 as node 6 (p1, c1, k60).
+1622452040: Client node 6 closed its connection.
+1622452057: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622452120: New connection from 172.21.0.1:33380 on port 1883.
+1622452120: New client connected from 172.21.0.1:33380 as node 12 (p1, c1, k60).
+1622452122: Client node 12 closed its connection.
+1622452480: New connection from 172.21.0.1:33386 on port 1883.
+1622452480: New client connected from 172.21.0.1:33386 as node 1 (p1, c1, k60).
+1622452485: Client node 1 closed its connection.
+1622452526: New connection from 172.21.0.1:33392 on port 1883.
+1622452526: New client connected from 172.21.0.1:33392 as node 1 (p1, c1, k60).
+1622452532: Client node 1 closed its connection.
+1622453491: New connection from 172.21.0.1:33398 on port 1883.
+1622453491: New client connected from 172.21.0.1:33398 as cliente love (p1, c1, k60).
+1622453494: Client cliente love closed its connection.
+1622453858: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622454022: New connection from 172.21.0.1:33404 on port 1883.
+1622454022: New client connected from 172.21.0.1:33404 as cliente love (p1, c1, k60).
+1622454023: Client cliente love closed its connection.
+1622454034: New connection from 172.21.0.1:33410 on port 1883.
+1622454034: New client connected from 172.21.0.1:33410 as cliente love (p1, c1, k60).
+1622454043: Client cliente love closed its connection.
+1622454092: New connection from 172.21.0.1:33416 on port 1883.
+1622454092: New client connected from 172.21.0.1:33416 as cliente love (p1, c1, k60).
+1622454093: Client cliente love closed its connection.
+1622454266: New connection from 172.21.0.1:33422 on port 1883.
+1622454266: New client connected from 172.21.0.1:33422 as cliente love (p1, c1, k60).
+1622454271: Client cliente love closed its connection.
+1622454456: New connection from 172.21.0.1:33428 on port 1883.
+1622454456: New client connected from 172.21.0.1:33428 as Node 1 (p1, c1, k60).
+1622454468: Client Node 1 closed its connection.
+1622454483: New connection from 172.21.0.1:33434 on port 1883.
+1622454483: New client connected from 172.21.0.1:33434 as Node 1 (p1, c1, k60).
+1622454498: Client Node 1 closed its connection.
+1622454500: New connection from 172.21.0.1:33440 on port 1883.
+1622454500: New client connected from 172.21.0.1:33440 as Node 2 (p1, c1, k60).
+1622454501: Client Node 2 closed its connection.
+1622454503: New connection from 172.21.0.1:33446 on port 1883.
+1622454503: New client connected from 172.21.0.1:33446 as Node 3 (p1, c1, k60).
+1622454504: Client Node 3 closed its connection.
+1622454505: New connection from 172.21.0.1:33452 on port 1883.
+1622454505: New client connected from 172.21.0.1:33452 as Node 4 (p1, c1, k60).
+1622454506: Client Node 4 closed its connection.
+1622454520: New connection from 172.21.0.1:33458 on port 1883.
+1622454520: New client connected from 172.21.0.1:33458 as Node 1 (p1, c1, k60).
+1622454526: Client Node 1 closed its connection.
+1622454528: New connection from 172.21.0.1:33464 on port 1883.
+1622454528: New client connected from 172.21.0.1:33464 as Node 2 (p1, c1, k60).
+1622454529: Client Node 2 closed its connection.
+1622454531: New connection from 172.21.0.1:33470 on port 1883.
+1622454531: New client connected from 172.21.0.1:33470 as Node 3 (p1, c1, k60).
+1622454532: Client Node 3 closed its connection.
+1622454533: New connection from 172.21.0.1:33476 on port 1883.
+1622454533: New client connected from 172.21.0.1:33476 as Node 4 (p1, c1, k60).
+1622454534: Client Node 4 closed its connection.
+1622454778: New connection from 172.21.0.1:33482 on port 1883.
+1622454778: New client connected from 172.21.0.1:33482 as Node 1 (p1, c1, k60).
+1622454785: Client Node 1 closed its connection.
+1622454799: New connection from 172.21.0.1:33488 on port 1883.
+1622454799: New client connected from 172.21.0.1:33488 as Node 1 (p1, c1, k60).
+1622454800: Client Node 1 closed its connection.
+1622454806: New connection from 172.21.0.1:33494 on port 1883.
+1622454806: New client connected from 172.21.0.1:33494 as Node 1 (p1, c1, k60).
+1622454808: Client Node 1 closed its connection.
+1622455658: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622456956: New connection from 172.21.0.1:33500 on port 1883.
+1622456956: New client connected from 172.21.0.1:33500 as Node 1 (p1, c1, k60).
+1622456961: Client Node 1 closed its connection.
+1622456971: New connection from 172.21.0.1:33506 on port 1883.
+1622456971: New client connected from 172.21.0.1:33506 as Node 1 (p1, c1, k60).
+1622456972: New connection from 172.21.0.1:33512 on port 1883.
+1622456972: New client connected from 172.21.0.1:33512 as Node 2 (p1, c1, k60).
+1622456999: Client Node 2 closed its connection.
+1622457001: Client Node 1 closed its connection.
+1622457146: New connection from 172.21.0.1:33518 on port 1883.
+1622457146: New client connected from 172.21.0.1:33518 as Node 1 (p1, c1, k60).
+1622457186: Client Node 1 closed its connection.
+1622457368: New connection from 172.21.0.1:33524 on port 1883.
+1622457368: New client connected from 172.21.0.1:33524 as Node 1 (p1, c1, k60).
+1622457376: Client Node 1 closed its connection.
+1622457448: New connection from 172.21.0.1:33530 on port 1883.
+1622457448: New client connected from 172.21.0.1:33530 as Node 1 (p1, c1, k60).
+1622457455: Client Node 1 closed its connection.
+1622457460: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622458074: New connection from 172.21.0.1:33536 on port 1883.
+1622458074: New client connected from 172.21.0.1:33536 as Node 1 (p1, c1, k60).
+1622458085: Client Node 1 closed its connection.
+1622458113: New connection from 172.21.0.1:33542 on port 1883.
+1622458113: New client connected from 172.21.0.1:33542 as Node 1 (p1, c1, k60).
+1622458114: New connection from 172.21.0.1:33548 on port 1883.
+1622458114: New client connected from 172.21.0.1:33548 as Node 2 (p1, c1, k60).
+1622458116: New connection from 172.21.0.1:33554 on port 1883.
+1622458116: New client connected from 172.21.0.1:33554 as Node 3 (p1, c1, k60).
+1622458117: New connection from 172.21.0.1:33560 on port 1883.
+1622458117: New client connected from 172.21.0.1:33560 as Node 4 (p1, c1, k60).
+1622458123: Client Node 4 closed its connection.
+1622458124: Client Node 3 closed its connection.
+1622458125: Client Node 2 closed its connection.
+1622458128: Client Node 1 closed its connection.
+1622458186: New connection from 172.21.0.1:33566 on port 1883.
+1622458186: New client connected from 172.21.0.1:33566 as Node 1 (p1, c1, k60).
+1622458187: New connection from 172.21.0.1:33572 on port 1883.
+1622458187: New client connected from 172.21.0.1:33572 as Node 2 (p1, c1, k60).
+1622458188: New connection from 172.21.0.1:33578 on port 1883.
+1622458188: New client connected from 172.21.0.1:33578 as Node 3 (p1, c1, k60).
+1622458189: New connection from 172.21.0.1:33584 on port 1883.
+1622458189: New client connected from 172.21.0.1:33584 as Node 4 (p1, c1, k60).
+1622458194: Client Node 4 closed its connection.
+1622458195: Client Node 3 closed its connection.
+1622458197: Client Node 2 closed its connection.
+1622458198: Client Node 1 closed its connection.
+1622458267: New connection from 172.21.0.1:33590 on port 1883.
+1622458267: New client connected from 172.21.0.1:33590 as Node 1 (p1, c1, k60).
+1622458268: New connection from 172.21.0.1:33596 on port 1883.
+1622458268: New client connected from 172.21.0.1:33596 as Node 2 (p1, c1, k60).
+1622458269: New connection from 172.21.0.1:33602 on port 1883.
+1622458269: New client connected from 172.21.0.1:33602 as Node 3 (p1, c1, k60).
+1622458270: New connection from 172.21.0.1:33608 on port 1883.
+1622458270: New client connected from 172.21.0.1:33608 as Node 4 (p1, c1, k60).
+1622458272: New connection from 172.21.0.1:33614 on port 1883.
+1622458272: New client connected from 172.21.0.1:33614 as Node 5 (p1, c1, k60).
+1622458273: New connection from 172.21.0.1:33620 on port 1883.
+1622458273: New client connected from 172.21.0.1:33620 as Node 6 (p1, c1, k60).
+1622458274: New connection from 172.21.0.1:33626 on port 1883.
+1622458274: New client connected from 172.21.0.1:33626 as Node 7 (p1, c1, k60).
+1622458276: New connection from 172.21.0.1:33632 on port 1883.
+1622458276: New client connected from 172.21.0.1:33632 as Node 8 (p1, c1, k60).
+1622458277: New connection from 172.21.0.1:33638 on port 1883.
+1622458277: New client connected from 172.21.0.1:33638 as Node 9 (p1, c1, k60).
+1622458279: New connection from 172.21.0.1:33644 on port 1883.
+1622458279: New client connected from 172.21.0.1:33644 as Node 10 (p1, c1, k60).
+1622458280: New connection from 172.21.0.1:33650 on port 1883.
+1622458280: New client connected from 172.21.0.1:33650 as Node 11 (p1, c1, k60).
+1622458282: New connection from 172.21.0.1:33656 on port 1883.
+1622458282: New client connected from 172.21.0.1:33656 as Node 12 (p1, c1, k60).
+1622458284: New connection from 172.21.0.1:33662 on port 1883.
+1622458284: New client connected from 172.21.0.1:33662 as Node 13 (p1, c1, k60).
+1622458285: New connection from 172.21.0.1:33668 on port 1883.
+1622458285: New client connected from 172.21.0.1:33668 as Node 14 (p1, c1, k60).
+1622458287: New connection from 172.21.0.1:33674 on port 1883.
+1622458287: New client connected from 172.21.0.1:33674 as Node 15 (p1, c1, k60).
+1622458289: New connection from 172.21.0.1:33680 on port 1883.
+1622458289: New client connected from 172.21.0.1:33680 as Node 16 (p1, c1, k60).
+1622458298: Client Node 15 closed its connection.
+1622458298: Client Node 13 closed its connection.
+1622458298: Client Node 16 closed its connection.
+1622458298: Client Node 7 closed its connection.
+1622458298: Client Node 4 closed its connection.
+1622458298: Client Node 11 closed its connection.
+1622458298: Client Node 1 closed its connection.
+1622458298: Client Node 3 closed its connection.
+1622458298: Client Node 2 closed its connection.
+1622458298: Client Node 10 closed its connection.
+1622458298: Client Node 6 closed its connection.
+1622458298: Client Node 14 closed its connection.
+1622458298: Client Node 9 closed its connection.
+1622458298: Client Node 5 closed its connection.
+1622458298: Client Node 12 closed its connection.
+1622458298: Client Node 8 closed its connection.
+1622458487: New connection from 172.21.0.1:33686 on port 1883.
+1622458487: New client connected from 172.21.0.1:33686 as Node 1 (p1, c1, k60).
+1622458489: New connection from 172.21.0.1:33692 on port 1883.
+1622458489: New client connected from 172.21.0.1:33692 as Node 2 (p1, c1, k60).
+1622458490: New connection from 172.21.0.1:33698 on port 1883.
+1622458490: New client connected from 172.21.0.1:33698 as Node 3 (p1, c1, k60).
+1622458491: New connection from 172.21.0.1:33704 on port 1883.
+1622458491: New client connected from 172.21.0.1:33704 as Node 4 (p1, c1, k60).
+1622458519: Client Node 2 closed its connection.
+1622458519: Client Node 1 closed its connection.
+1622458519: Client Node 3 closed its connection.
+1622458519: Client Node 4 closed its connection.
+1622458660: New connection from 172.21.0.1:33710 on port 1883.
+1622458660: New client connected from 172.21.0.1:33710 as Node 1 (p1, c1, k60).
+1622458661: New connection from 172.21.0.1:33716 on port 1883.
+1622458661: New client connected from 172.21.0.1:33716 as Node 2 (p1, c1, k60).
+1622458663: New connection from 172.21.0.1:33722 on port 1883.
+1622458663: New client connected from 172.21.0.1:33722 as Node 3 (p1, c1, k60).
+1622458664: New connection from 172.21.0.1:33728 on port 1883.
+1622458664: New client connected from 172.21.0.1:33728 as Node 4 (p1, c1, k60).
+1622458680: Client Node 1 closed its connection.
+1622458680: Client Node 4 closed its connection.
+1622458680: Client Node 3 closed its connection.
+1622458680: Client Node 2 closed its connection.
+1622459242: New connection from 172.21.0.1:33734 on port 1883.
+1622459242: New client connected from 172.21.0.1:33734 as Node 1 (p1, c1, k60).
+1622459243: New connection from 172.21.0.1:33740 on port 1883.
+1622459243: New client connected from 172.21.0.1:33740 as Node 2 (p1, c1, k60).
+1622459245: New connection from 172.21.0.1:33746 on port 1883.
+1622459245: New client connected from 172.21.0.1:33746 as Node 3 (p1, c1, k60).
+1622459246: New connection from 172.21.0.1:33752 on port 1883.
+1622459246: New client connected from 172.21.0.1:33752 as Node 4 (p1, c1, k60).
+1622459259: Client Node 1 closed its connection.
+1622459260: Client Node 2 closed its connection.
+1622459260: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622459262: Client Node 3 closed its connection.
+1622459263: Client Node 4 closed its connection.
+1622459273: New connection from 172.21.0.1:33758 on port 1883.
+1622459273: New client connected from 172.21.0.1:33758 as Node 1 (p1, c1, k60).
+1622459274: New connection from 172.21.0.1:33764 on port 1883.
+1622459274: New client connected from 172.21.0.1:33764 as Node 2 (p1, c1, k60).
+1622459275: New connection from 172.21.0.1:33770 on port 1883.
+1622459275: New client connected from 172.21.0.1:33770 as Node 3 (p1, c1, k60).
+1622459277: New connection from 172.21.0.1:33776 on port 1883.
+1622459277: New client connected from 172.21.0.1:33776 as Node 4 (p1, c1, k60).
+1622459290: Client Node 3 closed its connection.
+1622459290: Client Node 2 closed its connection.
+1622459290: Client Node 4 closed its connection.
+1622459290: Client Node 1 closed its connection.
+1622459429: New connection from 172.21.0.1:33782 on port 1883.
+1622459429: New client connected from 172.21.0.1:33782 as Node 1 (p1, c1, k60).
+1622459430: New connection from 172.21.0.1:33788 on port 1883.
+1622459430: New client connected from 172.21.0.1:33788 as Node 2 (p1, c1, k60).
+1622459436: Client Node 2 closed its connection.
+1622459437: Client Node 1 closed its connection.
+1622459494: New connection from 172.21.0.1:33794 on port 1883.
+1622459494: New client connected from 172.21.0.1:33794 as Node 1 (p1, c1, k60).
+1622459496: New connection from 172.21.0.1:33800 on port 1883.
+1622459496: New client connected from 172.21.0.1:33800 as Node 2 (p1, c1, k60).
+1622459501: Client Node 2 closed its connection.
+1622459502: Client Node 1 closed its connection.
+1622461657: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622464486: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622465822: New connection from 172.21.0.1:33806 on port 1883.
+1622465822: New client connected from 172.21.0.1:33806 as Node 1 (p1, c1, k60).
+1622465823: New connection from 172.21.0.1:33812 on port 1883.
+1622465823: New client connected from 172.21.0.1:33812 as Node 2 (p1, c1, k60).
+1622465836: Client Node 1 closed its connection.
+1622465838: Client Node 2 closed its connection.
+1622466002: New connection from 172.21.0.1:33818 on port 1883.
+1622466002: New client connected from 172.21.0.1:33818 as Node 1 (p1, c1, k60).
+1622466003: New connection from 172.21.0.1:33824 on port 1883.
+1622466003: New client connected from 172.21.0.1:33824 as Node 2 (p1, c1, k60).
+1622466032: Client Node 1 closed its connection.
+1622466033: Client Node 2 closed its connection.
+1622466144: New connection from 172.21.0.1:33830 on port 1883.
+1622466144: New client connected from 172.21.0.1:33830 as Node 1 (p1, c1, k60).
+1622466146: New connection from 172.21.0.1:33836 on port 1883.
+1622466146: New client connected from 172.21.0.1:33836 as Node 2 (p1, c1, k60).
+1622466163: Client Node 1 closed its connection.
+1622466165: Client Node 2 closed its connection.
+1622466287: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622466352: New connection from 172.21.0.1:33842 on port 1883.
+1622466352: New client connected from 172.21.0.1:33842 as Node 1 (p1, c1, k60).
+1622466354: New connection from 172.21.0.1:33848 on port 1883.
+1622466354: New client connected from 172.21.0.1:33848 as Node 2 (p1, c1, k60).
+1622466368: Client Node 1 closed its connection.
+1622466370: Client Node 2 closed its connection.
+1622468080: New connection from 172.21.0.1:33854 on port 1883.
+1622468080: New client connected from 172.21.0.1:33854 as Node 1 (p1, c1, k60).
+1622468081: New connection from 172.21.0.1:33860 on port 1883.
+1622468081: New client connected from 172.21.0.1:33860 as Node 2 (p1, c1, k60).
+1622468084: Client Node 2 closed its connection.
+1622468087: Client Node 1 closed its connection.
+1622468088: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622468529: New connection from 172.21.0.1:33866 on port 1883.
+1622468529: New client connected from 172.21.0.1:33866 as Node 1 (p1, c1, k60).
+1622468531: New connection from 172.21.0.1:33872 on port 1883.
+1622468531: New client connected from 172.21.0.1:33872 as Node 2 (p1, c1, k60).
+1622468533: Client Node 2 closed its connection.
+1622468534: Client Node 1 closed its connection.
+1622468654: New connection from 172.21.0.1:33878 on port 1883.
+1622468654: New client connected from 172.21.0.1:33878 as Node 1 (p1, c1, k60).
+1622468762: Client Node 1 closed its connection.
+1622468766: New connection from 172.21.0.1:33884 on port 1883.
+1622468766: New client connected from 172.21.0.1:33884 as Node 1 (p1, c1, k60).
+1622468774: Client Node 1 closed its connection.
+1622468953: New connection from 172.21.0.1:33890 on port 1883.
+1622468953: New client connected from 172.21.0.1:33890 as Node 1 (p1, c1, k60).
+1622468956: Client Node 1 closed its connection.
+1622468989: New connection from 172.21.0.1:33896 on port 1883.
+1622468989: New client connected from 172.21.0.1:33896 as Node 1 (p1, c1, k60).
+1622468995: Client Node 1 closed its connection.
+1622469017: New connection from 172.21.0.1:33902 on port 1883.
+1622469017: New client connected from 172.21.0.1:33902 as Node 1 (p1, c1, k60).
+1622469022: Client Node 1 closed its connection.
+1622469221: New connection from 172.21.0.1:33908 on port 1883.
+1622469221: New client connected from 172.21.0.1:33908 as Node 1 (p1, c1, k60).
+1622469224: Client Node 1 closed its connection.
+1622469241: New connection from 172.21.0.1:33914 on port 1883.
+1622469241: New client connected from 172.21.0.1:33914 as Node 1 (p1, c1, k60).
+1622469243: Client Node 1 closed its connection.
+1622469308: New connection from 172.21.0.1:33920 on port 1883.
+1622469308: New client connected from 172.21.0.1:33920 as Node 1 (p1, c1, k60).
+1622469314: Client Node 1 closed its connection.
+1622469400: New connection from 172.21.0.1:33926 on port 1883.
+1622469400: New client connected from 172.21.0.1:33926 as Node 1 (p1, c1, k60).
+1622469407: Client Node 1 closed its connection.
+1622469455: New connection from 172.21.0.1:33932 on port 1883.
+1622469455: New client connected from 172.21.0.1:33932 as Node 1 (p1, c1, k60).
+1622469458: Client Node 1 closed its connection.
+1622469615: New connection from 172.21.0.1:33938 on port 1883.
+1622469615: New client connected from 172.21.0.1:33938 as Node 1 (p1, c1, k60).
+1622469618: Client Node 1 closed its connection.
+1622469633: New connection from 172.21.0.1:33944 on port 1883.
+1622469633: New client connected from 172.21.0.1:33944 as Node 1 (p1, c1, k60).
+1622469656: Client Node 1 closed its connection.
+1622469660: New connection from 172.21.0.1:33950 on port 1883.
+1622469660: New client connected from 172.21.0.1:33950 as Node 1 (p1, c1, k60).
+1622469816: Client Node 1 closed its connection.
+1622469820: New connection from 172.21.0.1:33956 on port 1883.
+1622469820: New client connected from 172.21.0.1:33956 as Node 1 (p1, c1, k60).
+1622469825: Client Node 1 closed its connection.
+1622469888: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622469940: New connection from 172.21.0.1:33962 on port 1883.
+1622469940: New client connected from 172.21.0.1:33962 as Node 1 (p1, c1, k60).
+1622469944: Client Node 1 closed its connection.
+1622469957: New connection from 172.21.0.1:33968 on port 1883.
+1622469957: New client connected from 172.21.0.1:33968 as Node 1 (p1, c1, k60).
+1622469962: Client Node 1 closed its connection.
+1622469976: New connection from 172.21.0.1:33974 on port 1883.
+1622469976: New client connected from 172.21.0.1:33974 as Node 1 (p1, c1, k60).
+1622469980: Client Node 1 closed its connection.
+1622469999: New connection from 172.21.0.1:33980 on port 1883.
+1622469999: New client connected from 172.21.0.1:33980 as Node 1 (p1, c1, k60).
+1622470006: Client Node 1 closed its connection.
+1622470085: New connection from 172.21.0.1:33986 on port 1883.
+1622470085: New client connected from 172.21.0.1:33986 as Node 1 (p1, c1, k60).
+1622470179: Client Node 1 has exceeded timeout, disconnecting.
+1622470589: New connection from 172.21.0.1:33992 on port 1883.
+1622470589: New client connected from 172.21.0.1:33992 as Node 1 (p1, c1, k60).
+1622470597: Client Node 1 closed its connection.
+1622470611: New connection from 172.21.0.1:33998 on port 1883.
+1622470611: New client connected from 172.21.0.1:33998 as Node 1 (p1, c1, k60).
+1622470622: Client Node 1 closed its connection.
+1622470701: New connection from 172.21.0.1:34004 on port 1883.
+1622470701: New client connected from 172.21.0.1:34004 as Node 1 (p1, c1, k60).
+1622470724: Client Node 1 closed its connection.
+1622471689: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622471943: New connection from 172.21.0.1:34010 on port 1883.
+1622471943: New client connected from 172.21.0.1:34010 as Node 1 (p1, c1, k60).
+1622472013: New connection from 172.21.0.1:34016 on port 1883.
+1622472013: Client Node 1 already connected, closing old connection.
+1622472013: New client connected from 172.21.0.1:34016 as Node 1 (p1, c1, k60).
+1622472026: Client Node 1 closed its connection.
+1622472077: New connection from 172.21.0.1:34022 on port 1883.
+1622472077: New client connected from 172.21.0.1:34022 as Node 1 (p1, c1, k60).
+1622472085: Client Node 1 closed its connection.
+1622472166: New connection from 172.21.0.1:34028 on port 1883.
+1622472166: New client connected from 172.21.0.1:34028 as Node 1 (p1, c1, k60).
+1622472171: Client Node 1 closed its connection.
+1622472258: New connection from 172.21.0.1:34034 on port 1883.
+1622472258: New client connected from 172.21.0.1:34034 as Node 1 (p1, c1, k60).
+1622472268: Client Node 1 closed its connection.
+1622472275: New connection from 172.21.0.1:34040 on port 1883.
+1622472275: New client connected from 172.21.0.1:34040 as Node 1 (p1, c1, k60).
+1622472310: Client Node 1 closed its connection.
+1622472314: New connection from 172.21.0.1:34046 on port 1883.
+1622472314: New client connected from 172.21.0.1:34046 as Node 1 (p1, c1, k60).
+1622472564: Client Node 1 closed its connection.
+1622472568: New connection from 172.21.0.1:34052 on port 1883.
+1622472568: New client connected from 172.21.0.1:34052 as Node 1 (p1, c1, k60).
+1622472603: Client Node 1 closed its connection.
+1622472610: New connection from 172.21.0.1:34058 on port 1883.
+1622472610: New client connected from 172.21.0.1:34058 as Node 1 (p1, c1, k60).
+1622472643: Client Node 1 closed its connection.
+1622473491: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622473991: New connection from 172.21.0.1:34064 on port 1883.
+1622473991: New client connected from 172.21.0.1:34064 as Node 1 (p1, c1, k60).
+1622473992: Client Node 1 closed its connection.
+1622474002: New connection from 172.21.0.1:34070 on port 1883.
+1622474002: New client connected from 172.21.0.1:34070 as Node 1 (p1, c1, k60).
+1622474004: New connection from 172.21.0.1:34076 on port 1883.
+1622474004: New client connected from 172.21.0.1:34076 as Node 2 (p1, c1, k60).
+1622474005: New connection from 172.21.0.1:34082 on port 1883.
+1622474005: New client connected from 172.21.0.1:34082 as Node 3 (p1, c1, k60).
+1622474007: New connection from 172.21.0.1:34088 on port 1883.
+1622474007: New client connected from 172.21.0.1:34088 as Node 4 (p1, c1, k60).
+1622474054: Client Node 2 closed its connection.
+1622474054: Client Node 3 closed its connection.
+1622474054: Client Node 1 closed its connection.
+1622474054: Client Node 4 closed its connection.
+1622475292: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622477092: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622478894: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622480695: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622482496: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622482790: New connection from 172.21.0.1:34094 on port 1883.
+1622482790: New client connected from 172.21.0.1:34094 as Node 1 (p1, c1, k60).
+1622482790: New connection from 172.21.0.1:34100 on port 1883.
+1622482790: New client connected from 172.21.0.1:34100 as Node 2 (p1, c1, k60).
+1622482791: New connection from 172.21.0.1:34106 on port 1883.
+1622482791: New client connected from 172.21.0.1:34106 as Node 3 (p1, c1, k60).
+1622482793: New connection from 172.21.0.1:34112 on port 1883.
+1622482793: New client connected from 172.21.0.1:34112 as Node 4 (p1, c1, k60).
+1622482794: New connection from 172.21.0.1:34118 on port 1883.
+1622482794: New client connected from 172.21.0.1:34118 as Node 5 (p1, c1, k60).
+1622482795: New connection from 172.21.0.1:34124 on port 1883.
+1622482795: New client connected from 172.21.0.1:34124 as Node 6 (p1, c1, k60).
+1622482796: New connection from 172.21.0.1:34130 on port 1883.
+1622482796: New client connected from 172.21.0.1:34130 as Node 7 (p1, c1, k60).
+1622482796: New connection from 172.21.0.1:34136 on port 1883.
+1622482796: New client connected from 172.21.0.1:34136 as Node 8 (p1, c1, k60).
+1622482797: New connection from 172.21.0.1:34142 on port 1883.
+1622482797: New client connected from 172.21.0.1:34142 as Node 9 (p1, c1, k60).
+1622482798: New connection from 172.21.0.1:34148 on port 1883.
+1622482798: New client connected from 172.21.0.1:34148 as Node 10 (p1, c1, k60).
+1622482799: New connection from 172.21.0.1:34154 on port 1883.
+1622482799: New client connected from 172.21.0.1:34154 as Node 11 (p1, c1, k60).
+1622482800: New connection from 172.21.0.1:34160 on port 1883.
+1622482800: New client connected from 172.21.0.1:34160 as Node 12 (p1, c1, k60).
+1622482801: New connection from 172.21.0.1:34166 on port 1883.
+1622482801: New client connected from 172.21.0.1:34166 as Node 13 (p1, c1, k60).
+1622482802: New connection from 172.21.0.1:34172 on port 1883.
+1622482802: New client connected from 172.21.0.1:34172 as Node 14 (p1, c1, k60).
+1622482803: New connection from 172.21.0.1:34178 on port 1883.
+1622482803: New client connected from 172.21.0.1:34178 as Node 15 (p1, c1, k60).
+1622482804: New connection from 172.21.0.1:34184 on port 1883.
+1622482804: New client connected from 172.21.0.1:34184 as Node 16 (p1, c1, k60).
+1622482847: Client Node 13 closed its connection.
+1622482847: Client Node 5 closed its connection.
+1622482847: Client Node 2 closed its connection.
+1622482847: Client Node 14 closed its connection.
+1622482847: Client Node 9 closed its connection.
+1622482847: Client Node 11 closed its connection.
+1622482847: Client Node 12 closed its connection.
+1622482847: Client Node 7 closed its connection.
+1622482847: Client Node 16 closed its connection.
+1622482847: Client Node 10 closed its connection.
+1622482847: Client Node 6 closed its connection.
+1622482847: Client Node 4 closed its connection.
+1622482847: Client Node 3 closed its connection.
+1622482847: Client Node 1 closed its connection.
+1622482847: Client Node 8 closed its connection.
+1622482847: Client Node 15 closed its connection.
+1622484297: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622486098: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622487898: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622489700: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622491501: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622493302: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622520314: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622522115: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622523915: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622525717: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622532565: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622548837: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622550637: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622552438: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622553422: New connection from 172.21.0.1:34190 on port 1883.
+1622553422: New client connected from 172.21.0.1:34190 as Node 1 (p1, c1, k60).
+1622553422: New connection from 172.21.0.1:34196 on port 1883.
+1622553422: New client connected from 172.21.0.1:34196 as Node 2 (p1, c1, k60).
+1622553423: New connection from 172.21.0.1:34202 on port 1883.
+1622553423: New client connected from 172.21.0.1:34202 as Node 3 (p1, c1, k60).
+1622553424: New connection from 172.21.0.1:34208 on port 1883.
+1622553424: New client connected from 172.21.0.1:34208 as Node 4 (p1, c1, k60).
+1622553448: Client Node 1 closed its connection.
+1622553792: Client Node 3 closed its connection.
+1622553792: Client Node 4 closed its connection.
+1622553792: Client Node 2 closed its connection.
+1622553796: New connection from 172.21.0.1:34214 on port 1883.
+1622553796: New client connected from 172.21.0.1:34214 as Node 1 (p1, c1, k60).
+1622553797: New connection from 172.21.0.1:34220 on port 1883.
+1622553797: New client connected from 172.21.0.1:34220 as Node 2 (p1, c1, k60).
+1622553798: New connection from 172.21.0.1:34226 on port 1883.
+1622553798: New client connected from 172.21.0.1:34226 as Node 3 (p1, c1, k60).
+1622553798: New connection from 172.21.0.1:34232 on port 1883.
+1622553798: New client connected from 172.21.0.1:34232 as Node 4 (p1, c1, k60).
+1622553813: Client Node 3 closed its connection.
+1622553813: Client Node 1 closed its connection.
+1622553813: Client Node 4 closed its connection.
+1622553813: Client Node 2 closed its connection.
+1622553829: New connection from 172.21.0.1:34238 on port 1883.
+1622553829: New client connected from 172.21.0.1:34238 as Node 1 (p1, c1, k60).
+1622553830: New connection from 172.21.0.1:34244 on port 1883.
+1622553830: New client connected from 172.21.0.1:34244 as Node 2 (p1, c1, k60).
+1622553831: New connection from 172.21.0.1:34250 on port 1883.
+1622553831: New client connected from 172.21.0.1:34250 as Node 3 (p1, c1, k60).
+1622553832: New connection from 172.21.0.1:34256 on port 1883.
+1622553832: New client connected from 172.21.0.1:34256 as Node 4 (p1, c1, k60).
+1622553853: Client Node 2 closed its connection.
+1622553853: Client Node 1 closed its connection.
+1622553853: Client Node 3 closed its connection.
+1622553853: Client Node 4 closed its connection.
+1622553929: New connection from 172.21.0.1:34262 on port 1883.
+1622553929: New client connected from 172.21.0.1:34262 as Node 1 (p1, c1, k60).
+1622553930: New connection from 172.21.0.1:34268 on port 1883.
+1622553930: New client connected from 172.21.0.1:34268 as Node 2 (p1, c1, k60).
+1622553930: New connection from 172.21.0.1:34274 on port 1883.
+1622553930: New client connected from 172.21.0.1:34274 as Node 3 (p1, c1, k60).
+1622553931: New connection from 172.21.0.1:34280 on port 1883.
+1622553931: New client connected from 172.21.0.1:34280 as Node 4 (p1, c1, k60).
+1622553955: Client Node 4 closed its connection.
+1622553955: Client Node 1 closed its connection.
+1622553955: Client Node 3 closed its connection.
+1622553955: Client Node 2 closed its connection.
+1622554033: New connection from 172.21.0.1:34286 on port 1883.
+1622554033: New client connected from 172.21.0.1:34286 as Node 1 (p1, c1, k60).
+1622554034: New connection from 172.21.0.1:34292 on port 1883.
+1622554034: New client connected from 172.21.0.1:34292 as Node 2 (p1, c1, k60).
+1622554035: New connection from 172.21.0.1:34298 on port 1883.
+1622554035: New client connected from 172.21.0.1:34298 as Node 3 (p1, c1, k60).
+1622554035: New connection from 172.21.0.1:34304 on port 1883.
+1622554035: New client connected from 172.21.0.1:34304 as Node 4 (p1, c1, k60).
+1622554162: Client Node 3 closed its connection.
+1622554162: Client Node 4 closed its connection.
+1622554162: Client Node 2 closed its connection.
+1622554162: Client Node 1 closed its connection.
+1622554165: New connection from 172.21.0.1:34310 on port 1883.
+1622554165: New client connected from 172.21.0.1:34310 as Node 1 (p1, c1, k60).
+1622554166: New connection from 172.21.0.1:34316 on port 1883.
+1622554166: New client connected from 172.21.0.1:34316 as Node 2 (p1, c1, k60).
+1622554167: New connection from 172.21.0.1:34322 on port 1883.
+1622554167: New client connected from 172.21.0.1:34322 as Node 3 (p1, c1, k60).
+1622554168: New connection from 172.21.0.1:34328 on port 1883.
+1622554168: New client connected from 172.21.0.1:34328 as Node 4 (p1, c1, k60).
+1622554188: Client Node 3 closed its connection.
+1622554188: Client Node 1 closed its connection.
+1622554188: Client Node 4 closed its connection.
+1622554188: Client Node 2 closed its connection.
+1622554239: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622554403: New connection from 172.21.0.1:34334 on port 1883.
+1622554403: New client connected from 172.21.0.1:34334 as Node 1 (p1, c1, k60).
+1622554404: New connection from 172.21.0.1:34340 on port 1883.
+1622554404: New client connected from 172.21.0.1:34340 as Node 2 (p1, c1, k60).
+1622554405: New connection from 172.21.0.1:34346 on port 1883.
+1622554405: New client connected from 172.21.0.1:34346 as Node 3 (p1, c1, k60).
+1622554405: New connection from 172.21.0.1:34352 on port 1883.
+1622554405: New client connected from 172.21.0.1:34352 as Node 4 (p1, c1, k60).
+1622554414: Client Node 4 closed its connection.
+1622554414: Client Node 2 closed its connection.
+1622554414: Client Node 1 closed its connection.
+1622554414: Client Node 3 closed its connection.
+1622556041: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622557841: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622562375: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622564821: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622566622: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622567650: New connection from 172.21.0.1:34358 on port 1883.
+1622567650: New client connected from 172.21.0.1:34358 as Node 1 (p1, c1, k60).
+1622567650: New connection from 172.21.0.1:34364 on port 1883.
+1622567650: New client connected from 172.21.0.1:34364 as Node 2 (p1, c1, k60).
+1622567651: New connection from 172.21.0.1:34370 on port 1883.
+1622567651: New client connected from 172.21.0.1:34370 as Node 3 (p1, c1, k60).
+1622567651: New connection from 172.21.0.1:34376 on port 1883.
+1622567651: New client connected from 172.21.0.1:34376 as Node 4 (p1, c1, k60).
+1622567742: Client Node 2 has exceeded timeout, disconnecting.
+1622567751: Client Node 4 closed its connection.
+1622567751: Client Node 1 closed its connection.
+1622567751: Client Node 3 closed its connection.
+1622567755: New connection from 172.21.0.1:34382 on port 1883.
+1622567755: New client connected from 172.21.0.1:34382 as Node 1 (p1, c1, k60).
+1622567755: New connection from 172.21.0.1:34388 on port 1883.
+1622567755: New client connected from 172.21.0.1:34388 as Node 2 (p1, c1, k60).
+1622567756: New connection from 172.21.0.1:34394 on port 1883.
+1622567756: New client connected from 172.21.0.1:34394 as Node 3 (p1, c1, k60).
+1622567756: New connection from 172.21.0.1:34400 on port 1883.
+1622567756: New client connected from 172.21.0.1:34400 as Node 4 (p1, c1, k60).
+1622567778: Client Node 4 closed its connection.
+1622567778: Client Node 3 closed its connection.
+1622567778: Client Node 1 closed its connection.
+1622567778: Client Node 2 closed its connection.
+1622567786: New connection from 172.21.0.1:34406 on port 1883.
+1622567786: New client connected from 172.21.0.1:34406 as Node 1 (p1, c1, k60).
+1622567786: New connection from 172.21.0.1:34412 on port 1883.
+1622567786: New client connected from 172.21.0.1:34412 as Node 2 (p1, c1, k60).
+1622567787: New connection from 172.21.0.1:34418 on port 1883.
+1622567787: New client connected from 172.21.0.1:34418 as Node 3 (p1, c1, k60).
+1622567788: New connection from 172.21.0.1:34424 on port 1883.
+1622567788: New client connected from 172.21.0.1:34424 as Node 4 (p1, c1, k60).
+1622567909: Client Node 2 closed its connection.
+1622567909: Client Node 4 closed its connection.
+1622567909: Client Node 3 closed its connection.
+1622567909: Client Node 1 closed its connection.
+1622567920: New connection from 172.21.0.1:34430 on port 1883.
+1622567920: New client connected from 172.21.0.1:34430 as Node 1 (p1, c1, k60).
+1622567920: New connection from 172.21.0.1:34436 on port 1883.
+1622567920: New client connected from 172.21.0.1:34436 as Node 2 (p1, c1, k60).
+1622567921: New connection from 172.21.0.1:34442 on port 1883.
+1622567921: New client connected from 172.21.0.1:34442 as Node 3 (p1, c1, k60).
+1622567922: New connection from 172.21.0.1:34448 on port 1883.
+1622567922: New client connected from 172.21.0.1:34448 as Node 4 (p1, c1, k60).
+1622567922: New connection from 172.21.0.1:34454 on port 1883.
+1622567922: New client connected from 172.21.0.1:34454 as Node 5 (p1, c1, k60).
+1622567923: New connection from 172.21.0.1:34460 on port 1883.
+1622567923: New client connected from 172.21.0.1:34460 as Node 6 (p1, c1, k60).
+1622567924: New connection from 172.21.0.1:34466 on port 1883.
+1622567924: New client connected from 172.21.0.1:34466 as Node 7 (p1, c1, k60).
+1622567924: New connection from 172.21.0.1:34472 on port 1883.
+1622567924: New client connected from 172.21.0.1:34472 as Node 8 (p1, c1, k60).
+1622567925: New connection from 172.21.0.1:34478 on port 1883.
+1622567925: New client connected from 172.21.0.1:34478 as Node 9 (p1, c1, k60).
+1622567926: New connection from 172.21.0.1:34484 on port 1883.
+1622567926: New client connected from 172.21.0.1:34484 as Node 10 (p1, c1, k60).
+1622567926: New connection from 172.21.0.1:34490 on port 1883.
+1622567926: New client connected from 172.21.0.1:34490 as Node 11 (p1, c1, k60).
+1622567927: New connection from 172.21.0.1:34496 on port 1883.
+1622567927: New client connected from 172.21.0.1:34496 as Node 12 (p1, c1, k60).
+1622567928: New connection from 172.21.0.1:34502 on port 1883.
+1622567928: New client connected from 172.21.0.1:34502 as Node 13 (p1, c1, k60).
+1622567929: New connection from 172.21.0.1:34508 on port 1883.
+1622567929: New client connected from 172.21.0.1:34508 as Node 14 (p1, c1, k60).
+1622567929: New connection from 172.21.0.1:34514 on port 1883.
+1622567929: New client connected from 172.21.0.1:34514 as Node 15 (p1, c1, k60).
+1622567931: New connection from 172.21.0.1:34520 on port 1883.
+1622567931: New client connected from 172.21.0.1:34520 as Node 16 (p1, c1, k60).
+1622568040: Client Node 7 closed its connection.
+1622568040: Client Node 12 closed its connection.
+1622568040: Client Node 5 closed its connection.
+1622568040: Client Node 2 closed its connection.
+1622568040: Client Node 10 closed its connection.
+1622568040: Client Node 14 closed its connection.
+1622568040: Client Node 13 closed its connection.
+1622568040: Client Node 9 closed its connection.
+1622568040: Client Node 8 closed its connection.
+1622568040: Client Node 1 closed its connection.
+1622568040: Client Node 6 closed its connection.
+1622568040: Client Node 11 closed its connection.
+1622568040: Client Node 3 closed its connection.
+1622568040: Client Node 4 closed its connection.
+1622568040: Client Node 16 closed its connection.
+1622568040: Client Node 15 closed its connection.
+1622568140: New connection from 172.21.0.1:34526 on port 1883.
+1622568140: New client connected from 172.21.0.1:34526 as Node 4 (p1, c1, k60).
+1622568194: Client Node 4 closed its connection.
+1622568214: New connection from 172.21.0.1:34532 on port 1883.
+1622568214: New client connected from 172.21.0.1:34532 as Node 1 (p1, c1, k60).
+1622568214: New connection from 172.21.0.1:34538 on port 1883.
+1622568214: New client connected from 172.21.0.1:34538 as Node 2 (p1, c1, k60).
+1622568215: New connection from 172.21.0.1:34544 on port 1883.
+1622568215: New client connected from 172.21.0.1:34544 as Node 3 (p1, c1, k60).
+1622568216: New connection from 172.21.0.1:34550 on port 1883.
+1622568216: New client connected from 172.21.0.1:34550 as Node 4 (p1, c1, k60).
+1622568216: New connection from 172.21.0.1:34556 on port 1883.
+1622568216: New client connected from 172.21.0.1:34556 as Node 5 (p1, c1, k60).
+1622568217: New connection from 172.21.0.1:34562 on port 1883.
+1622568217: New client connected from 172.21.0.1:34562 as Node 6 (p1, c1, k60).
+1622568218: New connection from 172.21.0.1:34568 on port 1883.
+1622568218: New client connected from 172.21.0.1:34568 as Node 7 (p1, c1, k60).
+1622568218: New connection from 172.21.0.1:34574 on port 1883.
+1622568218: New client connected from 172.21.0.1:34574 as Node 8 (p1, c1, k60).
+1622568219: New connection from 172.21.0.1:34580 on port 1883.
+1622568219: New client connected from 172.21.0.1:34580 as Node 9 (p1, c1, k60).
+1622568220: New connection from 172.21.0.1:34586 on port 1883.
+1622568220: New client connected from 172.21.0.1:34586 as Node 10 (p1, c1, k60).
+1622568221: New connection from 172.21.0.1:34592 on port 1883.
+1622568221: New client connected from 172.21.0.1:34592 as Node 11 (p1, c1, k60).
+1622568221: New connection from 172.21.0.1:34598 on port 1883.
+1622568221: New client connected from 172.21.0.1:34598 as Node 12 (p1, c1, k60).
+1622568223: New connection from 172.21.0.1:34604 on port 1883.
+1622568223: New client connected from 172.21.0.1:34604 as Node 13 (p1, c1, k60).
+1622568224: New connection from 172.21.0.1:34610 on port 1883.
+1622568224: New client connected from 172.21.0.1:34610 as Node 14 (p1, c1, k60).
+1622568225: New connection from 172.21.0.1:34616 on port 1883.
+1622568225: New client connected from 172.21.0.1:34616 as Node 15 (p1, c1, k60).
+1622568226: New connection from 172.21.0.1:34622 on port 1883.
+1622568226: New client connected from 172.21.0.1:34622 as Node 16 (p1, c1, k60).
+1622568293: Client Node 16 closed its connection.
+1622568293: Client Node 2 closed its connection.
+1622568293: Client Node 15 closed its connection.
+1622568293: Client Node 9 closed its connection.
+1622568293: Client Node 11 closed its connection.
+1622568293: Client Node 7 closed its connection.
+1622568293: Client Node 8 closed its connection.
+1622568293: Client Node 14 closed its connection.
+1622568293: Client Node 5 closed its connection.
+1622568293: Client Node 10 closed its connection.
+1622568293: Client Node 12 closed its connection.
+1622568293: Client Node 1 closed its connection.
+1622568293: Client Node 6 closed its connection.
+1622568293: Client Node 4 closed its connection.
+1622568293: Client Node 13 closed its connection.
+1622568293: Client Node 3 closed its connection.
+1622568423: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1622570223: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623812078: mosquitto version 2.0.11 starting
+1623812078: Config loaded from /mosquitto/config/mosquitto.conf.
+1623812078: Opening ipv4 listen socket on port 1883.
+1623812078: Opening ipv6 listen socket on port 1883.
+1623812078: mosquitto version 2.0.11 running
+1623813004: New connection from 172.21.0.1:48874 on port 1883.
+1623813004: New client connected from 172.21.0.1:48874 as Node 1 (p1, c1, k60).
+1623813005: New connection from 172.21.0.1:48880 on port 1883.
+1623813005: New client connected from 172.21.0.1:48880 as Node 2 (p1, c1, k60).
+1623813006: New connection from 172.21.0.1:48886 on port 1883.
+1623813006: New client connected from 172.21.0.1:48886 as Node 3 (p1, c1, k60).
+1623813008: New connection from 172.21.0.1:48892 on port 1883.
+1623813008: New client connected from 172.21.0.1:48892 as Node 4 (p1, c1, k60).
+1623813009: New connection from 172.21.0.1:48898 on port 1883.
+1623813009: New client connected from 172.21.0.1:48898 as Node 5 (p1, c1, k60).
+1623813010: New connection from 172.21.0.1:48904 on port 1883.
+1623813010: New client connected from 172.21.0.1:48904 as Node 6 (p1, c1, k60).
+1623813011: New connection from 172.21.0.1:48910 on port 1883.
+1623813011: New client connected from 172.21.0.1:48910 as Node 7 (p1, c1, k60).
+1623813013: New connection from 172.21.0.1:48916 on port 1883.
+1623813013: New client connected from 172.21.0.1:48916 as Node 8 (p1, c1, k60).
+1623813014: New connection from 172.21.0.1:48922 on port 1883.
+1623813014: New client connected from 172.21.0.1:48922 as Node 9 (p1, c1, k60).
+1623813016: New connection from 172.21.0.1:48928 on port 1883.
+1623813016: New client connected from 172.21.0.1:48928 as Node 10 (p1, c1, k60).
+1623813017: New connection from 172.21.0.1:48934 on port 1883.
+1623813017: New client connected from 172.21.0.1:48934 as Node 11 (p1, c1, k60).
+1623813019: New connection from 172.21.0.1:48940 on port 1883.
+1623813019: New client connected from 172.21.0.1:48940 as Node 12 (p1, c1, k60).
+1623813020: New connection from 172.21.0.1:48946 on port 1883.
+1623813020: New client connected from 172.21.0.1:48946 as Node 13 (p1, c1, k60).
+1623813022: New connection from 172.21.0.1:48952 on port 1883.
+1623813022: New client connected from 172.21.0.1:48952 as Node 14 (p1, c1, k60).
+1623813023: New connection from 172.21.0.1:48958 on port 1883.
+1623813023: New client connected from 172.21.0.1:48958 as Node 15 (p1, c1, k60).
+1623813025: New connection from 172.21.0.1:48964 on port 1883.
+1623813025: New client connected from 172.21.0.1:48964 as Node 16 (p1, c1, k60).
+1623813127: Client Node 13 closed its connection.
+1623813127: Client Node 14 closed its connection.
+1623813127: Client Node 3 closed its connection.
+1623813127: Client Node 7 closed its connection.
+1623813127: Client Node 6 closed its connection.
+1623813127: Client Node 9 closed its connection.
+1623813127: Client Node 5 closed its connection.
+1623813127: Client Node 11 closed its connection.
+1623813127: Client Node 16 closed its connection.
+1623813127: Client Node 12 closed its connection.
+1623813127: Client Node 10 closed its connection.
+1623813127: Client Node 1 closed its connection.
+1623813127: Client Node 8 closed its connection.
+1623813127: Client Node 4 closed its connection.
+1623813127: Client Node 15 closed its connection.
+1623813127: Client Node 2 closed its connection.
+1623862478: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623886116: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623888769: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623889409: New connection from 172.21.0.1:48970 on port 1883.
+1623889409: New client connected from 172.21.0.1:48970 as Node 1 (p1, c1, k60).
+1623889410: New connection from 172.21.0.1:48976 on port 1883.
+1623889410: New client connected from 172.21.0.1:48976 as Node 2 (p1, c1, k60).
+1623889411: New connection from 172.21.0.1:48982 on port 1883.
+1623889411: New client connected from 172.21.0.1:48982 as Node 3 (p1, c1, k60).
+1623889413: New connection from 172.21.0.1:48988 on port 1883.
+1623889413: New client connected from 172.21.0.1:48988 as Node 4 (p1, c1, k60).
+1623889414: New connection from 172.21.0.1:48994 on port 1883.
+1623889414: New client connected from 172.21.0.1:48994 as Node 5 (p1, c1, k60).
+1623889415: New connection from 172.21.0.1:49000 on port 1883.
+1623889415: New client connected from 172.21.0.1:49000 as Node 6 (p1, c1, k60).
+1623889416: New connection from 172.21.0.1:49006 on port 1883.
+1623889416: New client connected from 172.21.0.1:49006 as Node 7 (p1, c1, k60).
+1623889418: New connection from 172.21.0.1:49012 on port 1883.
+1623889418: New client connected from 172.21.0.1:49012 as Node 8 (p1, c1, k60).
+1623889419: New connection from 172.21.0.1:49018 on port 1883.
+1623889419: New client connected from 172.21.0.1:49018 as Node 9 (p1, c1, k60).
+1623889421: New connection from 172.21.0.1:49024 on port 1883.
+1623889421: New client connected from 172.21.0.1:49024 as Node 10 (p1, c1, k60).
+1623889422: New connection from 172.21.0.1:49030 on port 1883.
+1623889422: New client connected from 172.21.0.1:49030 as Node 11 (p1, c1, k60).
+1623889424: New connection from 172.21.0.1:49036 on port 1883.
+1623889424: New client connected from 172.21.0.1:49036 as Node 12 (p1, c1, k60).
+1623889425: New connection from 172.21.0.1:49042 on port 1883.
+1623889425: New client connected from 172.21.0.1:49042 as Node 13 (p1, c1, k60).
+1623889427: New connection from 172.21.0.1:49048 on port 1883.
+1623889427: New client connected from 172.21.0.1:49048 as Node 14 (p1, c1, k60).
+1623889428: New connection from 172.21.0.1:49054 on port 1883.
+1623889428: New client connected from 172.21.0.1:49054 as Node 15 (p1, c1, k60).
+1623889430: New connection from 172.21.0.1:49060 on port 1883.
+1623889430: New client connected from 172.21.0.1:49060 as Node 16 (p1, c1, k60).
+1623889474: Client Node 16 closed its connection.
+1623889474: Client Node 13 closed its connection.
+1623889474: Client Node 14 closed its connection.
+1623889474: Client Node 4 closed its connection.
+1623889474: Client Node 10 closed its connection.
+1623889474: Client Node 15 closed its connection.
+1623889474: Client Node 7 closed its connection.
+1623889474: Client Node 5 closed its connection.
+1623889474: Client Node 12 closed its connection.
+1623889474: Client Node 9 closed its connection.
+1623889474: Client Node 2 closed its connection.
+1623889474: Client Node 6 closed its connection.
+1623889474: Client Node 8 closed its connection.
+1623889474: Client Node 3 closed its connection.
+1623889474: Client Node 11 closed its connection.
+1623889474: Client Node 1 closed its connection.
+1623890570: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623892371: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623894212: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623896013: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623910446: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623914840: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623917319: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623920918: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623924518: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623928118: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623932141: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623933941: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623935742: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623937543: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623939344: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623941145: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623942946: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623942957: New connection from 172.21.0.1:49072 on port 1883.
+1623942957: New connection from 172.21.0.1:49074 on port 1883.
+1623942957: New client connected from 172.21.0.1:49072 as Node 2 (p1, c1, k60).
+1623942957: New client connected from 172.21.0.1:49074 as Node 1 (p1, c1, k60).
+1623942957: New connection from 172.21.0.1:49080 on port 1883.
+1623942957: New client connected from 172.21.0.1:49080 as Node 3 (p1, c1, k60).
+1623942958: New connection from 172.21.0.1:49086 on port 1883.
+1623942958: New client connected from 172.21.0.1:49086 as Node 4 (p1, c1, k60).
+1623942959: New connection from 172.21.0.1:49092 on port 1883.
+1623942959: New client connected from 172.21.0.1:49092 as Node 5 (p1, c1, k60).
+1623942959: New connection from 172.21.0.1:49098 on port 1883.
+1623942959: New client connected from 172.21.0.1:49098 as Node 6 (p1, c1, k60).
+1623942960: New connection from 172.21.0.1:49104 on port 1883.
+1623942960: New client connected from 172.21.0.1:49104 as Node 7 (p1, c1, k60).
+1623942961: New connection from 172.21.0.1:49110 on port 1883.
+1623942961: New client connected from 172.21.0.1:49110 as Node 8 (p1, c1, k60).
+1623942961: New connection from 172.21.0.1:49116 on port 1883.
+1623942961: New client connected from 172.21.0.1:49116 as Node 9 (p1, c1, k60).
+1623942962: New connection from 172.21.0.1:49122 on port 1883.
+1623942962: New client connected from 172.21.0.1:49122 as Node 10 (p1, c1, k60).
+1623942963: New connection from 172.21.0.1:49128 on port 1883.
+1623942963: New client connected from 172.21.0.1:49128 as Node 11 (p1, c1, k60).
+1623942963: New connection from 172.21.0.1:49134 on port 1883.
+1623942963: New client connected from 172.21.0.1:49134 as Node 12 (p1, c1, k60).
+1623942964: New connection from 172.21.0.1:49140 on port 1883.
+1623942964: New client connected from 172.21.0.1:49140 as Node 13 (p1, c1, k60).
+1623942965: New connection from 172.21.0.1:49146 on port 1883.
+1623942965: New client connected from 172.21.0.1:49146 as Node 14 (p1, c1, k60).
+1623942966: New connection from 172.21.0.1:49152 on port 1883.
+1623942966: New client connected from 172.21.0.1:49152 as Node 15 (p1, c1, k60).
+1623942967: New connection from 172.21.0.1:49158 on port 1883.
+1623942967: New client connected from 172.21.0.1:49158 as Node 16 (p1, c1, k60).
+1623943011: Client Node 11 closed its connection.
+1623943011: Client Node 9 closed its connection.
+1623943011: Client Node 16 closed its connection.
+1623943011: Client Node 2 closed its connection.
+1623943011: Client Node 3 closed its connection.
+1623943011: Client Node 14 closed its connection.
+1623943011: Client Node 15 closed its connection.
+1623943011: Client Node 7 closed its connection.
+1623943011: Client Node 12 closed its connection.
+1623943011: Client Node 10 closed its connection.
+1623943011: Client Node 5 closed its connection.
+1623943011: Client Node 8 closed its connection.
+1623943011: Client Node 4 closed its connection.
+1623943011: Client Node 6 closed its connection.
+1623943011: Client Node 1 closed its connection.
+1623943011: Client Node 13 closed its connection.
+1623943190: New connection from 172.21.0.1:49164 on port 1883.
+1623943190: New client connected from 172.21.0.1:49164 as Node 1 (p1, c1, k60).
+1623943191: New connection from 172.21.0.1:49170 on port 1883.
+1623943191: New client connected from 172.21.0.1:49170 as Node 2 (p1, c1, k60).
+1623943199: Client Node 1 closed its connection.
+1623943200: Client Node 2 closed its connection.
+1623943246: New connection from 172.21.0.1:49176 on port 1883.
+1623943246: New client connected from 172.21.0.1:49176 as Node 1 (p1, c1, k60).
+1623943247: New connection from 172.21.0.1:49182 on port 1883.
+1623943247: New client connected from 172.21.0.1:49182 as Node 2 (p1, c1, k60).
+1623943255: Client Node 1 closed its connection.
+1623943255: Client Node 2 closed its connection.
+1623943273: New connection from 172.21.0.1:49188 on port 1883.
+1623943273: New client connected from 172.21.0.1:49188 as Node 1 (p1, c1, k60).
+1623943273: New connection from 172.21.0.1:49194 on port 1883.
+1623943273: New client connected from 172.21.0.1:49194 as Node 2 (p1, c1, k60).
+1623943277: Client Node 1 closed its connection.
+1623943278: Client Node 2 closed its connection.
+1623943317: New connection from 172.21.0.1:49200 on port 1883.
+1623943317: New client connected from 172.21.0.1:49200 as Node 1 (p1, c1, k60).
+1623943318: New connection from 172.21.0.1:49206 on port 1883.
+1623943318: New client connected from 172.21.0.1:49206 as Node 2 (p1, c1, k60).
+1623943327: Client Node 1 closed its connection.
+1623943329: Client Node 2 closed its connection.
+1623943354: New connection from 172.21.0.1:49212 on port 1883.
+1623943354: New client connected from 172.21.0.1:49212 as Node 1 (p1, c1, k60).
+1623943354: New connection from 172.21.0.1:49218 on port 1883.
+1623943354: New client connected from 172.21.0.1:49218 as Node 2 (p1, c1, k60).
+1623943385: Client Node 2 closed its connection.
+1623943385: Client Node 1 closed its connection.
+1623943391: New connection from 172.21.0.1:49224 on port 1883.
+1623943391: New client connected from 172.21.0.1:49224 as Node 1 (p1, c1, k60).
+1623943391: New connection from 172.21.0.1:49230 on port 1883.
+1623943391: New client connected from 172.21.0.1:49230 as Node 2 (p1, c1, k60).
+1623943408: Client Node 2 closed its connection.
+1623943408: Client Node 1 closed its connection.
+1623943566: New connection from 172.21.0.1:49236 on port 1883.
+1623943566: New client connected from 172.21.0.1:49236 as Node 1 (p1, c1, k60).
+1623943566: New connection from 172.21.0.1:49242 on port 1883.
+1623943566: New client connected from 172.21.0.1:49242 as Node 2 (p1, c1, k60).
+1623943574: Client Node 1 closed its connection.
+1623943576: Client Node 2 closed its connection.
+1623943636: New connection from 172.21.0.1:49248 on port 1883.
+1623943636: New client connected from 172.21.0.1:49248 as Node 1 (p1, c1, k60).
+1623943637: New connection from 172.21.0.1:49254 on port 1883.
+1623943637: New client connected from 172.21.0.1:49254 as Node 2 (p1, c1, k60).
+1623943645: Client Node 1 closed its connection.
+1623943645: Client Node 2 closed its connection.
+1623943763: New connection from 172.21.0.1:49260 on port 1883.
+1623943763: New client connected from 172.21.0.1:49260 as Node 1 (p1, c1, k60).
+1623943763: New connection from 172.21.0.1:49266 on port 1883.
+1623943763: New client connected from 172.21.0.1:49266 as Node 2 (p1, c1, k60).
+1623943853: Client Node 1 closed its connection.
+1623943853: Client Node 2 closed its connection.
+1623943857: New connection from 172.21.0.1:49272 on port 1883.
+1623943857: New client connected from 172.21.0.1:49272 as Node 1 (p1, c1, k60).
+1623943857: New connection from 172.21.0.1:49278 on port 1883.
+1623943857: New client connected from 172.21.0.1:49278 as Node 2 (p1, c1, k60).
+1623943903: Client Node 2 closed its connection.
+1623943903: Client Node 1 closed its connection.
+1623943905: New connection from 172.21.0.1:49284 on port 1883.
+1623943905: New client connected from 172.21.0.1:49284 as Node 1 (p1, c1, k60).
+1623943906: New connection from 172.21.0.1:49290 on port 1883.
+1623943906: New client connected from 172.21.0.1:49290 as Node 2 (p1, c1, k60).
+1623943998: Client Node 2 has exceeded timeout, disconnecting.
+1623944044: Client Node 1 closed its connection.
+1623944047: New connection from 172.21.0.1:49296 on port 1883.
+1623944047: New client connected from 172.21.0.1:49296 as Node 1 (p1, c1, k60).
+1623944048: New connection from 172.21.0.1:49302 on port 1883.
+1623944048: New client connected from 172.21.0.1:49302 as Node 2 (p1, c1, k60).
+1623944065: Client Node 2 closed its connection.
+1623944065: Client Node 1 closed its connection.
+1623944089: New connection from 172.21.0.1:49308 on port 1883.
+1623944089: New client connected from 172.21.0.1:49308 as Node 1 (p1, c1, k60).
+1623944089: New connection from 172.21.0.1:49314 on port 1883.
+1623944089: New client connected from 172.21.0.1:49314 as Node 2 (p1, c1, k60).
+1623944098: Client Node 1 closed its connection.
+1623944099: Client Node 2 closed its connection.
+1623944323: New connection from 172.21.0.1:49320 on port 1883.
+1623944323: New client connected from 172.21.0.1:49320 as Node 1 (p1, c1, k60).
+1623944324: New connection from 172.21.0.1:49326 on port 1883.
+1623944324: New client connected from 172.21.0.1:49326 as Node 2 (p1, c1, k60).
+1623944348: Client Node 1 closed its connection.
+1623944350: Client Node 2 closed its connection.
+1623944747: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623945055: New connection from 172.21.0.1:49332 on port 1883.
+1623945055: New client connected from 172.21.0.1:49332 as Node 1 (p1, c1, k60).
+1623945055: New connection from 172.21.0.1:49338 on port 1883.
+1623945055: New client connected from 172.21.0.1:49338 as Node 2 (p1, c1, k60).
+1623945056: New connection from 172.21.0.1:49344 on port 1883.
+1623945056: New client connected from 172.21.0.1:49344 as Node 3 (p1, c1, k60).
+1623945056: New connection from 172.21.0.1:49350 on port 1883.
+1623945056: New client connected from 172.21.0.1:49350 as Node 4 (p1, c1, k60).
+1623945057: New connection from 172.21.0.1:49356 on port 1883.
+1623945057: New client connected from 172.21.0.1:49356 as Node 5 (p1, c1, k60).
+1623945058: New connection from 172.21.0.1:49362 on port 1883.
+1623945058: New client connected from 172.21.0.1:49362 as Node 6 (p1, c1, k60).
+1623945059: New connection from 172.21.0.1:49368 on port 1883.
+1623945059: New client connected from 172.21.0.1:49368 as Node 7 (p1, c1, k60).
+1623945059: New connection from 172.21.0.1:49374 on port 1883.
+1623945059: New client connected from 172.21.0.1:49374 as Node 8 (p1, c1, k60).
+1623945060: New connection from 172.21.0.1:49380 on port 1883.
+1623945060: New client connected from 172.21.0.1:49380 as Node 9 (p1, c1, k60).
+1623945060: New connection from 172.21.0.1:49386 on port 1883.
+1623945060: New client connected from 172.21.0.1:49386 as Node 10 (p1, c1, k60).
+1623945061: New connection from 172.21.0.1:49392 on port 1883.
+1623945061: New client connected from 172.21.0.1:49392 as Node 11 (p1, c1, k60).
+1623945062: New connection from 172.21.0.1:49398 on port 1883.
+1623945062: New client connected from 172.21.0.1:49398 as Node 12 (p1, c1, k60).
+1623945063: New connection from 172.21.0.1:49404 on port 1883.
+1623945063: New client connected from 172.21.0.1:49404 as Node 13 (p1, c1, k60).
+1623945064: New connection from 172.21.0.1:49410 on port 1883.
+1623945064: New client connected from 172.21.0.1:49410 as Node 14 (p1, c1, k60).
+1623945065: New connection from 172.21.0.1:49416 on port 1883.
+1623945065: New client connected from 172.21.0.1:49416 as Node 15 (p1, c1, k60).
+1623945065: New connection from 172.21.0.1:49422 on port 1883.
+1623945065: New client connected from 172.21.0.1:49422 as Node 16 (p1, c1, k60).
+1623945116: Client Node 7 closed its connection.
+1623945116: Client Node 3 closed its connection.
+1623945116: Client Node 12 closed its connection.
+1623945116: Client Node 5 closed its connection.
+1623945116: Client Node 15 closed its connection.
+1623945116: Client Node 9 closed its connection.
+1623945116: Client Node 13 closed its connection.
+1623945116: Client Node 14 closed its connection.
+1623945116: Client Node 8 closed its connection.
+1623945116: Client Node 4 closed its connection.
+1623945116: Client Node 2 closed its connection.
+1623945116: Client Node 10 closed its connection.
+1623945116: Client Node 6 closed its connection.
+1623945116: Client Node 16 closed its connection.
+1623945116: Client Node 1 closed its connection.
+1623945116: Client Node 11 closed its connection.
+1623945147: New connection from 172.21.0.1:49428 on port 1883.
+1623945147: New client connected from 172.21.0.1:49428 as Node 1 (p1, c1, k60).
+1623945148: New connection from 172.21.0.1:49434 on port 1883.
+1623945148: New client connected from 172.21.0.1:49434 as Node 2 (p1, c1, k60).
+1623945240: Client Node 2 has exceeded timeout, disconnecting.
+1623945309: Client Node 1 closed its connection.
+1623945312: New connection from 172.21.0.1:49440 on port 1883.
+1623945312: New client connected from 172.21.0.1:49440 as Node 1 (p1, c1, k60).
+1623945312: New connection from 172.21.0.1:49446 on port 1883.
+1623945312: New client connected from 172.21.0.1:49446 as Node 2 (p1, c1, k60).
+1623945393: Client Node 1 closed its connection.
+1623945394: Client Node 2 closed its connection.
+1623945405: New connection from 172.21.0.1:49452 on port 1883.
+1623945405: New client connected from 172.21.0.1:49452 as Node 1 (p1, c1, k60).
+1623945405: New connection from 172.21.0.1:49458 on port 1883.
+1623945405: New client connected from 172.21.0.1:49458 as Node 2 (p1, c1, k60).
+1623945406: New connection from 172.21.0.1:49464 on port 1883.
+1623945406: New client connected from 172.21.0.1:49464 as Node 3 (p1, c1, k60).
+1623945407: New connection from 172.21.0.1:49470 on port 1883.
+1623945407: New client connected from 172.21.0.1:49470 as Node 4 (p1, c1, k60).
+1623945407: New connection from 172.21.0.1:49476 on port 1883.
+1623945407: New client connected from 172.21.0.1:49476 as Node 5 (p1, c1, k60).
+1623945408: New connection from 172.21.0.1:49482 on port 1883.
+1623945408: New client connected from 172.21.0.1:49482 as Node 6 (p1, c1, k60).
+1623945409: New connection from 172.21.0.1:49488 on port 1883.
+1623945409: New client connected from 172.21.0.1:49488 as Node 7 (p1, c1, k60).
+1623945410: New connection from 172.21.0.1:49494 on port 1883.
+1623945410: New client connected from 172.21.0.1:49494 as Node 8 (p1, c1, k60).
+1623945410: New connection from 172.21.0.1:49500 on port 1883.
+1623945410: New client connected from 172.21.0.1:49500 as Node 9 (p1, c1, k60).
+1623945411: New connection from 172.21.0.1:49506 on port 1883.
+1623945411: New client connected from 172.21.0.1:49506 as Node 10 (p1, c1, k60).
+1623945412: New connection from 172.21.0.1:49512 on port 1883.
+1623945412: New client connected from 172.21.0.1:49512 as Node 11 (p1, c1, k60).
+1623945412: New connection from 172.21.0.1:49518 on port 1883.
+1623945412: New client connected from 172.21.0.1:49518 as Node 12 (p1, c1, k60).
+1623945413: New connection from 172.21.0.1:49524 on port 1883.
+1623945413: New client connected from 172.21.0.1:49524 as Node 13 (p1, c1, k60).
+1623945414: New connection from 172.21.0.1:49530 on port 1883.
+1623945414: New client connected from 172.21.0.1:49530 as Node 14 (p1, c1, k60).
+1623945415: New connection from 172.21.0.1:49536 on port 1883.
+1623945415: New client connected from 172.21.0.1:49536 as Node 15 (p1, c1, k60).
+1623945416: New connection from 172.21.0.1:49542 on port 1883.
+1623945416: New client connected from 172.21.0.1:49542 as Node 16 (p1, c1, k60).
+1623945496: Client Node 1 closed its connection.
+1623945496: Client Node 6 closed its connection.
+1623945496: Client Node 14 closed its connection.
+1623945496: Client Node 13 closed its connection.
+1623945496: Client Node 2 closed its connection.
+1623945496: Client Node 15 closed its connection.
+1623945496: Client Node 11 closed its connection.
+1623945496: Client Node 4 closed its connection.
+1623945496: Client Node 3 closed its connection.
+1623945496: Client Node 16 closed its connection.
+1623945496: Client Node 8 closed its connection.
+1623945496: Client Node 12 closed its connection.
+1623945496: Client Node 7 closed its connection.
+1623945496: Client Node 10 closed its connection.
+1623945496: Client Node 9 closed its connection.
+1623945496: Client Node 5 closed its connection.
+1623946548: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623948349: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623948775: New connection from 172.21.0.1:49552 on port 1883.
+1623948775: New connection from 172.21.0.1:49554 on port 1883.
+1623948775: New client connected from 172.21.0.1:49554 as Node 2 (p1, c1, k60).
+1623948775: New client connected from 172.21.0.1:49552 as Node 1 (p1, c1, k60).
+1623948776: New connection from 172.21.0.1:49560 on port 1883.
+1623948776: New client connected from 172.21.0.1:49560 as Node 3 (p1, c1, k60).
+1623948777: New connection from 172.21.0.1:49566 on port 1883.
+1623948777: New client connected from 172.21.0.1:49566 as Node 4 (p1, c1, k60).
+1623948777: New connection from 172.21.0.1:49572 on port 1883.
+1623948777: New client connected from 172.21.0.1:49572 as Node 5 (p1, c1, k60).
+1623948778: New connection from 172.21.0.1:49578 on port 1883.
+1623948778: New client connected from 172.21.0.1:49578 as Node 6 (p1, c1, k60).
+1623948779: New connection from 172.21.0.1:49584 on port 1883.
+1623948779: New client connected from 172.21.0.1:49584 as Node 7 (p1, c1, k60).
+1623948779: New connection from 172.21.0.1:49590 on port 1883.
+1623948779: New client connected from 172.21.0.1:49590 as Node 8 (p1, c1, k60).
+1623948780: New connection from 172.21.0.1:49596 on port 1883.
+1623948780: New client connected from 172.21.0.1:49596 as Node 9 (p1, c1, k60).
+1623948781: New connection from 172.21.0.1:49602 on port 1883.
+1623948781: New client connected from 172.21.0.1:49602 as Node 10 (p1, c1, k60).
+1623948782: New connection from 172.21.0.1:49608 on port 1883.
+1623948782: New client connected from 172.21.0.1:49608 as Node 11 (p1, c1, k60).
+1623948783: New connection from 172.21.0.1:49614 on port 1883.
+1623948783: New client connected from 172.21.0.1:49614 as Node 12 (p1, c1, k60).
+1623948783: New connection from 172.21.0.1:49620 on port 1883.
+1623948783: New client connected from 172.21.0.1:49620 as Node 13 (p1, c1, k60).
+1623948784: New connection from 172.21.0.1:49626 on port 1883.
+1623948784: New client connected from 172.21.0.1:49626 as Node 14 (p1, c1, k60).
+1623948785: New connection from 172.21.0.1:49632 on port 1883.
+1623948785: New client connected from 172.21.0.1:49632 as Node 15 (p1, c1, k60).
+1623948786: New connection from 172.21.0.1:49638 on port 1883.
+1623948786: New client connected from 172.21.0.1:49638 as Node 16 (p1, c1, k60).
+1623948821: Client Node 11 closed its connection.
+1623948821: Client Node 3 closed its connection.
+1623948821: Client Node 9 closed its connection.
+1623948821: Client Node 4 closed its connection.
+1623948821: Client Node 15 closed its connection.
+1623948821: Client Node 13 closed its connection.
+1623948821: Client Node 10 closed its connection.
+1623948821: Client Node 12 closed its connection.
+1623948821: Client Node 2 closed its connection.
+1623948821: Client Node 1 closed its connection.
+1623948821: Client Node 5 closed its connection.
+1623948821: Client Node 7 closed its connection.
+1623948821: Client Node 8 closed its connection.
+1623948821: Client Node 16 closed its connection.
+1623948821: Client Node 14 closed its connection.
+1623948821: Client Node 6 closed its connection.
+1623948838: New connection from 172.21.0.1:49644 on port 1883.
+1623948838: New client connected from 172.21.0.1:49644 as Node 1 (p1, c1, k60).
+1623948838: New connection from 172.21.0.1:49650 on port 1883.
+1623948838: New client connected from 172.21.0.1:49650 as Node 2 (p1, c1, k60).
+1623948839: New connection from 172.21.0.1:49656 on port 1883.
+1623948839: New client connected from 172.21.0.1:49656 as Node 3 (p1, c1, k60).
+1623948840: New connection from 172.21.0.1:49662 on port 1883.
+1623948840: New client connected from 172.21.0.1:49662 as Node 4 (p1, c1, k60).
+1623948840: New connection from 172.21.0.1:49668 on port 1883.
+1623948840: New client connected from 172.21.0.1:49668 as Node 5 (p1, c1, k60).
+1623948841: New connection from 172.21.0.1:49674 on port 1883.
+1623948841: New client connected from 172.21.0.1:49674 as Node 6 (p1, c1, k60).
+1623948842: New connection from 172.21.0.1:49680 on port 1883.
+1623948842: New client connected from 172.21.0.1:49680 as Node 7 (p1, c1, k60).
+1623948843: New connection from 172.21.0.1:49686 on port 1883.
+1623948843: New client connected from 172.21.0.1:49686 as Node 8 (p1, c1, k60).
+1623948843: New connection from 172.21.0.1:49692 on port 1883.
+1623948843: New client connected from 172.21.0.1:49692 as Node 9 (p1, c1, k60).
+1623948844: New connection from 172.21.0.1:49698 on port 1883.
+1623948844: New client connected from 172.21.0.1:49698 as Node 10 (p1, c1, k60).
+1623948845: New connection from 172.21.0.1:49704 on port 1883.
+1623948845: New client connected from 172.21.0.1:49704 as Node 11 (p1, c1, k60).
+1623948846: New connection from 172.21.0.1:49710 on port 1883.
+1623948846: New client connected from 172.21.0.1:49710 as Node 12 (p1, c1, k60).
+1623948846: New connection from 172.21.0.1:49716 on port 1883.
+1623948846: New client connected from 172.21.0.1:49716 as Node 13 (p1, c1, k60).
+1623948847: New connection from 172.21.0.1:49722 on port 1883.
+1623948847: New client connected from 172.21.0.1:49722 as Node 14 (p1, c1, k60).
+1623948848: New connection from 172.21.0.1:49728 on port 1883.
+1623948848: New client connected from 172.21.0.1:49728 as Node 15 (p1, c1, k60).
+1623948849: New connection from 172.21.0.1:49734 on port 1883.
+1623948849: New client connected from 172.21.0.1:49734 as Node 16 (p1, c1, k60).
+1623948925: Client Node 16 closed its connection.
+1623948925: Client Node 15 closed its connection.
+1623948925: Client Node 12 closed its connection.
+1623948925: Client Node 13 closed its connection.
+1623948925: Client Node 8 closed its connection.
+1623948925: Client Node 11 closed its connection.
+1623948925: Client Node 9 closed its connection.
+1623948925: Client Node 2 closed its connection.
+1623948925: Client Node 3 closed its connection.
+1623948925: Client Node 6 closed its connection.
+1623948925: Client Node 10 closed its connection.
+1623948925: Client Node 14 closed its connection.
+1623948925: Client Node 1 closed its connection.
+1623948925: Client Node 5 closed its connection.
+1623948925: Client Node 4 closed its connection.
+1623948925: Client Node 7 closed its connection.
+1623948928: New connection from 172.21.0.1:49740 on port 1883.
+1623948928: New client connected from 172.21.0.1:49740 as Node 1 (p1, c1, k60).
+1623948929: New connection from 172.21.0.1:49746 on port 1883.
+1623948929: New client connected from 172.21.0.1:49746 as Node 2 (p1, c1, k60).
+1623948929: New connection from 172.21.0.1:49752 on port 1883.
+1623948929: New client connected from 172.21.0.1:49752 as Node 3 (p1, c1, k60).
+1623948930: New connection from 172.21.0.1:49758 on port 1883.
+1623948930: New client connected from 172.21.0.1:49758 as Node 4 (p1, c1, k60).
+1623948931: New connection from 172.21.0.1:49764 on port 1883.
+1623948931: New client connected from 172.21.0.1:49764 as Node 5 (p1, c1, k60).
+1623948931: New connection from 172.21.0.1:49770 on port 1883.
+1623948931: New client connected from 172.21.0.1:49770 as Node 6 (p1, c1, k60).
+1623948932: New connection from 172.21.0.1:49776 on port 1883.
+1623948932: New client connected from 172.21.0.1:49776 as Node 7 (p1, c1, k60).
+1623948932: New connection from 172.21.0.1:49782 on port 1883.
+1623948932: New client connected from 172.21.0.1:49782 as Node 8 (p1, c1, k60).
+1623948933: New connection from 172.21.0.1:49788 on port 1883.
+1623948933: New client connected from 172.21.0.1:49788 as Node 9 (p1, c1, k60).
+1623948934: New connection from 172.21.0.1:49794 on port 1883.
+1623948934: New client connected from 172.21.0.1:49794 as Node 10 (p1, c1, k60).
+1623948935: New connection from 172.21.0.1:49800 on port 1883.
+1623948935: New client connected from 172.21.0.1:49800 as Node 11 (p1, c1, k60).
+1623948936: New connection from 172.21.0.1:49806 on port 1883.
+1623948936: New client connected from 172.21.0.1:49806 as Node 12 (p1, c1, k60).
+1623948936: New connection from 172.21.0.1:49812 on port 1883.
+1623948936: New client connected from 172.21.0.1:49812 as Node 13 (p1, c1, k60).
+1623948937: New connection from 172.21.0.1:49818 on port 1883.
+1623948937: New client connected from 172.21.0.1:49818 as Node 14 (p1, c1, k60).
+1623948938: New connection from 172.21.0.1:49824 on port 1883.
+1623948938: New client connected from 172.21.0.1:49824 as Node 15 (p1, c1, k60).
+1623948939: New connection from 172.21.0.1:49830 on port 1883.
+1623948939: New client connected from 172.21.0.1:49830 as Node 16 (p1, c1, k60).
+1623948977: Client Node 7 closed its connection.
+1623948977: Client Node 3 closed its connection.
+1623948977: Client Node 15 closed its connection.
+1623948977: Client Node 6 closed its connection.
+1623948977: Client Node 12 closed its connection.
+1623948977: Client Node 11 closed its connection.
+1623948977: Client Node 4 closed its connection.
+1623948977: Client Node 1 closed its connection.
+1623948977: Client Node 14 closed its connection.
+1623948977: Client Node 2 closed its connection.
+1623948977: Client Node 8 closed its connection.
+1623948977: Client Node 10 closed its connection.
+1623948977: Client Node 5 closed its connection.
+1623948977: Client Node 9 closed its connection.
+1623948977: Client Node 16 closed its connection.
+1623948977: Client Node 13 closed its connection.
+1623949407: New connection from 172.21.0.1:49836 on port 1883.
+1623949407: New client connected from 172.21.0.1:49836 as Node 1 (p1, c1, k60).
+1623949408: New connection from 172.21.0.1:49842 on port 1883.
+1623949408: New client connected from 172.21.0.1:49842 as Node 2 (p1, c1, k60).
+1623949408: New connection from 172.21.0.1:49848 on port 1883.
+1623949408: New client connected from 172.21.0.1:49848 as Node 3 (p1, c1, k60).
+1623949409: New connection from 172.21.0.1:49854 on port 1883.
+1623949409: New client connected from 172.21.0.1:49854 as Node 4 (p1, c1, k60).
+1623949409: New connection from 172.21.0.1:49860 on port 1883.
+1623949409: New client connected from 172.21.0.1:49860 as Node 5 (p1, c1, k60).
+1623949410: New connection from 172.21.0.1:49866 on port 1883.
+1623949410: New client connected from 172.21.0.1:49866 as Node 6 (p1, c1, k60).
+1623949410: New connection from 172.21.0.1:49872 on port 1883.
+1623949410: New client connected from 172.21.0.1:49872 as Node 7 (p1, c1, k60).
+1623949411: New connection from 172.21.0.1:49878 on port 1883.
+1623949411: New client connected from 172.21.0.1:49878 as Node 8 (p1, c1, k60).
+1623949412: New connection from 172.21.0.1:49884 on port 1883.
+1623949412: New client connected from 172.21.0.1:49884 as Node 9 (p1, c1, k60).
+1623949413: New connection from 172.21.0.1:49890 on port 1883.
+1623949413: New client connected from 172.21.0.1:49890 as Node 10 (p1, c1, k60).
+1623949413: New connection from 172.21.0.1:49896 on port 1883.
+1623949413: New client connected from 172.21.0.1:49896 as Node 11 (p1, c1, k60).
+1623949414: New connection from 172.21.0.1:49902 on port 1883.
+1623949414: New client connected from 172.21.0.1:49902 as Node 12 (p1, c1, k60).
+1623949415: New connection from 172.21.0.1:49908 on port 1883.
+1623949415: New client connected from 172.21.0.1:49908 as Node 13 (p1, c1, k60).
+1623949416: New connection from 172.21.0.1:49914 on port 1883.
+1623949416: New client connected from 172.21.0.1:49914 as Node 14 (p1, c1, k60).
+1623949417: New connection from 172.21.0.1:49920 on port 1883.
+1623949417: New client connected from 172.21.0.1:49920 as Node 15 (p1, c1, k60).
+1623949418: New connection from 172.21.0.1:49926 on port 1883.
+1623949418: New client connected from 172.21.0.1:49926 as Node 16 (p1, c1, k60).
+1623949483: Client Node 5 closed its connection.
+1623949483: Client Node 13 closed its connection.
+1623949483: Client Node 10 closed its connection.
+1623949483: Client Node 11 closed its connection.
+1623949483: Client Node 1 closed its connection.
+1623949483: Client Node 4 closed its connection.
+1623949483: Client Node 8 closed its connection.
+1623949483: Client Node 9 closed its connection.
+1623949483: Client Node 6 closed its connection.
+1623949483: Client Node 12 closed its connection.
+1623949483: Client Node 3 closed its connection.
+1623949483: Client Node 14 closed its connection.
+1623949483: Client Node 2 closed its connection.
+1623949483: Client Node 15 closed its connection.
+1623949483: Client Node 7 closed its connection.
+1623949483: Client Node 16 closed its connection.
+1623950150: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623951951: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623956315: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623959915: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623962312: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623964113: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623965914: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623967715: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623968342: New connection from 172.21.0.1:49932 on port 1883.
+1623968342: New client connected from 172.21.0.1:49932 as Node 1 (p1, c1, k60).
+1623968342: New connection from 172.21.0.1:49938 on port 1883.
+1623968342: New client connected from 172.21.0.1:49938 as Node 2 (p1, c1, k60).
+1623968343: New connection from 172.21.0.1:49944 on port 1883.
+1623968343: New client connected from 172.21.0.1:49944 as Node 3 (p1, c1, k60).
+1623968343: New connection from 172.21.0.1:49950 on port 1883.
+1623968343: New client connected from 172.21.0.1:49950 as Node 4 (p1, c1, k60).
+1623968344: New connection from 172.21.0.1:49956 on port 1883.
+1623968344: New client connected from 172.21.0.1:49956 as Node 5 (p1, c1, k60).
+1623968345: New connection from 172.21.0.1:49962 on port 1883.
+1623968345: New client connected from 172.21.0.1:49962 as Node 6 (p1, c1, k60).
+1623968345: New connection from 172.21.0.1:49968 on port 1883.
+1623968345: New client connected from 172.21.0.1:49968 as Node 7 (p1, c1, k60).
+1623968345: New connection from 172.21.0.1:49974 on port 1883.
+1623968345: New client connected from 172.21.0.1:49974 as Node 8 (p1, c1, k60).
+1623968346: New connection from 172.21.0.1:49980 on port 1883.
+1623968346: New client connected from 172.21.0.1:49980 as Node 9 (p1, c1, k60).
+1623968346: New connection from 172.21.0.1:49986 on port 1883.
+1623968346: New client connected from 172.21.0.1:49986 as Node 10 (p1, c1, k60).
+1623968347: New connection from 172.21.0.1:49992 on port 1883.
+1623968347: New client connected from 172.21.0.1:49992 as Node 11 (p1, c1, k60).
+1623968347: New connection from 172.21.0.1:49998 on port 1883.
+1623968347: New client connected from 172.21.0.1:49998 as Node 12 (p1, c1, k60).
+1623968348: New connection from 172.21.0.1:50004 on port 1883.
+1623968348: New client connected from 172.21.0.1:50004 as Node 13 (p1, c1, k60).
+1623968348: New connection from 172.21.0.1:50010 on port 1883.
+1623968348: New client connected from 172.21.0.1:50010 as Node 14 (p1, c1, k60).
+1623968349: New connection from 172.21.0.1:50016 on port 1883.
+1623968349: New client connected from 172.21.0.1:50016 as Node 15 (p1, c1, k60).
+1623968349: New connection from 172.21.0.1:50022 on port 1883.
+1623968349: New client connected from 172.21.0.1:50022 as Node 16 (p1, c1, k60).
+1623968375: Client Node 6 closed its connection.
+1623968375: Client Node 5 closed its connection.
+1623968375: Client Node 2 closed its connection.
+1623968375: Client Node 11 closed its connection.
+1623968375: Client Node 9 closed its connection.
+1623968375: Client Node 12 closed its connection.
+1623968375: Client Node 15 closed its connection.
+1623968375: Client Node 14 closed its connection.
+1623968375: Client Node 13 closed its connection.
+1623968375: Client Node 10 closed its connection.
+1623968375: Client Node 8 closed its connection.
+1623968375: Client Node 4 closed its connection.
+1623968375: Client Node 16 closed its connection.
+1623968375: Client Node 1 closed its connection.
+1623968375: Client Node 3 closed its connection.
+1623968375: Client Node 7 closed its connection.
+1623968458: New connection from 172.21.0.1:50028 on port 1883.
+1623968458: New client connected from 172.21.0.1:50028 as Node 1 (p1, c1, k60).
+1623968458: New connection from 172.21.0.1:50034 on port 1883.
+1623968458: New client connected from 172.21.0.1:50034 as Node 2 (p1, c1, k60).
+1623968459: New connection from 172.21.0.1:50040 on port 1883.
+1623968459: New client connected from 172.21.0.1:50040 as Node 3 (p1, c1, k60).
+1623968459: New connection from 172.21.0.1:50046 on port 1883.
+1623968459: New client connected from 172.21.0.1:50046 as Node 4 (p1, c1, k60).
+1623968459: New connection from 172.21.0.1:50052 on port 1883.
+1623968459: New client connected from 172.21.0.1:50052 as Node 5 (p1, c1, k60).
+1623968460: New connection from 172.21.0.1:50058 on port 1883.
+1623968460: New client connected from 172.21.0.1:50058 as Node 6 (p1, c1, k60).
+1623968460: New connection from 172.21.0.1:50064 on port 1883.
+1623968460: New client connected from 172.21.0.1:50064 as Node 7 (p1, c1, k60).
+1623968461: New connection from 172.21.0.1:50070 on port 1883.
+1623968461: New client connected from 172.21.0.1:50070 as Node 8 (p1, c1, k60).
+1623968461: New connection from 172.21.0.1:50076 on port 1883.
+1623968461: New client connected from 172.21.0.1:50076 as Node 9 (p1, c1, k60).
+1623968461: New connection from 172.21.0.1:50082 on port 1883.
+1623968461: New client connected from 172.21.0.1:50082 as Node 10 (p1, c1, k60).
+1623968462: New connection from 172.21.0.1:50088 on port 1883.
+1623968462: New client connected from 172.21.0.1:50088 as Node 11 (p1, c1, k60).
+1623968462: New connection from 172.21.0.1:50094 on port 1883.
+1623968462: New client connected from 172.21.0.1:50094 as Node 12 (p1, c1, k60).
+1623968463: New connection from 172.21.0.1:50100 on port 1883.
+1623968463: New client connected from 172.21.0.1:50100 as Node 13 (p1, c1, k60).
+1623968463: New connection from 172.21.0.1:50106 on port 1883.
+1623968463: New client connected from 172.21.0.1:50106 as Node 14 (p1, c1, k60).
+1623968464: New connection from 172.21.0.1:50112 on port 1883.
+1623968464: New client connected from 172.21.0.1:50112 as Node 15 (p1, c1, k60).
+1623968464: New connection from 172.21.0.1:50118 on port 1883.
+1623968464: New client connected from 172.21.0.1:50118 as Node 16 (p1, c1, k60).
+1623968526: Client Node 3 closed its connection.
+1623968526: Client Node 1 closed its connection.
+1623968526: Client Node 14 closed its connection.
+1623968526: Client Node 10 closed its connection.
+1623968526: Client Node 16 closed its connection.
+1623968526: Client Node 13 closed its connection.
+1623968526: Client Node 12 closed its connection.
+1623968526: Client Node 4 closed its connection.
+1623968526: Client Node 2 closed its connection.
+1623968526: Client Node 11 closed its connection.
+1623968526: Client Node 5 closed its connection.
+1623968526: Client Node 9 closed its connection.
+1623968526: Client Node 7 closed its connection.
+1623968526: Client Node 6 closed its connection.
+1623968526: Client Node 15 closed its connection.
+1623968526: Client Node 8 closed its connection.
+1623968638: New connection from 172.21.0.1:50124 on port 1883.
+1623968638: New client connected from 172.21.0.1:50124 as Node 1 (p1, c1, k60).
+1623968639: New connection from 172.21.0.1:50130 on port 1883.
+1623968639: New client connected from 172.21.0.1:50130 as Node 2 (p1, c1, k60).
+1623968639: New connection from 172.21.0.1:50136 on port 1883.
+1623968639: New client connected from 172.21.0.1:50136 as Node 3 (p1, c1, k60).
+1623968639: New connection from 172.21.0.1:50142 on port 1883.
+1623968639: New client connected from 172.21.0.1:50142 as Node 4 (p1, c1, k60).
+1623968640: New connection from 172.21.0.1:50148 on port 1883.
+1623968640: New client connected from 172.21.0.1:50148 as Node 5 (p1, c1, k60).
+1623968640: New connection from 172.21.0.1:50154 on port 1883.
+1623968640: New client connected from 172.21.0.1:50154 as Node 6 (p1, c1, k60).
+1623968640: New connection from 172.21.0.1:50160 on port 1883.
+1623968640: New client connected from 172.21.0.1:50160 as Node 7 (p1, c1, k60).
+1623968641: New connection from 172.21.0.1:50166 on port 1883.
+1623968641: New client connected from 172.21.0.1:50166 as Node 8 (p1, c1, k60).
+1623968642: New connection from 172.21.0.1:50172 on port 1883.
+1623968642: New client connected from 172.21.0.1:50172 as Node 9 (p1, c1, k60).
+1623968642: New connection from 172.21.0.1:50178 on port 1883.
+1623968642: New client connected from 172.21.0.1:50178 as Node 10 (p1, c1, k60).
+1623968642: New connection from 172.21.0.1:50184 on port 1883.
+1623968642: New client connected from 172.21.0.1:50184 as Node 11 (p1, c1, k60).
+1623968643: New connection from 172.21.0.1:50190 on port 1883.
+1623968643: New client connected from 172.21.0.1:50190 as Node 12 (p1, c1, k60).
+1623968643: New connection from 172.21.0.1:50196 on port 1883.
+1623968643: New client connected from 172.21.0.1:50196 as Node 13 (p1, c1, k60).
+1623968644: New connection from 172.21.0.1:50202 on port 1883.
+1623968644: New client connected from 172.21.0.1:50202 as Node 14 (p1, c1, k60).
+1623968645: New connection from 172.21.0.1:50208 on port 1883.
+1623968645: New client connected from 172.21.0.1:50208 as Node 15 (p1, c1, k60).
+1623968645: New connection from 172.21.0.1:50214 on port 1883.
+1623968645: New client connected from 172.21.0.1:50214 as Node 16 (p1, c1, k60).
+1623968720: Client Node 15 closed its connection.
+1623968720: Client Node 5 closed its connection.
+1623968720: Client Node 10 closed its connection.
+1623968720: Client Node 6 closed its connection.
+1623968720: Client Node 14 closed its connection.
+1623968720: Client Node 4 closed its connection.
+1623968720: Client Node 3 closed its connection.
+1623968720: Client Node 2 closed its connection.
+1623968720: Client Node 16 closed its connection.
+1623968720: Client Node 12 closed its connection.
+1623968720: Client Node 13 closed its connection.
+1623968720: Client Node 9 closed its connection.
+1623968720: Client Node 7 closed its connection.
+1623968720: Client Node 8 closed its connection.
+1623968720: Client Node 11 closed its connection.
+1623968720: Client Node 1 closed its connection.
+1623968879: New connection from 172.21.0.1:50220 on port 1883.
+1623968879: New client connected from 172.21.0.1:50220 as Node 1 (p1, c1, k60).
+1623968879: New connection from 172.21.0.1:50226 on port 1883.
+1623968879: New client connected from 172.21.0.1:50226 as Node 2 (p1, c1, k60).
+1623968879: New connection from 172.21.0.1:50232 on port 1883.
+1623968879: New client connected from 172.21.0.1:50232 as Node 3 (p1, c1, k60).
+1623968880: New connection from 172.21.0.1:50238 on port 1883.
+1623968880: New client connected from 172.21.0.1:50238 as Node 4 (p1, c1, k60).
+1623968880: New connection from 172.21.0.1:50244 on port 1883.
+1623968880: New client connected from 172.21.0.1:50244 as Node 5 (p1, c1, k60).
+1623968880: New connection from 172.21.0.1:50250 on port 1883.
+1623968880: New client connected from 172.21.0.1:50250 as Node 6 (p1, c1, k60).
+1623968881: New connection from 172.21.0.1:50256 on port 1883.
+1623968881: New client connected from 172.21.0.1:50256 as Node 7 (p1, c1, k60).
+1623968881: New connection from 172.21.0.1:50262 on port 1883.
+1623968881: New client connected from 172.21.0.1:50262 as Node 8 (p1, c1, k60).
+1623968882: New connection from 172.21.0.1:50268 on port 1883.
+1623968882: New client connected from 172.21.0.1:50268 as Node 9 (p1, c1, k60).
+1623968882: New connection from 172.21.0.1:50274 on port 1883.
+1623968882: New client connected from 172.21.0.1:50274 as Node 10 (p1, c1, k60).
+1623968883: New connection from 172.21.0.1:50280 on port 1883.
+1623968883: New client connected from 172.21.0.1:50280 as Node 11 (p1, c1, k60).
+1623968883: New connection from 172.21.0.1:50286 on port 1883.
+1623968883: New client connected from 172.21.0.1:50286 as Node 12 (p1, c1, k60).
+1623968883: New connection from 172.21.0.1:50292 on port 1883.
+1623968883: New client connected from 172.21.0.1:50292 as Node 13 (p1, c1, k60).
+1623968884: New connection from 172.21.0.1:50298 on port 1883.
+1623968884: New client connected from 172.21.0.1:50298 as Node 14 (p1, c1, k60).
+1623968884: New connection from 172.21.0.1:50304 on port 1883.
+1623968884: New client connected from 172.21.0.1:50304 as Node 15 (p1, c1, k60).
+1623968885: New connection from 172.21.0.1:50310 on port 1883.
+1623968885: New client connected from 172.21.0.1:50310 as Node 16 (p1, c1, k60).
+1623969023: Client Node 14 closed its connection.
+1623969023: Client Node 2 closed its connection.
+1623969023: Client Node 15 closed its connection.
+1623969023: Client Node 3 closed its connection.
+1623969023: Client Node 6 closed its connection.
+1623969023: Client Node 1 closed its connection.
+1623969023: Client Node 7 closed its connection.
+1623969023: Client Node 10 closed its connection.
+1623969023: Client Node 11 closed its connection.
+1623969023: Client Node 4 closed its connection.
+1623969023: Client Node 16 closed its connection.
+1623969023: Client Node 13 closed its connection.
+1623969023: Client Node 12 closed its connection.
+1623969023: Client Node 5 closed its connection.
+1623969023: Client Node 9 closed its connection.
+1623969023: Client Node 8 closed its connection.
+1623969159: New connection from 172.21.0.1:50316 on port 1883.
+1623969159: New client connected from 172.21.0.1:50316 as Node 1 (p1, c1, k60).
+1623969159: New connection from 172.21.0.1:50322 on port 1883.
+1623969159: New client connected from 172.21.0.1:50322 as Node 2 (p1, c1, k60).
+1623969160: New connection from 172.21.0.1:50328 on port 1883.
+1623969160: New client connected from 172.21.0.1:50328 as Node 3 (p1, c1, k60).
+1623969160: New connection from 172.21.0.1:50334 on port 1883.
+1623969160: New client connected from 172.21.0.1:50334 as Node 4 (p1, c1, k60).
+1623969161: New connection from 172.21.0.1:50340 on port 1883.
+1623969161: New client connected from 172.21.0.1:50340 as Node 5 (p1, c1, k60).
+1623969161: New connection from 172.21.0.1:50346 on port 1883.
+1623969161: New client connected from 172.21.0.1:50346 as Node 6 (p1, c1, k60).
+1623969161: New connection from 172.21.0.1:50352 on port 1883.
+1623969161: New client connected from 172.21.0.1:50352 as Node 7 (p1, c1, k60).
+1623969162: New connection from 172.21.0.1:50358 on port 1883.
+1623969162: New client connected from 172.21.0.1:50358 as Node 8 (p1, c1, k60).
+1623969162: New connection from 172.21.0.1:50364 on port 1883.
+1623969162: New client connected from 172.21.0.1:50364 as Node 9 (p1, c1, k60).
+1623969163: New connection from 172.21.0.1:50370 on port 1883.
+1623969163: New client connected from 172.21.0.1:50370 as Node 10 (p1, c1, k60).
+1623969163: New connection from 172.21.0.1:50376 on port 1883.
+1623969163: New client connected from 172.21.0.1:50376 as Node 11 (p1, c1, k60).
+1623969164: New connection from 172.21.0.1:50382 on port 1883.
+1623969164: New client connected from 172.21.0.1:50382 as Node 12 (p1, c1, k60).
+1623969164: New connection from 172.21.0.1:50388 on port 1883.
+1623969164: New client connected from 172.21.0.1:50388 as Node 13 (p1, c1, k60).
+1623969165: New connection from 172.21.0.1:50394 on port 1883.
+1623969165: New client connected from 172.21.0.1:50394 as Node 14 (p1, c1, k60).
+1623969165: New connection from 172.21.0.1:50400 on port 1883.
+1623969165: New client connected from 172.21.0.1:50400 as Node 15 (p1, c1, k60).
+1623969165: New connection from 172.21.0.1:50406 on port 1883.
+1623969165: New client connected from 172.21.0.1:50406 as Node 16 (p1, c1, k60).
+1623969347: Client Node 14 closed its connection.
+1623969347: Client Node 6 closed its connection.
+1623969347: Client Node 8 closed its connection.
+1623969347: Client Node 11 closed its connection.
+1623969347: Client Node 3 closed its connection.
+1623969347: Client Node 2 closed its connection.
+1623969347: Client Node 1 closed its connection.
+1623969347: Client Node 13 closed its connection.
+1623969347: Client Node 9 closed its connection.
+1623969347: Client Node 4 closed its connection.
+1623969347: Client Node 5 closed its connection.
+1623969347: Client Node 10 closed its connection.
+1623969347: Client Node 7 closed its connection.
+1623969347: Client Node 16 closed its connection.
+1623969347: Client Node 12 closed its connection.
+1623969347: Client Node 15 closed its connection.
+1623969351: New connection from 172.21.0.1:50412 on port 1883.
+1623969351: New client connected from 172.21.0.1:50412 as Node 1 (p1, c1, k60).
+1623969351: New connection from 172.21.0.1:50418 on port 1883.
+1623969351: New client connected from 172.21.0.1:50418 as Node 2 (p1, c1, k60).
+1623969352: New connection from 172.21.0.1:50424 on port 1883.
+1623969352: New client connected from 172.21.0.1:50424 as Node 3 (p1, c1, k60).
+1623969352: New connection from 172.21.0.1:50430 on port 1883.
+1623969352: New client connected from 172.21.0.1:50430 as Node 4 (p1, c1, k60).
+1623969353: New connection from 172.21.0.1:50436 on port 1883.
+1623969353: New client connected from 172.21.0.1:50436 as Node 5 (p1, c1, k60).
+1623969353: New connection from 172.21.0.1:50442 on port 1883.
+1623969353: New client connected from 172.21.0.1:50442 as Node 6 (p1, c1, k60).
+1623969354: New connection from 172.21.0.1:50448 on port 1883.
+1623969354: New client connected from 172.21.0.1:50448 as Node 7 (p1, c1, k60).
+1623969354: New connection from 172.21.0.1:50454 on port 1883.
+1623969354: New client connected from 172.21.0.1:50454 as Node 8 (p1, c1, k60).
+1623969354: New connection from 172.21.0.1:50460 on port 1883.
+1623969354: New client connected from 172.21.0.1:50460 as Node 9 (p1, c1, k60).
+1623969355: New connection from 172.21.0.1:50466 on port 1883.
+1623969355: New client connected from 172.21.0.1:50466 as Node 10 (p1, c1, k60).
+1623969356: New connection from 172.21.0.1:50472 on port 1883.
+1623969356: New client connected from 172.21.0.1:50472 as Node 11 (p1, c1, k60).
+1623969356: New connection from 172.21.0.1:50478 on port 1883.
+1623969356: New client connected from 172.21.0.1:50478 as Node 12 (p1, c1, k60).
+1623969357: New connection from 172.21.0.1:50484 on port 1883.
+1623969357: New client connected from 172.21.0.1:50484 as Node 13 (p1, c1, k60).
+1623969357: New connection from 172.21.0.1:50490 on port 1883.
+1623969357: New client connected from 172.21.0.1:50490 as Node 14 (p1, c1, k60).
+1623969358: New connection from 172.21.0.1:50496 on port 1883.
+1623969358: New client connected from 172.21.0.1:50496 as Node 15 (p1, c1, k60).
+1623969358: New connection from 172.21.0.1:50502 on port 1883.
+1623969358: New client connected from 172.21.0.1:50502 as Node 16 (p1, c1, k60).
+1623969506: Client Node 9 closed its connection.
+1623969506: Client Node 14 closed its connection.
+1623969506: Client Node 10 closed its connection.
+1623969506: Client Node 16 closed its connection.
+1623969506: Client Node 2 closed its connection.
+1623969506: Client Node 3 closed its connection.
+1623969506: Client Node 6 closed its connection.
+1623969506: Client Node 5 closed its connection.
+1623969506: Client Node 11 closed its connection.
+1623969506: Client Node 15 closed its connection.
+1623969506: Client Node 8 closed its connection.
+1623969506: Client Node 7 closed its connection.
+1623969506: Client Node 4 closed its connection.
+1623969506: Client Node 1 closed its connection.
+1623969506: Client Node 12 closed its connection.
+1623969506: Client Node 13 closed its connection.
+1623969516: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623969563: New connection from 172.21.0.1:50508 on port 1883.
+1623969563: New client connected from 172.21.0.1:50508 as Node 1 (p1, c1, k60).
+1623969563: New connection from 172.21.0.1:50514 on port 1883.
+1623969563: New client connected from 172.21.0.1:50514 as Node 2 (p1, c1, k60).
+1623969564: New connection from 172.21.0.1:50520 on port 1883.
+1623969564: New client connected from 172.21.0.1:50520 as Node 3 (p1, c1, k60).
+1623969564: New connection from 172.21.0.1:50526 on port 1883.
+1623969564: New client connected from 172.21.0.1:50526 as Node 4 (p1, c1, k60).
+1623969564: New connection from 172.21.0.1:50532 on port 1883.
+1623969564: New client connected from 172.21.0.1:50532 as Node 5 (p1, c1, k60).
+1623969565: New connection from 172.21.0.1:50538 on port 1883.
+1623969565: New client connected from 172.21.0.1:50538 as Node 6 (p1, c1, k60).
+1623969565: New connection from 172.21.0.1:50544 on port 1883.
+1623969565: New client connected from 172.21.0.1:50544 as Node 7 (p1, c1, k60).
+1623969566: New connection from 172.21.0.1:50550 on port 1883.
+1623969566: New client connected from 172.21.0.1:50550 as Node 8 (p1, c1, k60).
+1623969566: New connection from 172.21.0.1:50556 on port 1883.
+1623969566: New client connected from 172.21.0.1:50556 as Node 9 (p1, c1, k60).
+1623969566: New connection from 172.21.0.1:50562 on port 1883.
+1623969566: New client connected from 172.21.0.1:50562 as Node 10 (p1, c1, k60).
+1623969567: New connection from 172.21.0.1:50568 on port 1883.
+1623969567: New client connected from 172.21.0.1:50568 as Node 11 (p1, c1, k60).
+1623969567: New connection from 172.21.0.1:50574 on port 1883.
+1623969567: New client connected from 172.21.0.1:50574 as Node 12 (p1, c1, k60).
+1623969568: New connection from 172.21.0.1:50580 on port 1883.
+1623969568: New client connected from 172.21.0.1:50580 as Node 13 (p1, c1, k60).
+1623969568: New connection from 172.21.0.1:50586 on port 1883.
+1623969568: New client connected from 172.21.0.1:50586 as Node 14 (p1, c1, k60).
+1623969569: New connection from 172.21.0.1:50592 on port 1883.
+1623969569: New client connected from 172.21.0.1:50592 as Node 15 (p1, c1, k60).
+1623969569: New connection from 172.21.0.1:50598 on port 1883.
+1623969569: New client connected from 172.21.0.1:50598 as Node 16 (p1, c1, k60).
+1623969625: Client Node 8 closed its connection.
+1623969762: Client Node 6 closed its connection.
+1623969762: Client Node 15 closed its connection.
+1623969762: Client Node 10 closed its connection.
+1623969762: Client Node 1 closed its connection.
+1623969762: Client Node 9 closed its connection.
+1623969762: Client Node 14 closed its connection.
+1623969762: Client Node 2 closed its connection.
+1623969762: Client Node 3 closed its connection.
+1623969762: Client Node 11 closed its connection.
+1623969762: Client Node 4 closed its connection.
+1623969762: Client Node 5 closed its connection.
+1623969762: Client Node 7 closed its connection.
+1623969762: Client Node 16 closed its connection.
+1623969762: Client Node 13 closed its connection.
+1623969762: Client Node 12 closed its connection.
+1623969765: New connection from 172.21.0.1:50604 on port 1883.
+1623969765: New client connected from 172.21.0.1:50604 as Node 1 (p1, c1, k60).
+1623969765: New connection from 172.21.0.1:50610 on port 1883.
+1623969765: New client connected from 172.21.0.1:50610 as Node 2 (p1, c1, k60).
+1623969766: New connection from 172.21.0.1:50616 on port 1883.
+1623969766: New client connected from 172.21.0.1:50616 as Node 3 (p1, c1, k60).
+1623969767: New connection from 172.21.0.1:50622 on port 1883.
+1623969767: New client connected from 172.21.0.1:50622 as Node 4 (p1, c1, k60).
+1623969767: New connection from 172.21.0.1:50628 on port 1883.
+1623969767: New client connected from 172.21.0.1:50628 as Node 5 (p1, c1, k60).
+1623969767: New connection from 172.21.0.1:50634 on port 1883.
+1623969767: New client connected from 172.21.0.1:50634 as Node 6 (p1, c1, k60).
+1623969768: New connection from 172.21.0.1:50640 on port 1883.
+1623969768: New client connected from 172.21.0.1:50640 as Node 7 (p1, c1, k60).
+1623969768: New connection from 172.21.0.1:50646 on port 1883.
+1623969768: New client connected from 172.21.0.1:50646 as Node 8 (p1, c1, k60).
+1623969769: New connection from 172.21.0.1:50652 on port 1883.
+1623969769: New client connected from 172.21.0.1:50652 as Node 9 (p1, c1, k60).
+1623969769: New connection from 172.21.0.1:50658 on port 1883.
+1623969769: New client connected from 172.21.0.1:50658 as Node 10 (p1, c1, k60).
+1623969770: New connection from 172.21.0.1:50664 on port 1883.
+1623969770: New client connected from 172.21.0.1:50664 as Node 11 (p1, c1, k60).
+1623969770: New connection from 172.21.0.1:50670 on port 1883.
+1623969770: New client connected from 172.21.0.1:50670 as Node 12 (p1, c1, k60).
+1623969771: New connection from 172.21.0.1:50676 on port 1883.
+1623969771: New client connected from 172.21.0.1:50676 as Node 13 (p1, c1, k60).
+1623969771: New connection from 172.21.0.1:50682 on port 1883.
+1623969771: New client connected from 172.21.0.1:50682 as Node 14 (p1, c1, k60).
+1623969772: New connection from 172.21.0.1:50688 on port 1883.
+1623969772: New client connected from 172.21.0.1:50688 as Node 15 (p1, c1, k60).
+1623969772: New connection from 172.21.0.1:50694 on port 1883.
+1623969772: New client connected from 172.21.0.1:50694 as Node 16 (p1, c1, k60).
+1623969862: Client Node 1 closed its connection.
+1623969862: Client Node 12 closed its connection.
+1623969862: Client Node 6 closed its connection.
+1623969862: Client Node 11 closed its connection.
+1623969862: Client Node 14 closed its connection.
+1623969862: Client Node 10 closed its connection.
+1623969862: Client Node 7 closed its connection.
+1623969862: Client Node 9 closed its connection.
+1623969862: Client Node 16 closed its connection.
+1623969862: Client Node 2 closed its connection.
+1623969862: Client Node 15 closed its connection.
+1623969862: Client Node 5 closed its connection.
+1623969862: Client Node 8 closed its connection.
+1623969862: Client Node 3 closed its connection.
+1623969862: Client Node 4 closed its connection.
+1623969862: Client Node 13 closed its connection.
+1623970525: New connection from 172.21.0.1:50700 on port 1883.
+1623970525: New client connected from 172.21.0.1:50700 as Node 1 (p1, c1, k60).
+1623970525: New connection from 172.21.0.1:50706 on port 1883.
+1623970525: New client connected from 172.21.0.1:50706 as Node 2 (p1, c1, k60).
+1623970525: New connection from 172.21.0.1:50712 on port 1883.
+1623970525: New client connected from 172.21.0.1:50712 as Node 3 (p1, c1, k60).
+1623970526: New connection from 172.21.0.1:50718 on port 1883.
+1623970526: New client connected from 172.21.0.1:50718 as Node 4 (p1, c1, k60).
+1623970526: New connection from 172.21.0.1:50724 on port 1883.
+1623970526: New client connected from 172.21.0.1:50724 as Node 5 (p1, c1, k60).
+1623970526: New connection from 172.21.0.1:50730 on port 1883.
+1623970526: New client connected from 172.21.0.1:50730 as Node 6 (p1, c1, k60).
+1623970527: New connection from 172.21.0.1:50736 on port 1883.
+1623970527: New client connected from 172.21.0.1:50736 as Node 7 (p1, c1, k60).
+1623970528: New connection from 172.21.0.1:50742 on port 1883.
+1623970528: New client connected from 172.21.0.1:50742 as Node 8 (p1, c1, k60).
+1623970528: New connection from 172.21.0.1:50748 on port 1883.
+1623970528: New client connected from 172.21.0.1:50748 as Node 9 (p1, c1, k60).
+1623970529: New connection from 172.21.0.1:50754 on port 1883.
+1623970529: New client connected from 172.21.0.1:50754 as Node 10 (p1, c1, k60).
+1623970529: New connection from 172.21.0.1:50760 on port 1883.
+1623970529: New client connected from 172.21.0.1:50760 as Node 11 (p1, c1, k60).
+1623970530: New connection from 172.21.0.1:50766 on port 1883.
+1623970530: New client connected from 172.21.0.1:50766 as Node 12 (p1, c1, k60).
+1623970530: New connection from 172.21.0.1:50772 on port 1883.
+1623970530: New client connected from 172.21.0.1:50772 as Node 13 (p1, c1, k60).
+1623970531: New connection from 172.21.0.1:50778 on port 1883.
+1623970531: New client connected from 172.21.0.1:50778 as Node 14 (p1, c1, k60).
+1623970531: New connection from 172.21.0.1:50784 on port 1883.
+1623970531: New client connected from 172.21.0.1:50784 as Node 15 (p1, c1, k60).
+1623970532: New connection from 172.21.0.1:50790 on port 1883.
+1623970532: New client connected from 172.21.0.1:50790 as Node 16 (p1, c1, k60).
+1623970683: Client Node 2 closed its connection.
+1623970683: Client Node 3 closed its connection.
+1623970683: Client Node 14 closed its connection.
+1623970683: Client Node 10 closed its connection.
+1623970683: Client Node 7 closed its connection.
+1623970683: Client Node 15 closed its connection.
+1623970683: Client Node 6 closed its connection.
+1623970683: Client Node 12 closed its connection.
+1623970683: Client Node 4 closed its connection.
+1623970683: Client Node 11 closed its connection.
+1623970683: Client Node 9 closed its connection.
+1623970683: Client Node 1 closed its connection.
+1623970683: Client Node 5 closed its connection.
+1623970683: Client Node 16 closed its connection.
+1623970683: Client Node 13 closed its connection.
+1623970683: Client Node 8 closed its connection.
+1623970685: New connection from 172.21.0.1:50796 on port 1883.
+1623970685: New client connected from 172.21.0.1:50796 as Node 1 (p1, c1, k60).
+1623970686: New connection from 172.21.0.1:50802 on port 1883.
+1623970686: New client connected from 172.21.0.1:50802 as Node 2 (p1, c1, k60).
+1623970686: New connection from 172.21.0.1:50808 on port 1883.
+1623970686: New client connected from 172.21.0.1:50808 as Node 3 (p1, c1, k60).
+1623970686: New connection from 172.21.0.1:50814 on port 1883.
+1623970686: New client connected from 172.21.0.1:50814 as Node 4 (p1, c1, k60).
+1623970687: New connection from 172.21.0.1:50820 on port 1883.
+1623970687: New client connected from 172.21.0.1:50820 as Node 5 (p1, c1, k60).
+1623970687: New connection from 172.21.0.1:50826 on port 1883.
+1623970687: New client connected from 172.21.0.1:50826 as Node 6 (p1, c1, k60).
+1623970687: New connection from 172.21.0.1:50832 on port 1883.
+1623970687: New client connected from 172.21.0.1:50832 as Node 7 (p1, c1, k60).
+1623970688: New connection from 172.21.0.1:50838 on port 1883.
+1623970688: New client connected from 172.21.0.1:50838 as Node 8 (p1, c1, k60).
+1623970689: New connection from 172.21.0.1:50844 on port 1883.
+1623970689: New client connected from 172.21.0.1:50844 as Node 9 (p1, c1, k60).
+1623970689: New connection from 172.21.0.1:50850 on port 1883.
+1623970689: New client connected from 172.21.0.1:50850 as Node 10 (p1, c1, k60).
+1623970689: New connection from 172.21.0.1:50856 on port 1883.
+1623970689: New client connected from 172.21.0.1:50856 as Node 11 (p1, c1, k60).
+1623970690: New connection from 172.21.0.1:50862 on port 1883.
+1623970690: New client connected from 172.21.0.1:50862 as Node 12 (p1, c1, k60).
+1623970690: New connection from 172.21.0.1:50868 on port 1883.
+1623970690: New client connected from 172.21.0.1:50868 as Node 13 (p1, c1, k60).
+1623970691: New connection from 172.21.0.1:50874 on port 1883.
+1623970691: New client connected from 172.21.0.1:50874 as Node 14 (p1, c1, k60).
+1623970691: New connection from 172.21.0.1:50880 on port 1883.
+1623970691: New client connected from 172.21.0.1:50880 as Node 15 (p1, c1, k60).
+1623970692: New connection from 172.21.0.1:50886 on port 1883.
+1623970692: New client connected from 172.21.0.1:50886 as Node 16 (p1, c1, k60).
+1623970897: Client Node 7 closed its connection.
+1623970897: Client Node 6 closed its connection.
+1623970897: Client Node 10 closed its connection.
+1623970897: Client Node 16 closed its connection.
+1623970897: Client Node 4 closed its connection.
+1623970897: Client Node 15 closed its connection.
+1623970897: Client Node 14 closed its connection.
+1623970897: Client Node 9 closed its connection.
+1623970897: Client Node 13 closed its connection.
+1623970897: Client Node 5 closed its connection.
+1623970897: Client Node 12 closed its connection.
+1623970897: Client Node 8 closed its connection.
+1623970897: Client Node 3 closed its connection.
+1623970897: Client Node 11 closed its connection.
+1623970897: Client Node 2 closed its connection.
+1623970897: Client Node 1 closed its connection.
+1623970900: New connection from 172.21.0.1:50892 on port 1883.
+1623970900: New client connected from 172.21.0.1:50892 as Node 1 (p1, c1, k60).
+1623970900: New connection from 172.21.0.1:50898 on port 1883.
+1623970900: New client connected from 172.21.0.1:50898 as Node 2 (p1, c1, k60).
+1623970901: New connection from 172.21.0.1:50904 on port 1883.
+1623970901: New client connected from 172.21.0.1:50904 as Node 3 (p1, c1, k60).
+1623970901: New connection from 172.21.0.1:50910 on port 1883.
+1623970901: New client connected from 172.21.0.1:50910 as Node 4 (p1, c1, k60).
+1623970902: New connection from 172.21.0.1:50916 on port 1883.
+1623970902: New client connected from 172.21.0.1:50916 as Node 5 (p1, c1, k60).
+1623970902: New connection from 172.21.0.1:50922 on port 1883.
+1623970902: New client connected from 172.21.0.1:50922 as Node 6 (p1, c1, k60).
+1623970903: New connection from 172.21.0.1:50928 on port 1883.
+1623970903: New client connected from 172.21.0.1:50928 as Node 7 (p1, c1, k60).
+1623970903: New connection from 172.21.0.1:50934 on port 1883.
+1623970903: New client connected from 172.21.0.1:50934 as Node 8 (p1, c1, k60).
+1623970904: New connection from 172.21.0.1:50940 on port 1883.
+1623970904: New client connected from 172.21.0.1:50940 as Node 9 (p1, c1, k60).
+1623970904: New connection from 172.21.0.1:50946 on port 1883.
+1623970904: New client connected from 172.21.0.1:50946 as Node 10 (p1, c1, k60).
+1623970905: New connection from 172.21.0.1:50952 on port 1883.
+1623970905: New client connected from 172.21.0.1:50952 as Node 11 (p1, c1, k60).
+1623970905: New connection from 172.21.0.1:50958 on port 1883.
+1623970905: New client connected from 172.21.0.1:50958 as Node 12 (p1, c1, k60).
+1623970906: New connection from 172.21.0.1:50964 on port 1883.
+1623970906: New client connected from 172.21.0.1:50964 as Node 13 (p1, c1, k60).
+1623970906: New connection from 172.21.0.1:50970 on port 1883.
+1623970906: New client connected from 172.21.0.1:50970 as Node 14 (p1, c1, k60).
+1623970907: New connection from 172.21.0.1:50976 on port 1883.
+1623970907: New client connected from 172.21.0.1:50976 as Node 15 (p1, c1, k60).
+1623970907: New connection from 172.21.0.1:50982 on port 1883.
+1623970907: New client connected from 172.21.0.1:50982 as Node 16 (p1, c1, k60).
+1623971025: Client Node 5 has exceeded timeout, disconnecting.
+1623971124: Client Node 10 closed its connection.
+1623971124: Client Node 7 closed its connection.
+1623971124: Client Node 11 closed its connection.
+1623971124: Client Node 1 closed its connection.
+1623971124: Client Node 6 closed its connection.
+1623971124: Client Node 3 closed its connection.
+1623971124: Client Node 15 closed its connection.
+1623971124: Client Node 14 closed its connection.
+1623971124: Client Node 2 closed its connection.
+1623971124: Client Node 8 closed its connection.
+1623971124: Client Node 13 closed its connection.
+1623971124: Client Node 9 closed its connection.
+1623971124: Client Node 4 closed its connection.
+1623971124: Client Node 12 closed its connection.
+1623971124: Client Node 16 closed its connection.
+1623971127: New connection from 172.21.0.1:50988 on port 1883.
+1623971127: New client connected from 172.21.0.1:50988 as Node 1 (p1, c1, k60).
+1623971127: New connection from 172.21.0.1:50994 on port 1883.
+1623971127: New client connected from 172.21.0.1:50994 as Node 2 (p1, c1, k60).
+1623971128: New connection from 172.21.0.1:51000 on port 1883.
+1623971128: New client connected from 172.21.0.1:51000 as Node 3 (p1, c1, k60).
+1623971128: New connection from 172.21.0.1:51006 on port 1883.
+1623971128: New client connected from 172.21.0.1:51006 as Node 4 (p1, c1, k60).
+1623971129: New connection from 172.21.0.1:51012 on port 1883.
+1623971129: New client connected from 172.21.0.1:51012 as Node 5 (p1, c1, k60).
+1623971129: New connection from 172.21.0.1:51018 on port 1883.
+1623971129: New client connected from 172.21.0.1:51018 as Node 6 (p1, c1, k60).
+1623971130: New connection from 172.21.0.1:51024 on port 1883.
+1623971130: New client connected from 172.21.0.1:51024 as Node 7 (p1, c1, k60).
+1623971130: New connection from 172.21.0.1:51030 on port 1883.
+1623971130: New client connected from 172.21.0.1:51030 as Node 8 (p1, c1, k60).
+1623971131: New connection from 172.21.0.1:51036 on port 1883.
+1623971131: New client connected from 172.21.0.1:51036 as Node 9 (p1, c1, k60).
+1623971131: New connection from 172.21.0.1:51042 on port 1883.
+1623971131: New client connected from 172.21.0.1:51042 as Node 10 (p1, c1, k60).
+1623971132: New connection from 172.21.0.1:51048 on port 1883.
+1623971132: New client connected from 172.21.0.1:51048 as Node 11 (p1, c1, k60).
+1623971133: New connection from 172.21.0.1:51054 on port 1883.
+1623971133: New client connected from 172.21.0.1:51054 as Node 12 (p1, c1, k60).
+1623971133: New connection from 172.21.0.1:51060 on port 1883.
+1623971133: New client connected from 172.21.0.1:51060 as Node 13 (p1, c1, k60).
+1623971134: New connection from 172.21.0.1:51066 on port 1883.
+1623971134: New client connected from 172.21.0.1:51066 as Node 14 (p1, c1, k60).
+1623971135: New connection from 172.21.0.1:51072 on port 1883.
+1623971135: New client connected from 172.21.0.1:51072 as Node 15 (p1, c1, k60).
+1623971135: New connection from 172.21.0.1:51078 on port 1883.
+1623971135: New client connected from 172.21.0.1:51078 as Node 16 (p1, c1, k60).
+1623971146: Client Node 14 closed its connection.
+1623971146: Client Node 15 closed its connection.
+1623971146: Client Node 10 closed its connection.
+1623971146: Client Node 3 closed its connection.
+1623971146: Client Node 8 closed its connection.
+1623971146: Client Node 11 closed its connection.
+1623971146: Client Node 5 closed its connection.
+1623971146: Client Node 2 closed its connection.
+1623971146: Client Node 16 closed its connection.
+1623971146: Client Node 7 closed its connection.
+1623971146: Client Node 9 closed its connection.
+1623971146: Client Node 4 closed its connection.
+1623971146: Client Node 6 closed its connection.
+1623971146: Client Node 1 closed its connection.
+1623971146: Client Node 13 closed its connection.
+1623971149: Client Node 12 closed its connection.
+1623971160: New connection from 172.21.0.1:51084 on port 1883.
+1623971160: New client connected from 172.21.0.1:51084 as Node 1 (p1, c1, k60).
+1623971160: New connection from 172.21.0.1:51090 on port 1883.
+1623971160: New client connected from 172.21.0.1:51090 as Node 2 (p1, c1, k60).
+1623971161: New connection from 172.21.0.1:51096 on port 1883.
+1623971161: New client connected from 172.21.0.1:51096 as Node 3 (p1, c1, k60).
+1623971161: New connection from 172.21.0.1:51102 on port 1883.
+1623971161: New client connected from 172.21.0.1:51102 as Node 4 (p1, c1, k60).
+1623971162: New connection from 172.21.0.1:51108 on port 1883.
+1623971162: New client connected from 172.21.0.1:51108 as Node 5 (p1, c1, k60).
+1623971162: New connection from 172.21.0.1:51114 on port 1883.
+1623971162: New client connected from 172.21.0.1:51114 as Node 6 (p1, c1, k60).
+1623971163: New connection from 172.21.0.1:51120 on port 1883.
+1623971163: New client connected from 172.21.0.1:51120 as Node 7 (p1, c1, k60).
+1623971163: New connection from 172.21.0.1:51126 on port 1883.
+1623971163: New client connected from 172.21.0.1:51126 as Node 8 (p1, c1, k60).
+1623971163: New connection from 172.21.0.1:51132 on port 1883.
+1623971163: New client connected from 172.21.0.1:51132 as Node 9 (p1, c1, k60).
+1623971164: New connection from 172.21.0.1:51138 on port 1883.
+1623971164: New client connected from 172.21.0.1:51138 as Node 10 (p1, c1, k60).
+1623971164: New connection from 172.21.0.1:51144 on port 1883.
+1623971164: New client connected from 172.21.0.1:51144 as Node 11 (p1, c1, k60).
+1623971165: New connection from 172.21.0.1:51150 on port 1883.
+1623971165: New client connected from 172.21.0.1:51150 as Node 12 (p1, c1, k60).
+1623971166: New connection from 172.21.0.1:51156 on port 1883.
+1623971166: New client connected from 172.21.0.1:51156 as Node 13 (p1, c1, k60).
+1623971166: New connection from 172.21.0.1:51162 on port 1883.
+1623971166: New client connected from 172.21.0.1:51162 as Node 14 (p1, c1, k60).
+1623971167: New connection from 172.21.0.1:51168 on port 1883.
+1623971167: New client connected from 172.21.0.1:51168 as Node 15 (p1, c1, k60).
+1623971167: New connection from 172.21.0.1:51174 on port 1883.
+1623971167: New client connected from 172.21.0.1:51174 as Node 16 (p1, c1, k60).
+1623971192: Client Node 14 closed its connection.
+1623971192: Client Node 7 closed its connection.
+1623971192: Client Node 16 closed its connection.
+1623971192: Client Node 12 closed its connection.
+1623971192: Client Node 4 closed its connection.
+1623971192: Client Node 10 closed its connection.
+1623971192: Client Node 5 closed its connection.
+1623971192: Client Node 1 closed its connection.
+1623971192: Client Node 6 closed its connection.
+1623971192: Client Node 8 closed its connection.
+1623971192: Client Node 9 closed its connection.
+1623971192: Client Node 13 closed its connection.
+1623971192: Client Node 2 closed its connection.
+1623971192: Client Node 11 closed its connection.
+1623971192: Client Node 3 closed its connection.
+1623971192: Client Node 15 closed its connection.
+1623971317: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623971327: New connection from 172.21.0.1:51180 on port 1883.
+1623971327: New client connected from 172.21.0.1:51180 as Node 1 (p1, c1, k60).
+1623971328: New connection from 172.21.0.1:51186 on port 1883.
+1623971328: New client connected from 172.21.0.1:51186 as Node 2 (p1, c1, k60).
+1623971328: New connection from 172.21.0.1:51192 on port 1883.
+1623971328: New client connected from 172.21.0.1:51192 as Node 3 (p1, c1, k60).
+1623971328: New connection from 172.21.0.1:51198 on port 1883.
+1623971328: New client connected from 172.21.0.1:51198 as Node 4 (p1, c1, k60).
+1623971329: New connection from 172.21.0.1:51204 on port 1883.
+1623971329: New client connected from 172.21.0.1:51204 as Node 5 (p1, c1, k60).
+1623971330: New connection from 172.21.0.1:51210 on port 1883.
+1623971330: New client connected from 172.21.0.1:51210 as Node 6 (p1, c1, k60).
+1623971330: New connection from 172.21.0.1:51216 on port 1883.
+1623971330: New client connected from 172.21.0.1:51216 as Node 7 (p1, c1, k60).
+1623971330: New connection from 172.21.0.1:51222 on port 1883.
+1623971330: New client connected from 172.21.0.1:51222 as Node 8 (p1, c1, k60).
+1623971331: New connection from 172.21.0.1:51228 on port 1883.
+1623971331: New client connected from 172.21.0.1:51228 as Node 9 (p1, c1, k60).
+1623971331: New connection from 172.21.0.1:51234 on port 1883.
+1623971331: New client connected from 172.21.0.1:51234 as Node 10 (p1, c1, k60).
+1623971332: New connection from 172.21.0.1:51240 on port 1883.
+1623971332: New client connected from 172.21.0.1:51240 as Node 11 (p1, c1, k60).
+1623971332: New connection from 172.21.0.1:51246 on port 1883.
+1623971332: New client connected from 172.21.0.1:51246 as Node 12 (p1, c1, k60).
+1623971333: New connection from 172.21.0.1:51252 on port 1883.
+1623971333: New client connected from 172.21.0.1:51252 as Node 13 (p1, c1, k60).
+1623971333: New connection from 172.21.0.1:51258 on port 1883.
+1623971333: New client connected from 172.21.0.1:51258 as Node 14 (p1, c1, k60).
+1623971334: New connection from 172.21.0.1:51264 on port 1883.
+1623971334: New client connected from 172.21.0.1:51264 as Node 15 (p1, c1, k60).
+1623971334: New connection from 172.21.0.1:51270 on port 1883.
+1623971334: New client connected from 172.21.0.1:51270 as Node 16 (p1, c1, k60).
+1623971375: Client Node 7 closed its connection.
+1623971375: Client Node 16 closed its connection.
+1623971375: Client Node 3 closed its connection.
+1623971375: Client Node 15 closed its connection.
+1623971375: Client Node 13 closed its connection.
+1623971375: Client Node 11 closed its connection.
+1623971375: Client Node 14 closed its connection.
+1623971375: Client Node 4 closed its connection.
+1623971375: Client Node 2 closed its connection.
+1623971375: Client Node 8 closed its connection.
+1623971375: Client Node 6 closed its connection.
+1623971375: Client Node 5 closed its connection.
+1623971375: Client Node 1 closed its connection.
+1623971375: Client Node 10 closed its connection.
+1623971375: Client Node 12 closed its connection.
+1623971375: Client Node 9 closed its connection.
+1623971395: New connection from 172.21.0.1:51276 on port 1883.
+1623971395: New client connected from 172.21.0.1:51276 as Node 1 (p1, c1, k60).
+1623971395: New connection from 172.21.0.1:51282 on port 1883.
+1623971395: New client connected from 172.21.0.1:51282 as Node 2 (p1, c1, k60).
+1623971396: New connection from 172.21.0.1:51288 on port 1883.
+1623971396: New client connected from 172.21.0.1:51288 as Node 3 (p1, c1, k60).
+1623971396: New connection from 172.21.0.1:51294 on port 1883.
+1623971396: New client connected from 172.21.0.1:51294 as Node 4 (p1, c1, k60).
+1623971396: New connection from 172.21.0.1:51300 on port 1883.
+1623971396: New client connected from 172.21.0.1:51300 as Node 5 (p1, c1, k60).
+1623971397: New connection from 172.21.0.1:51306 on port 1883.
+1623971397: New client connected from 172.21.0.1:51306 as Node 6 (p1, c1, k60).
+1623971398: New connection from 172.21.0.1:51312 on port 1883.
+1623971398: New client connected from 172.21.0.1:51312 as Node 7 (p1, c1, k60).
+1623971398: New connection from 172.21.0.1:51318 on port 1883.
+1623971398: New client connected from 172.21.0.1:51318 as Node 8 (p1, c1, k60).
+1623971398: New connection from 172.21.0.1:51324 on port 1883.
+1623971398: New client connected from 172.21.0.1:51324 as Node 9 (p1, c1, k60).
+1623971399: New connection from 172.21.0.1:51330 on port 1883.
+1623971399: New client connected from 172.21.0.1:51330 as Node 10 (p1, c1, k60).
+1623971399: New connection from 172.21.0.1:51336 on port 1883.
+1623971399: New client connected from 172.21.0.1:51336 as Node 11 (p1, c1, k60).
+1623971400: New connection from 172.21.0.1:51342 on port 1883.
+1623971400: New client connected from 172.21.0.1:51342 as Node 12 (p1, c1, k60).
+1623971400: New connection from 172.21.0.1:51348 on port 1883.
+1623971400: New client connected from 172.21.0.1:51348 as Node 13 (p1, c1, k60).
+1623971401: New connection from 172.21.0.1:51354 on port 1883.
+1623971401: New client connected from 172.21.0.1:51354 as Node 14 (p1, c1, k60).
+1623971401: New connection from 172.21.0.1:51360 on port 1883.
+1623971401: New client connected from 172.21.0.1:51360 as Node 15 (p1, c1, k60).
+1623971402: New connection from 172.21.0.1:51366 on port 1883.
+1623971402: New client connected from 172.21.0.1:51366 as Node 16 (p1, c1, k60).
+1623972049: Client Node 1 closed its connection.
+1623972049: Client Node 4 closed its connection.
+1623972049: Client Node 5 closed its connection.
+1623972049: Client Node 13 closed its connection.
+1623972049: Client Node 3 closed its connection.
+1623972049: Client Node 14 closed its connection.
+1623972049: Client Node 8 closed its connection.
+1623972049: Client Node 7 closed its connection.
+1623972049: Client Node 11 closed its connection.
+1623972049: Client Node 2 closed its connection.
+1623972049: Client Node 12 closed its connection.
+1623972049: Client Node 6 closed its connection.
+1623972049: Client Node 16 closed its connection.
+1623972049: Client Node 9 closed its connection.
+1623972049: Client Node 15 closed its connection.
+1623972049: Client Node 10 closed its connection.
+1623972528: New connection from 172.21.0.1:51372 on port 1883.
+1623972528: New client connected from 172.21.0.1:51372 as Node 1 (p1, c1, k60).
+1623972528: New connection from 172.21.0.1:51378 on port 1883.
+1623972528: New client connected from 172.21.0.1:51378 as Node 2 (p1, c1, k60).
+1623972529: New connection from 172.21.0.1:51384 on port 1883.
+1623972529: New client connected from 172.21.0.1:51384 as Node 3 (p1, c1, k60).
+1623972529: New connection from 172.21.0.1:51390 on port 1883.
+1623972529: New client connected from 172.21.0.1:51390 as Node 4 (p1, c1, k60).
+1623972530: New connection from 172.21.0.1:51396 on port 1883.
+1623972530: New client connected from 172.21.0.1:51396 as Node 5 (p1, c1, k60).
+1623972531: New connection from 172.21.0.1:51402 on port 1883.
+1623972531: New client connected from 172.21.0.1:51402 as Node 6 (p1, c1, k60).
+1623972531: New connection from 172.21.0.1:51408 on port 1883.
+1623972531: New client connected from 172.21.0.1:51408 as Node 7 (p1, c1, k60).
+1623972532: New connection from 172.21.0.1:51414 on port 1883.
+1623972532: New client connected from 172.21.0.1:51414 as Node 8 (p1, c1, k60).
+1623972532: New connection from 172.21.0.1:51420 on port 1883.
+1623972532: New client connected from 172.21.0.1:51420 as Node 9 (p1, c1, k60).
+1623972533: New connection from 172.21.0.1:51426 on port 1883.
+1623972533: New client connected from 172.21.0.1:51426 as Node 10 (p1, c1, k60).
+1623972534: New connection from 172.21.0.1:51432 on port 1883.
+1623972534: New client connected from 172.21.0.1:51432 as Node 11 (p1, c1, k60).
+1623972534: New connection from 172.21.0.1:51438 on port 1883.
+1623972534: New client connected from 172.21.0.1:51438 as Node 12 (p1, c1, k60).
+1623972535: New connection from 172.21.0.1:51444 on port 1883.
+1623972535: New client connected from 172.21.0.1:51444 as Node 13 (p1, c1, k60).
+1623972536: New connection from 172.21.0.1:51450 on port 1883.
+1623972536: New client connected from 172.21.0.1:51450 as Node 14 (p1, c1, k60).
+1623972537: New connection from 172.21.0.1:51456 on port 1883.
+1623972537: New client connected from 172.21.0.1:51456 as Node 15 (p1, c1, k60).
+1623972538: New connection from 172.21.0.1:51462 on port 1883.
+1623972538: New client connected from 172.21.0.1:51462 as Node 16 (p1, c1, k60).
+1623972656: Client Node 16 closed its connection.
+1623972656: Client Node 11 closed its connection.
+1623972656: Client Node 15 closed its connection.
+1623972656: Client Node 13 closed its connection.
+1623972656: Client Node 12 closed its connection.
+1623972656: Client Node 9 closed its connection.
+1623972656: Client Node 2 closed its connection.
+1623972656: Client Node 6 closed its connection.
+1623972656: Client Node 4 closed its connection.
+1623972656: Client Node 5 closed its connection.
+1623972656: Client Node 7 closed its connection.
+1623972656: Client Node 10 closed its connection.
+1623972656: Client Node 3 closed its connection.
+1623972656: Client Node 1 closed its connection.
+1623972656: Client Node 8 closed its connection.
+1623972656: Client Node 14 closed its connection.
+1623972659: New connection from 172.21.0.1:51468 on port 1883.
+1623972659: New client connected from 172.21.0.1:51468 as Node 1 (p1, c1, k60).
+1623972659: New connection from 172.21.0.1:51474 on port 1883.
+1623972659: New client connected from 172.21.0.1:51474 as Node 2 (p1, c1, k60).
+1623972660: New connection from 172.21.0.1:51480 on port 1883.
+1623972660: New client connected from 172.21.0.1:51480 as Node 3 (p1, c1, k60).
+1623972660: New connection from 172.21.0.1:51486 on port 1883.
+1623972660: New client connected from 172.21.0.1:51486 as Node 4 (p1, c1, k60).
+1623972661: New connection from 172.21.0.1:51492 on port 1883.
+1623972661: New client connected from 172.21.0.1:51492 as Node 5 (p1, c1, k60).
+1623972662: New connection from 172.21.0.1:51498 on port 1883.
+1623972662: New client connected from 172.21.0.1:51498 as Node 6 (p1, c1, k60).
+1623972662: New connection from 172.21.0.1:51504 on port 1883.
+1623972662: New client connected from 172.21.0.1:51504 as Node 7 (p1, c1, k60).
+1623972663: New connection from 172.21.0.1:51510 on port 1883.
+1623972663: New client connected from 172.21.0.1:51510 as Node 8 (p1, c1, k60).
+1623972664: New connection from 172.21.0.1:51516 on port 1883.
+1623972664: New client connected from 172.21.0.1:51516 as Node 9 (p1, c1, k60).
+1623972665: New connection from 172.21.0.1:51522 on port 1883.
+1623972665: New client connected from 172.21.0.1:51522 as Node 10 (p1, c1, k60).
+1623972666: New connection from 172.21.0.1:51528 on port 1883.
+1623972666: New client connected from 172.21.0.1:51528 as Node 11 (p1, c1, k60).
+1623972666: New connection from 172.21.0.1:51534 on port 1883.
+1623972666: New client connected from 172.21.0.1:51534 as Node 12 (p1, c1, k60).
+1623972667: New connection from 172.21.0.1:51540 on port 1883.
+1623972667: New client connected from 172.21.0.1:51540 as Node 13 (p1, c1, k60).
+1623972668: New connection from 172.21.0.1:51546 on port 1883.
+1623972668: New client connected from 172.21.0.1:51546 as Node 14 (p1, c1, k60).
+1623972669: New connection from 172.21.0.1:51552 on port 1883.
+1623972669: New client connected from 172.21.0.1:51552 as Node 15 (p1, c1, k60).
+1623972669: New connection from 172.21.0.1:51558 on port 1883.
+1623972669: New client connected from 172.21.0.1:51558 as Node 16 (p1, c1, k60).
+1623973056: Client Node 10 has exceeded timeout, disconnecting.
+1623973118: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623973593: Client Node 4 closed its connection.
+1623973593: Client Node 15 closed its connection.
+1623973593: Client Node 7 closed its connection.
+1623973593: Client Node 12 closed its connection.
+1623973593: Client Node 9 closed its connection.
+1623973593: Client Node 5 closed its connection.
+1623973593: Client Node 14 closed its connection.
+1623973593: Client Node 16 closed its connection.
+1623973593: Client Node 1 closed its connection.
+1623973593: Client Node 3 closed its connection.
+1623973593: Client Node 2 closed its connection.
+1623973593: Client Node 13 closed its connection.
+1623973593: Client Node 6 closed its connection.
+1623973593: Client Node 8 closed its connection.
+1623973593: Client Node 11 closed its connection.
+1623973890: New connection from 172.21.0.1:51564 on port 1883.
+1623973890: New client connected from 172.21.0.1:51564 as Node 1 (p1, c1, k60).
+1623973890: New connection from 172.21.0.1:51570 on port 1883.
+1623973890: New client connected from 172.21.0.1:51570 as Node 2 (p1, c1, k60).
+1623973891: New connection from 172.21.0.1:51576 on port 1883.
+1623973891: New client connected from 172.21.0.1:51576 as Node 3 (p1, c1, k60).
+1623973892: New connection from 172.21.0.1:51582 on port 1883.
+1623973892: New client connected from 172.21.0.1:51582 as Node 4 (p1, c1, k60).
+1623973892: New connection from 172.21.0.1:51588 on port 1883.
+1623973892: New client connected from 172.21.0.1:51588 as Node 5 (p1, c1, k60).
+1623973893: New connection from 172.21.0.1:51594 on port 1883.
+1623973893: New client connected from 172.21.0.1:51594 as Node 6 (p1, c1, k60).
+1623973894: New connection from 172.21.0.1:51600 on port 1883.
+1623973894: New client connected from 172.21.0.1:51600 as Node 7 (p1, c1, k60).
+1623973894: New connection from 172.21.0.1:51606 on port 1883.
+1623973894: New client connected from 172.21.0.1:51606 as Node 8 (p1, c1, k60).
+1623973895: New connection from 172.21.0.1:51612 on port 1883.
+1623973895: New client connected from 172.21.0.1:51612 as Node 9 (p1, c1, k60).
+1623973896: New connection from 172.21.0.1:51618 on port 1883.
+1623973896: New client connected from 172.21.0.1:51618 as Node 10 (p1, c1, k60).
+1623973896: New connection from 172.21.0.1:51624 on port 1883.
+1623973896: New client connected from 172.21.0.1:51624 as Node 11 (p1, c1, k60).
+1623973897: New connection from 172.21.0.1:51630 on port 1883.
+1623973897: New client connected from 172.21.0.1:51630 as Node 12 (p1, c1, k60).
+1623973897: New connection from 172.21.0.1:51636 on port 1883.
+1623973897: New client connected from 172.21.0.1:51636 as Node 13 (p1, c1, k60).
+1623973898: New connection from 172.21.0.1:51642 on port 1883.
+1623973898: New client connected from 172.21.0.1:51642 as Node 14 (p1, c1, k60).
+1623973899: New connection from 172.21.0.1:51648 on port 1883.
+1623973899: New client connected from 172.21.0.1:51648 as Node 15 (p1, c1, k60).
+1623973900: New connection from 172.21.0.1:51654 on port 1883.
+1623973900: New client connected from 172.21.0.1:51654 as Node 16 (p1, c1, k60).
+1623974072: Client Node 6 closed its connection.
+1623974072: Client Node 7 closed its connection.
+1623974072: Client Node 9 closed its connection.
+1623974072: Client Node 12 closed its connection.
+1623974072: Client Node 2 closed its connection.
+1623974072: Client Node 3 closed its connection.
+1623974072: Client Node 16 closed its connection.
+1623974072: Client Node 5 closed its connection.
+1623974072: Client Node 14 closed its connection.
+1623974072: Client Node 13 closed its connection.
+1623974072: Client Node 8 closed its connection.
+1623974072: Client Node 15 closed its connection.
+1623974072: Client Node 1 closed its connection.
+1623974072: Client Node 11 closed its connection.
+1623974072: Client Node 10 closed its connection.
+1623974072: Client Node 4 closed its connection.
+1623974185: New connection from 172.21.0.1:51660 on port 1883.
+1623974185: New client connected from 172.21.0.1:51660 as Node 1 (p1, c1, k60).
+1623974185: New connection from 172.21.0.1:51666 on port 1883.
+1623974185: New client connected from 172.21.0.1:51666 as Node 2 (p1, c1, k60).
+1623974185: New connection from 172.21.0.1:51672 on port 1883.
+1623974185: New client connected from 172.21.0.1:51672 as Node 3 (p1, c1, k60).
+1623974186: New connection from 172.21.0.1:51678 on port 1883.
+1623974186: New client connected from 172.21.0.1:51678 as Node 4 (p1, c1, k60).
+1623974187: New connection from 172.21.0.1:51684 on port 1883.
+1623974187: New client connected from 172.21.0.1:51684 as Node 5 (p1, c1, k60).
+1623974187: New connection from 172.21.0.1:51690 on port 1883.
+1623974187: New client connected from 172.21.0.1:51690 as Node 6 (p1, c1, k60).
+1623974188: New connection from 172.21.0.1:51696 on port 1883.
+1623974188: New client connected from 172.21.0.1:51696 as Node 7 (p1, c1, k60).
+1623974189: New connection from 172.21.0.1:51702 on port 1883.
+1623974189: New client connected from 172.21.0.1:51702 as Node 8 (p1, c1, k60).
+1623974189: New connection from 172.21.0.1:51708 on port 1883.
+1623974189: New client connected from 172.21.0.1:51708 as Node 9 (p1, c1, k60).
+1623974190: New connection from 172.21.0.1:51714 on port 1883.
+1623974190: New client connected from 172.21.0.1:51714 as Node 10 (p1, c1, k60).
+1623974190: New connection from 172.21.0.1:51720 on port 1883.
+1623974190: New client connected from 172.21.0.1:51720 as Node 11 (p1, c1, k60).
+1623974191: New connection from 172.21.0.1:51726 on port 1883.
+1623974191: New client connected from 172.21.0.1:51726 as Node 12 (p1, c1, k60).
+1623974192: New connection from 172.21.0.1:51732 on port 1883.
+1623974192: New client connected from 172.21.0.1:51732 as Node 13 (p1, c1, k60).
+1623974193: New connection from 172.21.0.1:51738 on port 1883.
+1623974193: New client connected from 172.21.0.1:51738 as Node 14 (p1, c1, k60).
+1623974194: New connection from 172.21.0.1:51744 on port 1883.
+1623974194: New client connected from 172.21.0.1:51744 as Node 15 (p1, c1, k60).
+1623974195: New connection from 172.21.0.1:51750 on port 1883.
+1623974195: New client connected from 172.21.0.1:51750 as Node 16 (p1, c1, k60).
+1623974253: Client Node 10 closed its connection.
+1623974253: Client Node 1 closed its connection.
+1623974253: Client Node 16 closed its connection.
+1623974253: Client Node 4 closed its connection.
+1623974253: Client Node 6 closed its connection.
+1623974253: Client Node 2 closed its connection.
+1623974253: Client Node 12 closed its connection.
+1623974253: Client Node 7 closed its connection.
+1623974253: Client Node 3 closed its connection.
+1623974253: Client Node 13 closed its connection.
+1623974253: Client Node 9 closed its connection.
+1623974253: Client Node 15 closed its connection.
+1623974253: Client Node 11 closed its connection.
+1623974253: Client Node 14 closed its connection.
+1623974253: Client Node 8 closed its connection.
+1623974254: Client Node 5 closed its connection.
+1623974919: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623976063: New connection from 172.21.0.1:51756 on port 1883.
+1623976063: New client connected from 172.21.0.1:51756 as Node 2 (p1, c1, k60).
+1623976063: New connection from 172.21.0.1:51762 on port 1883.
+1623976063: New client connected from 172.21.0.1:51762 as Node 1 (p1, c1, k60).
+1623976064: New connection from 172.21.0.1:51768 on port 1883.
+1623976064: New client connected from 172.21.0.1:51768 as Node 3 (p1, c1, k60).
+1623976065: New connection from 172.21.0.1:51774 on port 1883.
+1623976065: New client connected from 172.21.0.1:51774 as Node 4 (p1, c1, k60).
+1623976066: New connection from 172.21.0.1:51780 on port 1883.
+1623976066: New client connected from 172.21.0.1:51780 as Node 5 (p1, c1, k60).
+1623976067: New connection from 172.21.0.1:51786 on port 1883.
+1623976067: New client connected from 172.21.0.1:51786 as Node 6 (p1, c1, k60).
+1623976067: New connection from 172.21.0.1:51792 on port 1883.
+1623976067: New client connected from 172.21.0.1:51792 as Node 7 (p1, c1, k60).
+1623976068: New connection from 172.21.0.1:51798 on port 1883.
+1623976068: New client connected from 172.21.0.1:51798 as Node 8 (p1, c1, k60).
+1623976069: New connection from 172.21.0.1:51804 on port 1883.
+1623976069: New client connected from 172.21.0.1:51804 as Node 9 (p1, c1, k60).
+1623976069: New connection from 172.21.0.1:51810 on port 1883.
+1623976069: New client connected from 172.21.0.1:51810 as Node 10 (p1, c1, k60).
+1623976070: New connection from 172.21.0.1:51816 on port 1883.
+1623976070: New client connected from 172.21.0.1:51816 as Node 11 (p1, c1, k60).
+1623976071: New connection from 172.21.0.1:51822 on port 1883.
+1623976071: New client connected from 172.21.0.1:51822 as Node 12 (p1, c1, k60).
+1623976072: New connection from 172.21.0.1:51828 on port 1883.
+1623976072: New client connected from 172.21.0.1:51828 as Node 13 (p1, c1, k60).
+1623976073: New connection from 172.21.0.1:51834 on port 1883.
+1623976073: New client connected from 172.21.0.1:51834 as Node 14 (p1, c1, k60).
+1623976074: New connection from 172.21.0.1:51840 on port 1883.
+1623976074: New client connected from 172.21.0.1:51840 as Node 15 (p1, c1, k60).
+1623976074: New connection from 172.21.0.1:51846 on port 1883.
+1623976074: New client connected from 172.21.0.1:51846 as Node 16 (p1, c1, k60).
+1623976548: Client Node 5 closed its connection.
+1623976548: Client Node 6 closed its connection.
+1623976548: Client Node 4 closed its connection.
+1623976548: Client Node 7 closed its connection.
+1623976548: Client Node 1 closed its connection.
+1623976548: Client Node 12 closed its connection.
+1623976548: Client Node 9 closed its connection.
+1623976548: Client Node 10 closed its connection.
+1623976548: Client Node 2 closed its connection.
+1623976548: Client Node 8 closed its connection.
+1623976548: Client Node 15 closed its connection.
+1623976548: Client Node 14 closed its connection.
+1623976548: Client Node 13 closed its connection.
+1623976548: Client Node 11 closed its connection.
+1623976548: Client Node 16 closed its connection.
+1623976548: Client Node 3 closed its connection.
+1623976580: New connection from 172.21.0.1:51852 on port 1883.
+1623976580: New client connected from 172.21.0.1:51852 as Node 1 (p1, c1, k60).
+1623976581: New connection from 172.21.0.1:51858 on port 1883.
+1623976581: New client connected from 172.21.0.1:51858 as Node 2 (p1, c1, k60).
+1623976582: New connection from 172.21.0.1:51864 on port 1883.
+1623976582: New client connected from 172.21.0.1:51864 as Node 3 (p1, c1, k60).
+1623976582: New connection from 172.21.0.1:51870 on port 1883.
+1623976582: New client connected from 172.21.0.1:51870 as Node 4 (p1, c1, k60).
+1623976583: New connection from 172.21.0.1:51876 on port 1883.
+1623976583: New client connected from 172.21.0.1:51876 as Node 5 (p1, c1, k60).
+1623976584: New connection from 172.21.0.1:51882 on port 1883.
+1623976584: New client connected from 172.21.0.1:51882 as Node 6 (p1, c1, k60).
+1623976584: New connection from 172.21.0.1:51888 on port 1883.
+1623976584: New client connected from 172.21.0.1:51888 as Node 7 (p1, c1, k60).
+1623976585: New connection from 172.21.0.1:51894 on port 1883.
+1623976585: New client connected from 172.21.0.1:51894 as Node 8 (p1, c1, k60).
+1623976586: New connection from 172.21.0.1:51900 on port 1883.
+1623976586: New client connected from 172.21.0.1:51900 as Node 9 (p1, c1, k60).
+1623976586: New connection from 172.21.0.1:51906 on port 1883.
+1623976586: New client connected from 172.21.0.1:51906 as Node 10 (p1, c1, k60).
+1623976587: New connection from 172.21.0.1:51912 on port 1883.
+1623976587: New client connected from 172.21.0.1:51912 as Node 11 (p1, c1, k60).
+1623976588: New connection from 172.21.0.1:51918 on port 1883.
+1623976588: New client connected from 172.21.0.1:51918 as Node 12 (p1, c1, k60).
+1623976589: New connection from 172.21.0.1:51924 on port 1883.
+1623976589: New client connected from 172.21.0.1:51924 as Node 13 (p1, c1, k60).
+1623976589: New connection from 172.21.0.1:51930 on port 1883.
+1623976589: New client connected from 172.21.0.1:51930 as Node 14 (p1, c1, k60).
+1623976590: New connection from 172.21.0.1:51936 on port 1883.
+1623976590: New client connected from 172.21.0.1:51936 as Node 15 (p1, c1, k60).
+1623976591: New connection from 172.21.0.1:51942 on port 1883.
+1623976591: New client connected from 172.21.0.1:51942 as Node 16 (p1, c1, k60).
+1623976687: Client Node 11 closed its connection.
+1623976687: Client Node 9 closed its connection.
+1623976687: Client Node 4 closed its connection.
+1623976687: Client Node 7 closed its connection.
+1623976687: Client Node 5 closed its connection.
+1623976687: Client Node 6 closed its connection.
+1623976687: Client Node 3 closed its connection.
+1623976687: Client Node 2 closed its connection.
+1623976687: Client Node 14 closed its connection.
+1623976687: Client Node 8 closed its connection.
+1623976687: Client Node 12 closed its connection.
+1623976687: Client Node 15 closed its connection.
+1623976687: Client Node 1 closed its connection.
+1623976687: Client Node 16 closed its connection.
+1623976687: Client Node 13 closed its connection.
+1623976687: Client Node 10 closed its connection.
+1623976720: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623978521: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623980322: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623981955: New connection from 172.21.0.1:51948 on port 1883.
+1623981956: New client connected from 172.21.0.1:51948 as Node 2 (p1, c1, k60).
+1623981956: New connection from 172.21.0.1:51954 on port 1883.
+1623981956: New client connected from 172.21.0.1:51954 as Node 1 (p1, c1, k60).
+1623981956: New connection from 172.21.0.1:51960 on port 1883.
+1623981956: New client connected from 172.21.0.1:51960 as Node 3 (p1, c1, k60).
+1623981957: New connection from 172.21.0.1:51966 on port 1883.
+1623981957: New client connected from 172.21.0.1:51966 as Node 4 (p1, c1, k60).
+1623981957: New connection from 172.21.0.1:51972 on port 1883.
+1623981957: New client connected from 172.21.0.1:51972 as Node 5 (p1, c1, k60).
+1623981958: New connection from 172.21.0.1:51978 on port 1883.
+1623981958: New client connected from 172.21.0.1:51978 as Node 6 (p1, c1, k60).
+1623981959: New connection from 172.21.0.1:51984 on port 1883.
+1623981959: New client connected from 172.21.0.1:51984 as Node 7 (p1, c1, k60).
+1623981959: New connection from 172.21.0.1:51990 on port 1883.
+1623981959: New client connected from 172.21.0.1:51990 as Node 8 (p1, c1, k60).
+1623981960: New connection from 172.21.0.1:51996 on port 1883.
+1623981960: New client connected from 172.21.0.1:51996 as Node 9 (p1, c1, k60).
+1623981960: New connection from 172.21.0.1:52002 on port 1883.
+1623981960: New client connected from 172.21.0.1:52002 as Node 10 (p1, c1, k60).
+1623981961: New connection from 172.21.0.1:52008 on port 1883.
+1623981961: New client connected from 172.21.0.1:52008 as Node 11 (p1, c1, k60).
+1623981961: New connection from 172.21.0.1:52014 on port 1883.
+1623981961: New client connected from 172.21.0.1:52014 as Node 12 (p1, c1, k60).
+1623981962: New connection from 172.21.0.1:52020 on port 1883.
+1623981962: New client connected from 172.21.0.1:52020 as Node 13 (p1, c1, k60).
+1623981962: New connection from 172.21.0.1:52026 on port 1883.
+1623981962: New client connected from 172.21.0.1:52026 as Node 14 (p1, c1, k60).
+1623981963: New connection from 172.21.0.1:52032 on port 1883.
+1623981963: New client connected from 172.21.0.1:52032 as Node 15 (p1, c1, k60).
+1623981964: New connection from 172.21.0.1:52038 on port 1883.
+1623981964: New client connected from 172.21.0.1:52038 as Node 16 (p1, c1, k60).
+1623982026: Client Node 11 closed its connection.
+1623982026: Client Node 3 closed its connection.
+1623982026: Client Node 5 closed its connection.
+1623982026: Client Node 4 closed its connection.
+1623982026: Client Node 16 closed its connection.
+1623982026: Client Node 15 closed its connection.
+1623982026: Client Node 2 closed its connection.
+1623982026: Client Node 12 closed its connection.
+1623982026: Client Node 6 closed its connection.
+1623982026: Client Node 14 closed its connection.
+1623982026: Client Node 8 closed its connection.
+1623982026: Client Node 9 closed its connection.
+1623982027: Client Node 7 closed its connection.
+1623982027: Client Node 13 closed its connection.
+1623982027: Client Node 1 closed its connection.
+1623982027: Client Node 10 closed its connection.
+1623982123: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623983924: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623987847: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1623991447: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1624035430: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1624035885: New connection from 172.21.0.1:52044 on port 1883.
+1624035886: New client connected from 172.21.0.1:52044 as Node 1 (p1, c1, k60).
+1624035886: New connection from 172.21.0.1:52050 on port 1883.
+1624035886: New client connected from 172.21.0.1:52050 as Node 2 (p1, c1, k60).
+1624035886: New connection from 172.21.0.1:52056 on port 1883.
+1624035886: New client connected from 172.21.0.1:52056 as Node 3 (p1, c1, k60).
+1624035887: New connection from 172.21.0.1:52062 on port 1883.
+1624035887: New client connected from 172.21.0.1:52062 as Node 4 (p1, c1, k60).
+1624035887: New connection from 172.21.0.1:52068 on port 1883.
+1624035887: New client connected from 172.21.0.1:52068 as Node 5 (p1, c1, k60).
+1624035888: New connection from 172.21.0.1:52074 on port 1883.
+1624035888: New client connected from 172.21.0.1:52074 as Node 6 (p1, c1, k60).
+1624035889: New connection from 172.21.0.1:52080 on port 1883.
+1624035889: New client connected from 172.21.0.1:52080 as Node 7 (p1, c1, k60).
+1624035890: New connection from 172.21.0.1:52086 on port 1883.
+1624035890: New client connected from 172.21.0.1:52086 as Node 8 (p1, c1, k60).
+1624035890: New connection from 172.21.0.1:52092 on port 1883.
+1624035890: New client connected from 172.21.0.1:52092 as Node 9 (p1, c1, k60).
+1624035891: New connection from 172.21.0.1:52098 on port 1883.
+1624035891: New client connected from 172.21.0.1:52098 as Node 10 (p1, c1, k60).
+1624035892: New connection from 172.21.0.1:52104 on port 1883.
+1624035892: New client connected from 172.21.0.1:52104 as Node 11 (p1, c1, k60).
+1624035892: New connection from 172.21.0.1:52110 on port 1883.
+1624035892: New client connected from 172.21.0.1:52110 as Node 12 (p1, c1, k60).
+1624035893: New connection from 172.21.0.1:52116 on port 1883.
+1624035893: New client connected from 172.21.0.1:52116 as Node 13 (p1, c1, k60).
+1624035894: New connection from 172.21.0.1:52122 on port 1883.
+1624035894: New client connected from 172.21.0.1:52122 as Node 14 (p1, c1, k60).
+1624035894: New connection from 172.21.0.1:52128 on port 1883.
+1624035894: New client connected from 172.21.0.1:52128 as Node 15 (p1, c1, k60).
+1624035895: New connection from 172.21.0.1:52134 on port 1883.
+1624035895: New client connected from 172.21.0.1:52134 as Node 16 (p1, c1, k60).
+1624035897: Client Node 16 closed its connection.
+1624035897: Client Node 12 closed its connection.
+1624035897: Client Node 15 closed its connection.
+1624035897: Client Node 9 closed its connection.
+1624035897: Client Node 8 closed its connection.
+1624035897: Client Node 5 closed its connection.
+1624035897: Client Node 4 closed its connection.
+1624035897: Client Node 6 closed its connection.
+1624035897: Client Node 2 closed its connection.
+1624035897: Client Node 13 closed its connection.
+1624035897: Client Node 11 closed its connection.
+1624035897: Client Node 10 closed its connection.
+1624035897: Client Node 7 closed its connection.
+1624035897: Client Node 1 closed its connection.
+1624035897: Client Node 14 closed its connection.
+1624035897: Client Node 3 closed its connection.
+1624035907: New connection from 172.21.0.1:52140 on port 1883.
+1624035907: New client connected from 172.21.0.1:52140 as Node 1 (p1, c1, k60).
+1624035908: New connection from 172.21.0.1:52146 on port 1883.
+1624035908: New client connected from 172.21.0.1:52146 as Node 2 (p1, c1, k60).
+1624035908: New connection from 172.21.0.1:52152 on port 1883.
+1624035908: New client connected from 172.21.0.1:52152 as Node 3 (p1, c1, k60).
+1624035909: New connection from 172.21.0.1:52158 on port 1883.
+1624035909: New client connected from 172.21.0.1:52158 as Node 4 (p1, c1, k60).
+1624035910: New connection from 172.21.0.1:52164 on port 1883.
+1624035910: New client connected from 172.21.0.1:52164 as Node 5 (p1, c1, k60).
+1624035911: New connection from 172.21.0.1:52170 on port 1883.
+1624035911: New client connected from 172.21.0.1:52170 as Node 6 (p1, c1, k60).
+1624035912: New connection from 172.21.0.1:52176 on port 1883.
+1624035912: New client connected from 172.21.0.1:52176 as Node 7 (p1, c1, k60).
+1624035912: New connection from 172.21.0.1:52182 on port 1883.
+1624035912: New client connected from 172.21.0.1:52182 as Node 8 (p1, c1, k60).
+1624035913: New connection from 172.21.0.1:52188 on port 1883.
+1624035913: New client connected from 172.21.0.1:52188 as Node 9 (p1, c1, k60).
+1624035914: New connection from 172.21.0.1:52194 on port 1883.
+1624035914: New client connected from 172.21.0.1:52194 as Node 10 (p1, c1, k60).
+1624035915: New connection from 172.21.0.1:52200 on port 1883.
+1624035915: New client connected from 172.21.0.1:52200 as Node 11 (p1, c1, k60).
+1624035916: New connection from 172.21.0.1:52206 on port 1883.
+1624035916: New client connected from 172.21.0.1:52206 as Node 12 (p1, c1, k60).
+1624035917: New connection from 172.21.0.1:52212 on port 1883.
+1624035917: New client connected from 172.21.0.1:52212 as Node 13 (p1, c1, k60).
+1624035918: New connection from 172.21.0.1:52218 on port 1883.
+1624035918: New client connected from 172.21.0.1:52218 as Node 14 (p1, c1, k60).
+1624035919: New connection from 172.21.0.1:52224 on port 1883.
+1624035919: New client connected from 172.21.0.1:52224 as Node 15 (p1, c1, k60).
+1624035920: New connection from 172.21.0.1:52230 on port 1883.
+1624035920: New client connected from 172.21.0.1:52230 as Node 16 (p1, c1, k60).
+1624035924: Client Node 12 closed its connection.
+1624035924: Client Node 6 closed its connection.
+1624035924: Client Node 8 closed its connection.
+1624035924: Client Node 15 closed its connection.
+1624035924: Client Node 10 closed its connection.
+1624035924: Client Node 5 closed its connection.
+1624035924: Client Node 2 closed its connection.
+1624035924: Client Node 11 closed its connection.
+1624035924: Client Node 4 closed its connection.
+1624035924: Client Node 1 closed its connection.
+1624035924: Client Node 7 closed its connection.
+1624035924: Client Node 14 closed its connection.
+1624035924: Client Node 3 closed its connection.
+1624035924: Client Node 13 closed its connection.
+1624035924: Client Node 16 closed its connection.
+1624035924: Client Node 9 closed its connection.
+1624035938: New connection from 172.21.0.1:52236 on port 1883.
+1624035938: New client connected from 172.21.0.1:52236 as Node 1 (p1, c1, k60).
+1624035938: New connection from 172.21.0.1:52242 on port 1883.
+1624035938: New client connected from 172.21.0.1:52242 as Node 2 (p1, c1, k60).
+1624035939: New connection from 172.21.0.1:52248 on port 1883.
+1624035939: New client connected from 172.21.0.1:52248 as Node 3 (p1, c1, k60).
+1624035940: New connection from 172.21.0.1:52254 on port 1883.
+1624035940: New client connected from 172.21.0.1:52254 as Node 4 (p1, c1, k60).
+1624035940: New connection from 172.21.0.1:52260 on port 1883.
+1624035940: New client connected from 172.21.0.1:52260 as Node 5 (p1, c1, k60).
+1624035941: New connection from 172.21.0.1:52266 on port 1883.
+1624035941: New client connected from 172.21.0.1:52266 as Node 6 (p1, c1, k60).
+1624035942: New connection from 172.21.0.1:52272 on port 1883.
+1624035942: New client connected from 172.21.0.1:52272 as Node 7 (p1, c1, k60).
+1624035943: New connection from 172.21.0.1:52278 on port 1883.
+1624035943: New client connected from 172.21.0.1:52278 as Node 8 (p1, c1, k60).
+1624035944: New connection from 172.21.0.1:52284 on port 1883.
+1624035944: New client connected from 172.21.0.1:52284 as Node 9 (p1, c1, k60).
+1624035945: New connection from 172.21.0.1:52290 on port 1883.
+1624035945: New client connected from 172.21.0.1:52290 as Node 10 (p1, c1, k60).
+1624035946: New connection from 172.21.0.1:52296 on port 1883.
+1624035946: New client connected from 172.21.0.1:52296 as Node 11 (p1, c1, k60).
+1624035947: New connection from 172.21.0.1:52302 on port 1883.
+1624035947: New client connected from 172.21.0.1:52302 as Node 12 (p1, c1, k60).
+1624035948: New connection from 172.21.0.1:52308 on port 1883.
+1624035948: New client connected from 172.21.0.1:52308 as Node 13 (p1, c1, k60).
+1624035949: New connection from 172.21.0.1:52314 on port 1883.
+1624035949: New client connected from 172.21.0.1:52314 as Node 14 (p1, c1, k60).
+1624035950: New connection from 172.21.0.1:52320 on port 1883.
+1624035950: New client connected from 172.21.0.1:52320 as Node 15 (p1, c1, k60).
+1624035951: New connection from 172.21.0.1:52326 on port 1883.
+1624035951: New client connected from 172.21.0.1:52326 as Node 16 (p1, c1, k60).
+1624035967: mosquitto version 2.0.11 terminating
+1624035967: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1624036569: mosquitto version 2.0.11 starting
+1624036569: Config loaded from /mosquitto/config/mosquitto.conf.
+1624036569: Opening ipv4 listen socket on port 1883.
+1624036569: Opening ipv6 listen socket on port 1883.
+1624036569: mosquitto version 2.0.11 running
+1624036585: New connection from 172.21.0.1:52332 on port 1883.
+1624036585: New client connected from 172.21.0.1:52332 as Node 1 (p1, c1, k60).
+1624036586: New connection from 172.21.0.1:52338 on port 1883.
+1624036586: New client connected from 172.21.0.1:52338 as Node 2 (p1, c1, k60).
+1624036586: New connection from 172.21.0.1:52344 on port 1883.
+1624036586: New client connected from 172.21.0.1:52344 as Node 3 (p1, c1, k60).
+1624036587: New connection from 172.21.0.1:52350 on port 1883.
+1624036587: New client connected from 172.21.0.1:52350 as Node 4 (p1, c1, k60).
+1624036588: New connection from 172.21.0.1:52356 on port 1883.
+1624036588: New client connected from 172.21.0.1:52356 as Node 5 (p1, c1, k60).
+1624036588: New connection from 172.21.0.1:52362 on port 1883.
+1624036588: New client connected from 172.21.0.1:52362 as Node 6 (p1, c1, k60).
+1624036589: New connection from 172.21.0.1:52368 on port 1883.
+1624036589: New client connected from 172.21.0.1:52368 as Node 7 (p1, c1, k60).
+1624036590: New connection from 172.21.0.1:52374 on port 1883.
+1624036590: New client connected from 172.21.0.1:52374 as Node 8 (p1, c1, k60).
+1624036591: New connection from 172.21.0.1:52380 on port 1883.
+1624036591: New client connected from 172.21.0.1:52380 as Node 9 (p1, c1, k60).
+1624036592: New connection from 172.21.0.1:52386 on port 1883.
+1624036592: New client connected from 172.21.0.1:52386 as Node 10 (p1, c1, k60).
+1624036593: New connection from 172.21.0.1:52392 on port 1883.
+1624036593: New client connected from 172.21.0.1:52392 as Node 11 (p1, c1, k60).
+1624036594: New connection from 172.21.0.1:52398 on port 1883.
+1624036594: New client connected from 172.21.0.1:52398 as Node 12 (p1, c1, k60).
+1624036594: New connection from 172.21.0.1:52404 on port 1883.
+1624036594: New client connected from 172.21.0.1:52404 as Node 13 (p1, c1, k60).
+1624036595: New connection from 172.21.0.1:52410 on port 1883.
+1624036595: New client connected from 172.21.0.1:52410 as Node 14 (p1, c1, k60).
+1624036596: New connection from 172.21.0.1:52416 on port 1883.
+1624036596: New client connected from 172.21.0.1:52416 as Node 15 (p1, c1, k60).
+1624036597: New connection from 172.21.0.1:52422 on port 1883.
+1624036597: New client connected from 172.21.0.1:52422 as Node 16 (p1, c1, k60).
+1624036616: Client Node 2 closed its connection.
+1624036616: Client Node 9 closed its connection.
+1624036616: Client Node 11 closed its connection.
+1624036616: Client Node 6 closed its connection.
+1624036616: Client Node 10 closed its connection.
+1624036616: Client Node 14 closed its connection.
+1624036616: Client Node 3 closed its connection.
+1624036616: Client Node 12 closed its connection.
+1624036616: Client Node 4 closed its connection.
+1624036616: Client Node 13 closed its connection.
+1624036616: Client Node 16 closed its connection.
+1624036616: Client Node 15 closed its connection.
+1624036616: Client Node 7 closed its connection.
+1624036616: Client Node 8 closed its connection.
+1624036616: Client Node 5 closed its connection.
+1624036616: Client Node 1 closed its connection.
+1624037570: mosquitto version 2.0.11 terminating
+1624037570: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1624037617: mosquitto version 2.0.11 starting
+1624037617: Config loaded from /mosquitto/config/mosquitto.conf.
+1624037617: Opening ipv4 listen socket on port 1883.
+1624037617: Opening ipv6 listen socket on port 1883.
+1624037617: mosquitto version 2.0.11 running
+1624037625: New connection from 172.21.0.1:52428 on port 1883.
+1624037625: New client connected from 172.21.0.1:52428 as Node 1 (p1, c1, k60).
+1624037625: New connection from 172.21.0.1:52434 on port 1883.
+1624037625: New client connected from 172.21.0.1:52434 as Node 2 (p1, c1, k60).
+1624037626: New connection from 172.21.0.1:52440 on port 1883.
+1624037626: New client connected from 172.21.0.1:52440 as Node 3 (p1, c1, k60).
+1624037627: New connection from 172.21.0.1:52446 on port 1883.
+1624037627: New client connected from 172.21.0.1:52446 as Node 4 (p1, c1, k60).
+1624037627: New connection from 172.21.0.1:52452 on port 1883.
+1624037627: New client connected from 172.21.0.1:52452 as Node 5 (p1, c1, k60).
+1624037628: New connection from 172.21.0.1:52458 on port 1883.
+1624037628: New client connected from 172.21.0.1:52458 as Node 6 (p1, c1, k60).
+1624037629: New connection from 172.21.0.1:52464 on port 1883.
+1624037629: New client connected from 172.21.0.1:52464 as Node 7 (p1, c1, k60).
+1624037630: New connection from 172.21.0.1:52470 on port 1883.
+1624037630: New client connected from 172.21.0.1:52470 as Node 8 (p1, c1, k60).
+1624037631: New connection from 172.21.0.1:52476 on port 1883.
+1624037631: New client connected from 172.21.0.1:52476 as Node 9 (p1, c1, k60).
+1624037632: New connection from 172.21.0.1:52482 on port 1883.
+1624037632: New client connected from 172.21.0.1:52482 as Node 10 (p1, c1, k60).
+1624037633: New connection from 172.21.0.1:52488 on port 1883.
+1624037633: New client connected from 172.21.0.1:52488 as Node 11 (p1, c1, k60).
+1624037634: New connection from 172.21.0.1:52494 on port 1883.
+1624037634: New client connected from 172.21.0.1:52494 as Node 12 (p1, c1, k60).
+1624037635: New connection from 172.21.0.1:52500 on port 1883.
+1624037635: New client connected from 172.21.0.1:52500 as Node 13 (p1, c1, k60).
+1624037636: New connection from 172.21.0.1:52506 on port 1883.
+1624037636: New client connected from 172.21.0.1:52506 as Node 14 (p1, c1, k60).
+1624037637: New connection from 172.21.0.1:52512 on port 1883.
+1624037637: New client connected from 172.21.0.1:52512 as Node 15 (p1, c1, k60).
+1624037638: New connection from 172.21.0.1:52518 on port 1883.
+1624037638: New client connected from 172.21.0.1:52518 as Node 16 (p1, c1, k60).

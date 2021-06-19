@@ -1,12 +1,9 @@
-# RUN ON DOCKER CONTAINER
-run-mosquitto-server:
+
+run-mosquitto-docker:
 	docker-compose up -d mosquitto-server
 
-run-client-container:
-	docker-compose up lua-love
-
 # env:Path += ";C:\Program Files\LOVE\"
-run-love:
+run-windows:
 	powershell.exe "love.exe . 1"
 	powershell.exe "love.exe . 2"
 	powershell.exe "love.exe . 3"
@@ -24,11 +21,24 @@ run-love:
 	powershell.exe "love.exe . 15"
 	powershell.exe "love.exe . 16"
 
-run-all: run-mosquitto-server run-love
 
-# RUN LOCAL
-run-server:
-	lua server.lua
+run-linux:
+	love . 1
+	love . 2
+	love . 3
+	love . 4
+	love . 5
+	love . 6
+	love . 7
+	love . 8
+	love . 9
+	love . 10
+	love . 11
+	love . 12
+	love . 13
+	love . 14
+	love . 15
+	love . 16
 
-run-client:
-	lua client.lua localhost 8888
+run-all: run-mosquitto-docker run-windows
+

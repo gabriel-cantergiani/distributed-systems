@@ -30,6 +30,11 @@ end
 
 function love.mousereleased(x, y, button)
 
+    if graphics.mqtt_error ~= nil then
+        rumour.log(graphics.mqtt_error)
+        return
+    end
+
     -- Clique Evento 1
     if (x >= graphics.elements.evento1.position_x and x <= (graphics.elements.evento1.position_x + graphics.elements.evento1.width)) then
         if (y >= graphics.elements.evento1.position_y and y <= (graphics.elements.evento1.position_y + graphics.elements.evento1.height)) then
@@ -81,13 +86,17 @@ function printLog(message)
 end
 
 
- function love.load(arg)
+function love.load(arg)
 
     -- Rumour
     node_id = tonumber(arg[1])
-    rumour.SetUp(node_id, printLog)
+    mqtt_error = rumour.SetUp(node_id, printLog)
     row, column = rumour.getNodePosition()
     rows_columns_num = math.sqrt(config.nodes_num)
+
+    if mqtt_error ~= nil then
+        graphics.mqtt_error = mqtt_error
+    end
 
     -- Love
     local _, _, flags = love.window.getMode()

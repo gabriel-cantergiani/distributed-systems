@@ -1,0 +1,12 @@
+[0s][Node 6] Connection to mqtt server successful
+[0s][Node 6] Waiting for messages...
+[17s][Node 6] Forwarding Agent
+[20s][Node 6] Sending agent to node no-3-2
+[42s][Node 6] Forwarding query to event direction
+[45s][Node 6] Sending query to node no-2-1
+[48s][Node 6] Forwarding query response to query direction
+[51s][Node 6] Sending query-response to node no-3-2
+[79s][Node 6] Agent reached hops limit
+[119s][Node 6] Node state:
+[119s][Node 6] Event 1: direction=no-2-1, distance=1
+[119s][Node 6] Event 2: direction=no-3-3, distance=4

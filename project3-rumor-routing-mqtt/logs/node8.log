@@ -1,0 +1,14 @@
+[0s][Node 8] Connection to mqtt server successful
+[0s][Node 8] Waiting for messages...
+[31s][Node 8] Forwarding query to random direction
+[34s][Node 8] Sending query to node no-3-3
+[55s][Node 8] Forwarding query response to query direction
+[58s][Node 8] Sending query-response to node no-2-3
+[71s][Node 8] Forwarding Agent
+[74s][Node 8] Sending agent to node no-3-3
+[83s][Node 8] Forwarding query to event direction
+[86s][Node 8] Sending query to node no-3-4
+[95s][Node 8] Forwarding query response to query direction
+[98s][Node 8] Sending query-response to node no-1-4
+[137s][Node 8] Node state:
+[137s][Node 8] Event 2: direction=no-3-4, distance=2

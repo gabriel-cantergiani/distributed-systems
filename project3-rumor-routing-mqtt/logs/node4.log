@@ -1,0 +1,6 @@
+[0s][Node 4] Connection to mqtt server successful
+[0s][Node 4] Waiting for messages...
+[86s][Node 4] event2 query triggered
+[86s][Node 4] Sending query to node no-2-4
+[101s][Node 4] Received Event Information: foo
+[136s][Node 4] Node state:

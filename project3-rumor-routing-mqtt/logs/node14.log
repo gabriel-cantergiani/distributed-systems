@@ -1,0 +1,5 @@
+[0s][Node 14] Connection to mqtt server successful
+[0s][Node 14] Waiting for messages...
+[18s][Node 14] Agent reached hops limit
+[116s][Node 14] Node state:
+[116s][Node 14] Event 1: direction=no-3-3, distance=4

@@ -1,0 +1,13 @@
+[0s][Node 11] Connection to mqtt server successful
+[0s][Node 11] Waiting for messages...
+[18s][Node 11] Forwarding Agent
+[21s][Node 11] Sending agent to node no-4-2
+[31s][Node 11] Forwarding query to event direction
+[34s][Node 11] Sending query to node no-3-2
+[49s][Node 11] Forwarding query response to query direction
+[52s][Node 11] Sending query-response to node no-2-4
+[71s][Node 11] Forwarding Agent
+[74s][Node 11] Sending agent to node no-2-2
+[125s][Node 11] Node state:
+[125s][Node 11] Event 1: direction=no-3-2, distance=3
+[125s][Node 11] Event 2: direction=no-2-4, distance=3

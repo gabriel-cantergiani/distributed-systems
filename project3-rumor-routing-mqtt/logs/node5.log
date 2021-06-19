@@ -1,0 +1,10 @@
+[0s][Node 5] Connection to mqtt server successful
+[0s][Node 5] Waiting for messages...
+[15s][Node 5] event1 agent triggered
+[15s][Node 5] Sending agent to node no-2-1
+[15s][Node 5] Forwarding Agent
+[18s][Node 5] Sending agent to node no-2-2
+[46s][Node 5] Answering event query...
+[49s][Node 5] Sending query-response to node no-2-2
+[112s][Node 5] Node state:
+[112s][Node 5] Event 1: direction=no-2-1, distance=0
